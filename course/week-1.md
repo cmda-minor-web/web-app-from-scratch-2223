@@ -64,7 +64,7 @@ zodat ik een goed beeld krijg van de studenten die de minor dit jaar doen.**
 3. Schets samen ideeën voor de squadpagina. Bedenk creatieve, originele, of (technisch) uitdagende manieren om alle de teamleden te tonen.
 4. Maak gezamenlijk een break-down schets van jullie ontwerp/
 5. Fork de opdracht van Github (staat bij week 1).
-6. Haal data van alle members van het team op uit de Tribe API. Gebruik dit voor de squadpagina.
+6. Haal data van alle members van de squad op uit de Tribe API. Gebruik dit voor de squadpagina.
 
 ### Resources
 
