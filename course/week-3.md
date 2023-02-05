@@ -1,6 +1,6 @@
 # Week 3: ‘Design & refactor’ 🛠
 
-[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2122)
+[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
 
 ## Intention
 
@@ -10,7 +10,7 @@ Iterate on the user story. Add routes and states. refactor code into modules.
 
 ### Next week: ‘Wrapping up’ 🎁
 
-Final iteration on user story. Manipulate, filter and sort data. [Check it out](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/week-4.md)
+Final iteration on user story. Manipulate, filter and sort data. [Check it out](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-4.md)
 
 ---
 
@@ -28,8 +28,8 @@ Refactor your Single Page Web App.
 
 ### Slides
 
-1. [Routes en Modules - Week 3 Maandag 28 feb](WAFS-W3-01-Refactor.pdf)
-2. [Design Code logics - Week 3 Dinsdag 1 mrt](WAFS-W3-02-Design-Code-Logics.pdf)
+1. [Routes en Modules - Week 3 Maandag 20 feb](WAFS-W3-01-Refactor.pdf)
+2. [Design Code logics - Week 3 Dinsdag 21 feb](WAFS-W3-02-Design-Code-Logics.pdf)
 
 --- 
 
@@ -108,7 +108,7 @@ Create issues for different peer students. You can look at improvements / sugges
 
 ### Resources
 
-- [Vertical and horizontal peer review](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/peer-review-1.md)
+- [Vertical and horizontal peer review](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/peer-review-1.md)
 - [Best practices JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md)
 
 
