@@ -41,8 +41,7 @@ zodat ik een inschatting kan maken of ik de student ga uitnodigen voor een solli
 ### Resources
 
 - [Eerste Hulp bij het gebruik van API's](https://cmda-minor-web.github.io/kickoff-2021/eerste-hulp-bij-het-gebruik-van-apis.pdf)
-- [Tribe API](...)
-- [Documentatie Tribe Api](...)
+- [Documentatie Tribe Api](https://whois.fdnd.nl/docs)
 - [Haal data op uit een API (MDN)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 
 ---
@@ -67,7 +66,5 @@ zodat ik een goed beeld krijg van de studenten die de minor dit jaar doen.**
 6. Haal data van alle members van de squad op uit de Tribe API. Gebruik dit voor de squadpagina.
 
 ### Resources
-
-- [Tribe API](...)
-- [Documentatie Tribe Api](...)
+- [Documentatie Tribe Api](https://whois.fdnd.nl/docs)
 - [Werk samen op GitHub](https://github.com/udit-001/Collaboration-For-Beginners)
