@@ -1,6 +1,6 @@
 # Week 2: ‘Hello API’ 🐒
 
-[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2122)
+[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
 
 ## Intention
 
@@ -12,7 +12,7 @@ Pick an user story. Design the interface. Retrieve data from the chosen API and 
 
 ### Next week: ‘Design & refactor’ 🛠
 
-Iterate on the User Story. Add Routes and States. Refactor code into Modules. [Check it out](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/week-3.md)
+Iterate on the User Story. Add Routes and States. Refactor code into Modules. [Check it out](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-3.md)
 
 
 ---  
@@ -30,9 +30,8 @@ Design and build a Single Page Web App based on a User Story.
 
 ### Slides
 
-1. [Opdracht - Week 2 Maandag 14 feb](WAFS-W2-01-Hello-API.pdf)
-2. [UI-Stack - Week 2 Dinsdag 15 feb](WAFS-W2-02-UI-Stack.pdf)
-
+1. [Opdracht - Week 2 Maandag 13 feb](WAFS-W2-01-Hello-API.pdf)
+2. [UI-Stack - Week 2 Dinsdag 14 feb](WAFS-W2-02-UI-Stack.pdf)
 
 
 ---  
@@ -42,19 +41,18 @@ Design and build a Single Page Web App based on a User Story.
 ### User stories
 
 1. As a student Digital Design, I want to look at inspiring web design quotes, to get some fresh energy when I'm down while working on crazy deadlines.
-[FDND Web Design Quotes API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/fdnd-quotes.md)
+[FDND Web Design Quotes API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/fdnd-quotes.md)
 2. As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown
-[Rijksmuseum - RijksData API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/rijksmuseum.md)
+[Rijksmuseum - RijksData API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/rijksmuseum.md)
 3. As a frisbee player, I want to be able to save and pass on the scores of a match, so I know where and when we have to play the next game. 
-[Frisbee Tournament - Leaguevine API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/frisbee-tournament.md)
+[Frisbee Tournament - Leaguevine API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/frisbee-tournament.md)
 4. As a foodie, I want to be able to easily search and view information about a product while shopping,
 so that I can make a good choice whether it fits my diet.
-[Healthy Food Checker - Open Food Facts API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/healthy-food-checker.md)
+[Healthy Food Checker - Open Food Facts API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/healthy-food-checker.md)
 5. As a patient, I want to be able to make a reliable diagnosis at home, so that I can better estimate whether I should make an appointment with the doctor.
-[EndlessMedical API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/endless-medical.md)
-6. ~~As a artist, I want to sketch and design a t-shirt online, so I can sell my t-shirt-artwork.
-[Printify API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/t-shirt-maker.md)~~
-7. As a children's book author, I want to experiment with innovative Dutch-language voice interaction patterns, so I can tell my stories in an entirely new way.
+[EndlessMedical API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/endless-medical.md)
+[Printify API](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/t-shirt-maker.md)~~
+6. As a children's book author, I want to experiment with innovative Dutch-language voice interaction patterns, so I can tell my stories in an entirely new way.
 [Storytelling - Web Speech API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/storytelling.md)
 
 - Do you have an idea you want to design and develop? Yes you can ... Write a User Story and present what you are planning to do.
@@ -159,7 +157,7 @@ Create at least 2 issues for different peer students. You can look at improvemen
 
 ### Resources
 
-- [Vertical and horizontal peer review](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/peer-review-1.md)
+- [Vertical and horizontal peer review](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/peer-review-1.md)
 - [Best practices JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md)
 
 
