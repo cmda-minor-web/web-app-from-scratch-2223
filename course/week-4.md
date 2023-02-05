@@ -49,7 +49,7 @@ With the map, filter and reduce methods you retrieve the desired data to display
 
 ## 2. Documentation (Monday)
 
-When you pubish your code to Github, others can fork your code to use in their own project or collaborate with yours. 
+When you publish your code to Github, others can fork your code to use in their own project or collaborate with yours. 
 It's important to write your Readme with a description of your own work, explenation of your code and a link and poster image to showcase your project.
 
 When you're writing your project's README, it should be able to answer the what, why, and the how of the project.
