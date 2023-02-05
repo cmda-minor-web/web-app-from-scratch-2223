@@ -1,6 +1,6 @@
 # Exercises Week 4: ‘Wrapping up’ 🎁
 
-[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2122)
+[Minor Web Development](https://github.com/cmda-minor-web/) - [Web App From Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
 
 ## Intention
 
@@ -28,8 +28,8 @@ Refactor code into modules, improve UI and write documentation.
 
 ### Slides
 
-1. [Live coding map, filter, reduce - Week 4 Maandag 7 mrt](https://codepen.io/robertspier/pen/BamELJd?editors=1012)
-2. [Review - Week 4 Dinsdag 8 mrt](WAFS-W4-02-Review.pdf)
+1. [Live coding map, filter, reduce - Week 4 Maandag 6 mrt](https://codepen.io/robertspier/pen/BamELJd?editors=1012)
+2. [Review - Week 4 Dinsdag 7 mrt](WAFS-W4-02-Review.pdf)
 
 ---
 
@@ -138,7 +138,7 @@ The past weeks you've build a Single Page Web App. What are the consequences of 
 
 Your work will be assessed on the criteria: User Interface, Code structure, Data management and Project (documentation).
 
-Your efforts will be graded using a single point [rubric](https://github.com/cmda-minor-web/web-app-from-scratch-2122#rubric). You will have to pass the criterion to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
+Your efforts will be graded using a single point [rubric](https://github.com/cmda-minor-web/web-app-from-scratch-2223#rubric). You will have to pass the criterion to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
 
 
 
