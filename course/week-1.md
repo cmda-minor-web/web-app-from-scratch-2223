@@ -36,7 +36,7 @@ zodat ik een inschatting kan maken of ik de student ga uitnodigen voor een solli
 4. Fork deze opdracht van Github en open het project in je favoriete code editor. Werk de opdracht uit in de map "visitekaartje"
 5. Werk je breakdownschets uit in HTML, CSS en JS.
 6. Haal met JS jouw naam op uit de Tribe API (dit is een GET request). Render de data in HTML.
-7. Update de lege velden van jezelf in de API (dit is een PUT request). Deze data kun je daarna ook gebruiken voor je visitekaartje.
+7. Update de lege velden van jezelf in de API: [Update member form](https://whois.fdnd.nl/admin)
 
 ### Resources
 
