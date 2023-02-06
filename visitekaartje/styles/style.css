@@ -1,0 +1,13 @@
+*, html {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+    --background-color: rgb(235, 235, 255);
+}
+
+body {
+    background-color: var(--background-color);
+}
