@@ -1,5 +1,5 @@
 *, html {
-margin: 0;
+margin: .2em;
 padding: 0;
 box-sizing: border-box;
 }
@@ -10,4 +10,26 @@ box-sizing: border-box;
 
 body {
     background-color: var(--background-color);
+}
+
+
+/*****************/
+/* EERSTE PAGINA */
+/*****************/
+
+
+
+/**************************/
+/* FOOTER - NAVIGATIEMENU */
+/**************************/
+footer ul li {
+display: inline-block;
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
