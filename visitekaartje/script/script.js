@@ -70,5 +70,6 @@ function change() {
   }
 };
 
+change()
 
 // Bron: https://stackoverflow.com/questions/39978986/multiple-content-pages-in-single-html-file
