@@ -51,13 +51,13 @@ function changeH2(data) {
 
 
 
-function change() {
-  var links = document.querySelectorAll('.links');
-  var pages = document.querySelectorAll('.pages');
+(function() {
+  const links = document.querySelectorAll('.links');
+  const pages = document.querySelectorAll('.pages');
   // Als je op de button klikt dan verandert de pagina
-  for(var i=0;i<links.length;i++) {
+  for(let i=0;i<links.length;i++) {
       links[i].addEventListener('click', function() {
-          for(var j=0;j<pages.length;j++) {
+          for(let j=0;j<pages.length;j++) {
             // Per pagina zet is het standaard display none
               pages[j].setAttribute('style', 'display: none');
               
@@ -68,8 +68,7 @@ function change() {
           }
       })
   }
-};
+}());
 
-change()
 
 // Bron: https://stackoverflow.com/questions/39978986/multiple-content-pages-in-single-html-file
