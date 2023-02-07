@@ -1,57 +1,107 @@
-*, html {
-margin: .2em;
-padding: 0;
-box-sizing: border-box;
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --background-color: white;
-    --donker-blauw: #2e3553;
-    --grijs: #eff4f5;
-    --paars:#6f7de2;
-    --roze: #e4a7a3;
+  --background-color: white;
+  --donker-blauw: #2e3553;
+  --grijs: #eff4f5;
+  --paars: #6f7de2;
+  --roze: #e4a7a3;
 }
-
 
 /* https://huemint.com/brand-intersection/#palette=eff4f5-2e3553-6f7de2-e4a7a3 */
 /********************/
 /* ALGEMENE STIJLEN */
 /********************/
 
-
 body {
-    background-color: var(--grijs);
-    display: grid;
-    gap: 2em;
-    height: 150%;
-  
-    
+  background-color: var(--grijs);
+  display: grid;
+  gap: 2em;
+  height: 150%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+h1, h2{
+  font-family: 'highgate', sans-serif;
+}
+
+a,li,p {
+  font-family: interstate, sans-serif;
+  color: var(--donker-blauw)
 }
 
 main {
-    background-color: var(--grijs);
-    box-shadow: .5em .5em -.5em black;
+  width: 100%;
+  border-radius: .5em ;
+height: 100vh;
+  position: relative;
+  background-color: var(--grijs);
+  box-shadow: -.1em .1em .5em var(--donker-blauw); 
 }
 
-header {
-    background-color: var(--donker-blauw);
-    
+#Page3,
+#Page2 {
+  display: none;
 }
 
 /*****************/
 /* EERSTE PAGINA */
 /*****************/
- #Page3, #Page2 {
-    display: none;
- }
 
 section:nth-of-type(1) {
-    display: grid;
-    gap: 2em;
+
+  display: grid;
+  gap: 2em;
+}
+
+section:nth-of-type(1) article figure {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  background-color: var(--roze);
+  position: relative;
+  border-radius: .5em .5em 0  0;
+}
+
+section:nth-of-type(1) article figure img {
+  transform: translateY(5rem);
+  width: 80%;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) {
+  padding: 5em 2em;
+  display: grid;
+  place-items: center;
+}
+
+/********************************/
+/* TWEEDE PAGINA - VAARDIGHEDEN */
+/********************************/
+
+section:nth-of-type(2)  {
+  display: grid;
+  place-items: center;
+  position: relative;
+  
+}
+
+
+
+section:nth-of-type(2) article {
+  
+ padding: 2em 5em;
+}
+
+section:nth-of-type(2) article ul img {
+  width: 80%;
 }
 
 
@@ -59,69 +109,66 @@ section:nth-of-type(1) {
 /* FOOTER - NAVIGATIEMENU */
 /**************************/
 footer {
-    margin: 0;
-   
-    background-color: var(--grijs);
-    
-     /* box-shadow: 0 -.05em .1em #7d89be;
+  margin: 0;
+  position: fixed;
+  background-color: var(--grijs);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* box-shadow: 0 -.05em .1em #7d89be;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;  */
+     */
 }
 footer ul {
   display: flex;
-    /* width: 100%; */
-    justify-content:center;
-    align-items: center;
-    gap: .2em;
-   
-    
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
 }
 
 footer ul li {
-   display: flex;
-   flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-/* display: inline-block; */
-
+  /* display: inline-block; */
 }
 
 footer ul li img {
- width: 30%;
- height: 30%;
+  width: 30%;
+  height: 30%;
 }
 .shown {
-    display: block;
+  display: block;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
+@media (min-width: 30em) {
+  body {
+    place-items: center;
+    align-items: center;
+    margin: 5% auto;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
 
+  main {
+    width: 20rem;
+    height: 40rem;
+  }
 
-@media (min-width: 30em ) {
-    body {
-        place-content: center;
-        align-items: center;
-        margin: 0 auto;
-        width: 50%;
-        
-    }
-
-
-    main {
-       
-       width: 30rem;
-       height: fit-content;
-    }
-
-    footer {
-        width: 30rem;
-        /* bottom: 3em;
+  footer {
+    width: 20rem;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* bottom: 3em;
         left: 50%;
         transform: translate(-50% , 50%); */
-    }
+  }
 }
