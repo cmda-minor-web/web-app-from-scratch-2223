@@ -48,7 +48,7 @@ main {
 height: 100vh;
   position: relative;
   background-color: var(--grijs);
-  box-shadow: -.1em .1em .5em var(--donker-blauw); 
+  
 }
 
 #Page3,
@@ -84,6 +84,7 @@ section:nth-of-type(1) article:nth-of-type(2) {
   padding: 5em 2em;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
 /********************************/
@@ -99,11 +100,20 @@ section:nth-of-type(2)  {
   
 }
 
+section:nth-of-type(2) h2 {
+background-color: var(--roze);
+color: var(--donker-blauw);
+
+padding: 2em;
+text-align: center;
+}
+
+
 
 
 section:nth-of-type(2) article {
   align-self: center;
- padding: 5em 5em 0 2em;
+ padding: 2em 5em 0 2em;
 }
 
 section:nth-of-type(2) article ul {
@@ -133,6 +143,23 @@ gap: .5em;
   height: 1em;
   border-radius:2em;
   width: 10em;
+}
+
+/********************************/
+/* DERDE PAGINA - CONTACTPAGINA */
+/********************************/
+section:nth-of-type(3) article:nth-of-type(1) figure {
+  display: grid;
+  place-items: center;
+  
+  background-color: var(--roze);
+  padding: 1em;
+}
+
+section:nth-of-type(3) article:nth-of-type(1) figure img {
+  width: 60%;
+  border-radius: 50%;
+  transform: translateY(5em);
 }
 
 /**************************/
@@ -190,6 +217,7 @@ footer ul li img {
   main {
     width: 20rem;
     height: 40rem;
+    box-shadow: -.1em .1em .5em var(--donker-blauw); 
   }
 
 

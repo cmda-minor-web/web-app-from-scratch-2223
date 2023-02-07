@@ -1,55 +1,64 @@
-// // Create a request variable and assign a new XMLHttpRequest object to it.
-// const request = new XMLHttpRequest()
 
-// // Open a new connection, using the GET request on the URL endpoint
-// request.open('GET', 'https://cors-anywhere.herokuapp.com/https://whois.fdnd.nl/api/v1/members?first=200', true)
-
-// request.onload = function () {
-//   // Begin accessing JSON data here
-//   const data = JSON.parse(this.response)
-//   const header = document.querySelector("h1");
-
- 
-//   if (request.status >= 200 && request.status < 400) {
-//     console.log(data)
-//     header.textContent = data.members[89].name + ' ' +data.members[89].surname
-     
-  
-//   } else {
-//     console.log('error')
-//   }
-  
-// Send request
-//request.send()
-// }
 
 //variabele
-const secondHeading = document.querySelector("section:nth-of-type(1) h2");
+const secondHeading = document.querySelector('section:nth-of-type(1) h2');
+const listItem = document.querySelector('.bio');
+const avatarImage = document.querySelector('section:nth-of-type(3) article:nth-of-type(1) figure img  ');
+const myNickname = document.querySelector('section:nth-of-type(1) article:nth-of-type(2) li:nth-of-type(1)');
 
+//Logica
 fetchData()
 
 //functions
 function fetchData (){
-    const url ='https://whois.fdnd.nl/api/v1/members'
+    // Een url met mijn slug erachter dan krijg ik een json bestand met mijn gegevens alleen
+    const url ='https://whois.fdnd.nl/api/v1/member/keisha-alexander'
     const data = fetch(url)
     .then(response => response.json())
     .then(data => {
         //iets gaan doen met de data 
-        //data, h1 veranderen naar een naam
+        //Mijn gegevens opvrageb
 
-        changeH2(data)
+        addData(data)
+
+        // changeH2(data)
+        // changeBio(data)
+        
 
     })
 }
 
-function changeH2(data) {
-    const name =data.members[3].name
-    secondHeading.insertAdjacentHTML('beforeend',`  ${name} `) 
+function addData(data) {
+    const name = data.member.name
+    const surname = data.member.surname
+    const nickname = data.member.nickname
+    const description = data.member.bio.html
+    const portfolioWebsite = data.member.website
+    const image = data.member.avatar
+
+    //methodes om de dat in het HTml te laten weerschijn ipv van de console
+    secondHeading.insertAdjacentHTML('beforeend', `  ${name}  ` + `${surname}`);
+    listItem.textContent = description;
+    avatarImage.src = image;
     
+
 }
 
+// function changeH2(data) {
+    
+//     const name =data.members[1].name + ' ' + data.members[1].surname
+//     secondHeading.insertAdjacentHTML('beforeend',`  ${name}  `) 
+    
+// }
 
 
+// function changeBio(data) {
+//     const description = data.members[1].surname
+//     listItem.textContent = `Bio: ${description}`
+//     console.log(description)
+
+
+// }
 
 (function() {
   const links = document.querySelectorAll('.links');
