@@ -24,14 +24,34 @@
 // }
 
 //variabele
-const secondHeading = $("section:nth-of-type(1) h2");
+const secondHeading = document.querySelector("section:nth-of-type(1) h2");
 
-console.log(mainHeading)
+fetchData()
+
+//functions
+function fetchData (){
+    const url ='https://whois.fdnd.nl/api/v1/members'
+    const data = fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        //iets gaan doen met de data 
+        //data, h1 veranderen naar een naam
+
+        changeH2(data)
+
+    })
+}
+
+function changeH2(data) {
+    const name =data.members[3].name
+    secondHeading.insertAdjacentHTML('beforeend',`  ${name} `) 
+    
+}
 
 
 
 
-(function() {
+function change() {
   var links = document.querySelectorAll('.links');
   var pages = document.querySelectorAll('.pages');
   // Als je op de button klikt dan verandert de pagina
@@ -48,7 +68,7 @@ console.log(mainHeading)
           }
       })
   }
-}());
+};
 
 
 // Bron: https://stackoverflow.com/questions/39978986/multiple-content-pages-in-single-html-file
