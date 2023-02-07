@@ -5,31 +5,123 @@ box-sizing: border-box;
 }
 
 :root {
-    --background-color: rgb(235, 235, 255);
+    --background-color: white;
+    --donker-blauw: #2e3553;
+    --grijs: #eff4f5;
+    --paars:#6f7de2;
+    --roze: #e4a7a3;
 }
+
+
+/* https://huemint.com/brand-intersection/#palette=eff4f5-2e3553-6f7de2-e4a7a3 */
+/********************/
+/* ALGEMENE STIJLEN */
+/********************/
+
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--grijs);
+    display: grid;
+    gap: 2em;
+    height: 150%;
+  
+    
 }
 
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: var(--grijs);
+    box-shadow: .5em .5em -.5em black;
+}
+
+header {
+    background-color: var(--donker-blauw);
+    
+}
 
 /*****************/
 /* EERSTE PAGINA */
 /*****************/
+ #Page3, #Page2 {
+    display: none;
+ }
 
+section:nth-of-type(1) {
+    display: grid;
+    gap: 2em;
+}
 
 
 /**************************/
 /* FOOTER - NAVIGATIEMENU */
 /**************************/
-footer ul li {
-display: inline-block;
+footer {
+    margin: 0;
+   
+    background-color: var(--grijs);
+    
+     /* box-shadow: 0 -.05em .1em #7d89be;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;  */
+}
+footer ul {
+  display: flex;
+    /* width: 100%; */
+    justify-content:center;
+    align-items: center;
+    gap: .2em;
+   
+    
 }
 
+footer ul li {
+   display: flex;
+   flex-direction: column;
+ align-items: center;
+
+/* display: inline-block; */
+
+}
+
+footer ul li img {
+ width: 30%;
+ height: 30%;
+}
 .shown {
     display: block;
 }
 
 .hidden {
     display: none;
+}
+
+
+
+@media (min-width: 30em ) {
+    body {
+        place-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 50%;
+        
+    }
+
+
+    main {
+       
+       width: 30rem;
+       height: fit-content;
+    }
+
+    footer {
+        width: 30rem;
+        /* bottom: 3em;
+        left: 50%;
+        transform: translate(-50% , 50%); */
+    }
 }
