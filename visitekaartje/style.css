@@ -1,0 +1,139 @@
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+    width: 30%;
+    margin: auto;
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 15px;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template:
+        'Name . . . '
+        'Skills . Experience Socials';
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+body>div {
+    color: #022f40;
+}
+
+/* twice the size, bold and different color for each second word */
+body :nth-child(n) {
+    font-size: 2rem;
+    color: #38aecc;
+    font-weight: bold;
+}
+
+/* vertical orientation and different color for each third word */
+body :nth-child(2n) {
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    color: #0090c1;
+}
+
+/* triple size and different color for each fourth word */
+body :nth-child(3n) {
+    font-size: 3rem;
+    color: #183446;
+}
+
+/* quadruple size and different color for each fifth word */
+body :nth-child(4n) {
+    font-size: 4rem;
+    color: #046e8f;
+}
+
+body>div {
+    text-shadow: 3px 5px 8px rgba(1, 1, 1, 0.3);
+}
+
+.Name {
+    grid-area: Name;
+}
+
+.Skills {
+    grid-area: Skills;
+}
+
+.Experience {
+    grid-area: Experience;
+}
+
+.Socials {
+    grid-area: Socials;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
