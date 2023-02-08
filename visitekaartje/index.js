@@ -1,37 +1,47 @@
 const start = document.getElementById("Name")
-const url = "https://cors-anywhere.herokuapp.com/https://whois.fdnd.nl/api/v1/member?id=cldepmufa3yef0auom2zlm6we"
+const text = document.getElementById("text")
+const url = " https://stefan-the-api-middleman.netlify.app/.netlify/functions/members/?first=200"
 
-
-const promiseOfSomeData = fetch(url).then(r=>r.json()).then(data => {
-    console.log('in async', data);
-    console.log(data.member.name);
-    start.innerHTML = data.member.name;
-
-    console.log(data.member.prefix)
-    return data;
+function promiseOfSomeData() {
+    fetch(url).then(r => r.json()).then(data => {
+        const member = data.data.members[95]
+        start.innerHTML = member.name;
+    });
     
-});
+}
 
 window.onload = async () => {
-    let someData = await promiseOfSomeData;
+    let someData = promiseOfSomeData();
     console.log("onload");
 };
 
-function skills() {
-    let popupSkills = document.getElementById("pop-up-skills");
-    // let skills = promiseOfSomeData;
-    // console.log(skills)
-    popupSkills.classList.toggle("show");
+function openFormSkills() {
+    document.getElementById("myForm").style.display = "block";
+    fetch(url).then(r => r.json()).then(data => {
+        const member = data.data.members[95]
+        member.avatar = "Python, Java, Javascript"
+        text.innerHTML = member.avatar;
+    });
 }
 
-function experience() {
-    let popupExperience = document.getElementById("pop-up-experience");
-    // let experience = promiseOfSomeData;
-    popupExperience.classList.toggle("show")
+function openFormExperience() {
+    document.getElementById("myForm").style.display = "block";
+    fetch(url).then(r => r.json()).then(data => {
+        const member = data.data.members[95]
+        member.prefix = "Ictual, Kalipo";
+        text.innerHTML = "Worked at " + member.prefix;
+    });
 }
 
-function socials() {
-    let popupSocials = document.getElementById("pop-up-socials");
-    // let socials = promiseOfSomeData;
-    popupSocials.classList.toggle("show")
+function openFormSocials() {
+    document.getElementById("myForm").style.display = "block";
+    fetch(url).then(r => r.json()).then(data => {
+        const member = data.data.members[95]
+        member.website = "https://github.com/RainbowJM";
+        text.innerHTML = "Social: " + member.website.link(member.website);
+    });
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
 }

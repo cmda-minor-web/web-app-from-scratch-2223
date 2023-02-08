@@ -13,14 +13,20 @@
     <div class="container">
         <div class="card">
             <div id="Name"></div>
-            <div class="Skills" onclick="skills()">Skills
-            <span class="pop-up-skills" id="pop-up-skills">HI</span></div>
-            <div class="Experience" onclick="experience()"> Experience
-            <span class="pop-up-experience" id="pop-up-experience">HELLO</span></div>
-            <div class="Socials" onclick="socials()"> Socials
-            <span class="pop-up-socials" id="pop-up-socials">HALLO</span></div>
+            <div class="Skills" id="skills" onclick="openFormSkills()">Skills</div>
+            <div class="Experience" onclick="openFormExperience()"> Experience</div>
+            <div class="Socials" onclick="openFormSocials()"> Socials</div>
         </div>
     </div>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+          
+            <p id="text"></p>
+        </form>
+    </div>
+    
+
 </body>
 <script src="index.js"></script>
 

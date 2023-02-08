@@ -8,8 +8,8 @@ body {
 
 .container {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -25,8 +25,8 @@ body {
     justify-content: center;
     align-content: center;
     grid-template:
-        'Name . . . '
-        'Skills . Experience Socials';
+        'Skills . . . '
+        '. . . Socials';
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -85,55 +85,32 @@ body>div {
     grid-area: Socials;
 }
 
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: center;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+    max-height: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.btn {
+    bottom: 0;
+}
+.form-container .btn:hover {
+    opacity: 1;
+}
+
+.form-container p {
+    writing-mode: horizontal-tb;
+}
