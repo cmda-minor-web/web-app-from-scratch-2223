@@ -5,6 +5,8 @@ const secondHeading = document.querySelector('section:nth-of-type(1) h2');
 const listItem = document.querySelector('.bio');
 const avatarImage = document.querySelector('section:nth-of-type(3) article:nth-of-type(1) figure img  ');
 const myNickname = document.querySelector('section:nth-of-type(1) article:nth-of-type(2) li:nth-of-type(1)');
+const naamNaastVaardigheden = document.querySelector('section:nth-of-type(2) h2');
+
 
 //Logica
 fetchData()
@@ -38,7 +40,9 @@ function addData(data) {
 
     //methodes om de dat in het HTml te laten weerschijn ipv van de console
     secondHeading.insertAdjacentHTML('beforeend', `  ${name}  ` + `${surname}`);
+    naamNaastVaardigheden.insertAdjacentHTML('beforeend',` van` +` ${name}`)
     listItem.textContent = description;
+    myNickname.insertAdjacentHTML('beforeend' , `${nickname}`);
     avatarImage.src = image;
     
 
