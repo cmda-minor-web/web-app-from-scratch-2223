@@ -32,7 +32,7 @@ function fetchData (){
 
     })
 }
-
+// Hier haal ik mijn gegevens uit de API
 function addData(data) {
     const name = data.member.name
     const surname = data.member.surname
