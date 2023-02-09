@@ -6,6 +6,9 @@ const listItem = document.querySelector('.bio');
 const avatarImage = document.querySelector('section:nth-of-type(3) article:nth-of-type(1) figure img  ');
 const myNickname = document.querySelector('section:nth-of-type(1) article:nth-of-type(2) li:nth-of-type(1)');
 const naamNaastVaardigheden = document.querySelector('section:nth-of-type(2) h2');
+const websiteLink = document.querySelector('section:nth-of-type(3) article:nth-of-type(2) ul li:nth-child(1) ');
+// const test = document.querySelector('section:nth-of-type(3) article:nth-of-type(2) ul li:nth-child(1)');
+// console.log(test);
 
 
 //Logica
@@ -44,9 +47,17 @@ function addData(data) {
     listItem.textContent = description;
     myNickname.insertAdjacentHTML('beforeend' , `${nickname}`);
     avatarImage.src = image;
+    // websiteLink.innerHTML = `<a href = "${portfolioWebsite}"> ${portfolioWebsite} </a>`;
+      websiteLink.innerHTML = `<a href = "${portfolioWebsite}"> Portfolio website </a>`;
+    
     
 
 }
+
+
+
+
+
 
 // function changeH2(data) {
     
