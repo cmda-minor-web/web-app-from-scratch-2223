@@ -128,3 +128,17 @@ body>div {
 .form-container p {
     writing-mode: horizontal-tb;
 }
+
+@media only screen and (max-device-width: 480px) {
+
+    .container{
+        padding: 50px;
+        max-width: 80%;
+    }
+
+    .card{
+        padding: 30px;
+        font-size: small;
+    }
+   
+}
