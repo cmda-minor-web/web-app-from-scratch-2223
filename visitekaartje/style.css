@@ -19,24 +19,25 @@ body {
 }
 
 .container {
-    display: flex;
+    
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .card {
     background-color: rgb(249, 240, 224);
-    width: 30%;
-    margin: auto;
+    width: 50%;
+    margin: 0 auto;
     box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px;
     border: 1px solid;
-    padding: 25px;
+    /* padding: 25px; */
 
     display: grid;
     justify-content: center;
-    align-content: center;
+    /* align-content: center; */
     grid-template:
         'Skills . . . '
         '. . . Socials';
@@ -132,7 +133,7 @@ body>div {
 @media only screen and (max-device-width: 480px) {
 
     .container{
-        padding: 50px;
+        /* padding: 50px; */
         max-width: 80%;
     }
 
@@ -141,4 +142,12 @@ body>div {
         font-size: small;
     }
    
+}
+
+@media (max-width: 30em) {
+    .card {
+        width: 100vw;
+        height: 100vh;
+
+    }
 }
