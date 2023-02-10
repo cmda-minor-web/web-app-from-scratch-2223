@@ -1,10 +1,11 @@
 const start = document.getElementById("Name")
 const text = document.getElementById("text")
-const url = " https://stefan-the-api-middleman.netlify.app/.netlify/functions/members/?first=200"
+const url = "https://stefan-the-api-middleman.netlify.app/.netlify/functions/members/?first=200"
 
 function promiseOfSomeData() {
     fetch(url).then(r => r.json()).then(data => {
-        const member = data.data.members[95]
+        console.log(data.data.members)
+        const member = data.data.members[98]
         start.innerHTML = member.name;
     });
     
