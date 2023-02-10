@@ -8,7 +8,7 @@ html, body {
 
 body {
     /* background: pink; */
-    background-image: url(glitter.gif);
+    background-image: url(/glitter.gif);
     /* background-repeat: no-repeat; */
     background-size: cover;
     font-family: 'Trebuchet MS', sans-serif;
