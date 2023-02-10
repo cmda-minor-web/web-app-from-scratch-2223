@@ -1,0 +1,113 @@
+*, *::after, *::before  {
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
+}
+    
+
+body {
+    /* background: pink; */
+    background-image: url(/glitter.gif);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-family: 'Trebuchet MS', sans-serif;
+    min-width:32em;
+    
+  }
+  
+  .card {
+    position: absolute;
+    padding: 20em;
+    top: -5em;
+    /* left: -.1px; */
+    right: 35em;
+    margin: -150px;
+    float: left;
+    perspective: 500px;
+    
+  }
+  
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+  }
+  
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 1s;
+  }
+
+  h1{
+    position: absolute;
+    line-height: normal;
+    top: 1em;
+    font-size: 1.5em;
+    padding: 0;
+    
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ff1694,
+        0 0 82px #ff1694,
+        0 0 92px #ff1694,
+        0 0 102px #ff1694,
+        0 0 151px #ff1694;
+  }
+
+  p{
+    line-height: normal;
+    font-size: 30px;
+    padding: 2em;
+    color: black;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: hotpink;
+  }
+
+  footer img:first-of-type{
+    margin-right: .5em;
+    left: .5em;
+  }
+  footer img{
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 125px;
+    
+
+  }
+  
+  
+  .front,
+  .back { 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    line-height: 300px;
+    background-color: black;
+    text-align: center;
+    font-size: 60px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    background: pink;
+    color: white;
+    transform: rotateY( 180deg );
+  }

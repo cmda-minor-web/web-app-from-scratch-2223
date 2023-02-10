@@ -1,6 +1,7 @@
 // variables
-const mainHeading = $('h1')
+const mainHeading= $('h1')
 
+const biotje= $('p')
 
 
 
@@ -12,7 +13,7 @@ fetchData()
 
 // functions
 function fetchData (){
-    const url = 'https://whois.fdnd.nl/api/v1/members'
+    const url = 'https://whois.fdnd.nl/api/v1/member?id=cldep2jzr3wfq0avw3ac5lb97'
     // kan ook gelijk je id achter members zetten
 
 
@@ -22,15 +23,21 @@ function fetchData (){
                         // iets gaan doen met de data
                         // data, h1 veranderen naar naam
                         changeHTML(data)
-
-
                     })
-    
 }
 
 function changeHTML (data) {
-    const name = data.members[4].name
-    mainHeading.insertAdjacentHTML('beforeend', ` for ${name}`)  
+    console.log(data)
+    const name = data.member.name
+    const surname = data.member.surname
+    const me = data.member.bio.html
+   
+
+
+    mainHeading.textContent = name + ' ' + surname
+    biotje.innerHTML = me
+
+
 }
 
 function $ (element) {
