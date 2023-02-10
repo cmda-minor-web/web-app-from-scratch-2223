@@ -26,8 +26,6 @@ function fetchData (){
 
         addData(data)
 
-        // changeH2(data)
-        // changeBio(data)
         
 
     })
@@ -54,26 +52,10 @@ function addData(data) {
 
 }
 
+// Bron: Geleerd van Ine van den Hoven
 
 
 
-
-
-// function changeH2(data) {
-    
-//     const name =data.members[1].name + ' ' + data.members[1].surname
-//     secondHeading.insertAdjacentHTML('beforeend',`  ${name}  `) 
-    
-// }
-
-
-// function changeBio(data) {
-//     const description = data.members[1].surname
-//     listItem.textContent = `Bio: ${description}`
-//     console.log(description)
-
-
-// }
 
 (function() {
   const links = document.querySelectorAll('.links');

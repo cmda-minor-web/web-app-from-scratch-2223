@@ -284,7 +284,7 @@ section:nth-of-type(3) article:nth-of-type(2) ul li {
   display: flex;
   gap: .5em;
   align-items: center;
-  /* align-content: center; */
+  
 
 }
 
@@ -320,9 +320,7 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
-  /* box-shadow: 0 -.05em .1em #7d89be;
-    position: fixed;
-     */
+ 
 }
 footer ul {
   display: flex;
