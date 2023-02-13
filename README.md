@@ -1,4 +1,4 @@
-# Design quotes for stress releif
+# Design quotes for stress relieff
 Ik ga een single web app maken waar studenten verschillende quotes kan bekijken om hun deadlines te doormaken. De quotes zijn van verschillende designers die ook in de industrie werkte. 
 
 ## User story
@@ -7,3 +7,9 @@ Ik ga een single web app maken waar studenten verschillende quotes kan bekijken 
 # Schetsen
 ## Wireflow 
 ### Breakdownschets 
+
+---
+### Belangrijk links
+- [Link naar procesverslag]()
+- [Link naar visitekaart]()
+- [Link naar Single page web app]()

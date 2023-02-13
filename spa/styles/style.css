@@ -1,0 +1,18 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+--background-color: white;
+  --donker-blauw: #2e3553;
+  --grijs: #eff4f5;
+  --paars: #6f7de2;
+  --roze: #e4a7a3;
+}
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
