@@ -12,4 +12,4 @@ Ik ga een single web app maken waar studenten verschillende quotes kan bekijken 
 ### Belangrijk links
 - [Link naar procesverslag]()
 - [Link naar visitekaart]()
-- [Link naar Single page web app]()
+- [Link naar Single page web app]()kk
