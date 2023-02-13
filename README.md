@@ -5,7 +5,7 @@ In this course I will learn to build a web application without frameworks or unn
 ## Assignment
 
 1. [Visitekaartje](#): Mijn visite-kaartje.
-~~2. [Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.~~
+2. ~~[Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.~~
 3. [Single Page App](#): My single page application.
 
 ---
