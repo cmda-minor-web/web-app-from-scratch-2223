@@ -24,30 +24,49 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
 .card {
-    border: 2px solid #01B4EB;
     border-radius: 5px;
-    background-color: white;
     display: flex;
+    background-repeat: repeat;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 70%;
     height: 360px;
     padding: 20px;
+    border: 2px solid #000000;
 }
 
-.box {
+.card:hover {
 
-    border: 1px solid #000000;
-    background-color: rgba(215, 225, 234, 0.82);
+}
+
+
+
+.box {
+    box-shadow: 0px 5px 10px 0px rgb(0,0,0,0.3);
+    transition: transform ease 0.5s, box-shadow ease 0.5s;
+    border: 2px solid #000000;
+    background-color: rgb(240, 244, 245);
     padding: 1em;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 20px 2px rgb(0,0,0,0.5);
+
+}
+
+.box2 {
+
+}
+
 
 .box2 ul {
     list-style: none;
@@ -70,7 +89,7 @@ body {
 
 @media only screen and (min-width: 768px) {
     .box {
-        width: 55%;
+        width: 75%;
         height: auto;
     }
 }

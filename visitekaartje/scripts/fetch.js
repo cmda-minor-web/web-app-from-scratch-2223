@@ -6,6 +6,7 @@ const studentAvatar = document.getElementById("avatar")
 displayMessages()
 
 async function fetchAllStudents() {
+
     let student;
     let link = `https://whois.fdnd.nl/api/v1/members?first=100`
     const response = await fetch(link)
@@ -17,9 +18,12 @@ async function fetchAllStudents() {
             student = students.members[i];
         }
     }
-    return student
+
+    return student;
+
 }
 
+//skeleton screens
 async function displayMessages() {
     try {
         //is dit traag?
