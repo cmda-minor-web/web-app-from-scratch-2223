@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" type="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,9 +14,10 @@
 <body>
 <h1>Home</h1>
 <p>Testing playground, styling is not allowed in this zone</p>
-<label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-<input type="text" name="search" id="search" placeholder="Search...">
+<label for="summonerName"><i class="fa-solid fa-magnifying-glass"></i></label>
+<input type="text" name="search"  placeholder="Search..." id="summonerName">
 <div class="welcome-header">
+    Welkom <p id="welcomeMsg"></p>
 
 </div>
 
@@ -93,6 +94,9 @@
 </div>
 
 <!--todo sticky navbar permanent on the end of the site let's make a mobile application first lol-->
+
+<!--es6 hack for importing the api key without using node :D-->
+<script type="module"  src="../src/index.js" ></script>
 
 </body>
 </html>
