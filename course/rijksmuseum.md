@@ -4,7 +4,7 @@
 
 **Als kunstliefhebber, 
 wil ik thuis kunst uit het Rijksmuseum kunnen zoeken en bekijken, 
-zodat ik tijdens een lockdown toch van kunst kan genieten.**
+zodat ik ten alle tijden van kunst kan genieten.**
 
 ## Rijksdata (API)
 
