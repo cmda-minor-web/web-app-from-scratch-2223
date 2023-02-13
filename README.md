@@ -23,8 +23,14 @@ In this course I will learn to build a web application without frameworks or unn
 
 ## Week 2 - Hello API
 
-User-story: As a League of Legends addict/user, I want to be able to see champion & summoner information about my summoner of choice, so that I don’t have to open a statistics site all the time & being able to see my champions in style https://developer.riotgames.com/apis
+User-story: As a League of Legends addict/user, I want to be able to see champion & summoner information about my summoner of choice, so that I don’t have to open a statistics site all the time & being able to see my champions in style 
 
+## Assets: 
+1. https://developer.riotgames.com/apis
+2. https://developer.riotgames.com/docs/lol
+# Voorbeeld champion ophalen: 
+1. Alle champs: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json
+2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion/Aatrox.json
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
