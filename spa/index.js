@@ -1,5 +1,5 @@
 const article = document.querySelector("section:nth-of-type(1) article p");
-const url = "https://quote.api.fdnd.nl/v1/quote"
+const url = "https://quotes.fdnd.nl/api/v1/quotes"
 
 promiseOfSomeData();
 
