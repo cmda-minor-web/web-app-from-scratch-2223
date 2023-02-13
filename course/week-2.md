@@ -62,6 +62,7 @@ so that I can make a good choice whether it fits my diet.
 1. Investigate API
 2. Sketch User Flow in a Wireflow
 3. Sketch Breakdown-graph: break the Wireflow down in HTML, CSS and JS.
+4. Add your sketches in the wiki of your repo with a short description for each scketch.
 
 ### Resources
 
