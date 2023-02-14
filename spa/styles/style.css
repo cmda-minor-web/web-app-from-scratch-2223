@@ -6,13 +6,42 @@
 
 :root {
 
---background-color: white;
+--wit: white;
   --donker-blauw: #2e3553;
   --grijs: #eff4f5;
-  --paars: #6f7de2;
-  --roze: #e4a7a3;
+  --groen: #75B6A2;
+  --lichte-groen: #99C7B9;
+  --zwart: #202020;
+  --algemene-text: 'Josefin Sans', sans-serif;
+  --quote-text: 'Prata', serif;
 }
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+body {
+  background-color: var(--groen);
+ 
+
+}
+h1, h2 {
+  font-family: var(--algemene-text)
+}
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+main ul li {
+  font-family: var(--algemene-text);
+  font-weight: 400;
+}
+img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+
+q {
+  font-family: var(--quote-text);
+}

@@ -1,37 +1,65 @@
 console.log("Hello");
+//Variabele
+ const main = document.querySelector("main ");
+  const img = document.querySelector("main section img");
+  const quote = document.querySelector("main article q");
+  const authorName = document.querySelector("main section p:nth-of-type(2)");
+  const authorBio = document.querySelector("main article p:nth-of-type(2)");
+  const nextButton = document.querySelector("main button");
 
 
 
-    fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
-.then((response) => response.json())
-.then((data) => {
-  const main = document.querySelector("main ")
-  const img = document.querySelector("main section img")
-console.log(data)
+//Logica
+nextButton.addEventListener('click', () => {
+  fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
+    .then((response) => response.json())
+    .then((data) => {
 
-let html = ''
+      
+ const randomIndex = Math.floor(Math.random() * data.length);
+      const randomData = data[randomIndex];
+      data.forEach(item => {
+        
+      const quotes = randomData.quote
+      quote.innerHTML = quotes;
 
-data.forEach(item => {
+      const avatarImg = randomData.avatar
+     img.src = avatarImg
+        })
+     
 
-    html = `
-      <section>
-        <img src="${item.avatar}" alt="Avatar">
 
-        <article>
-            <q>${item.quote}</q>
+      // let html = ''
 
-            <p>${item.author}</p>
-            <p>${item.bio}</p>
-        </article>
-    </section>
-    
-    `;
+      // data.forEach(item => {
+      // const avatarImg = item.avatar
+      //   img.forEach(image => {
+      //     image.src = avatarImg
 
-    main.insertAdjacentHTML('beforeend', html)
-//     const allName = item.author ;
-//    main.insertAdjacentHTML('beforeend', `${allName}`)
+      //   })
 
-});
-    
-});
 
+
+      // html = `
+      //   <section>
+      //     <img src="${item.avatar}" alt="Avatar">
+
+      //     <article>
+      //         <q>${item.quote}</q>
+
+      //         <p>${item.author}</p>
+      //         <p>${item.bio}</p>
+      //     </article>
+      // </section>
+
+      // `;
+
+      // main.insertAdjacentHTML('beforeend', html)
+      //     const allName = item.author ;
+      //    main.insertAdjacentHTML('beforeend', `${allName}`)
+
+    });
+
+})
+
+ 
