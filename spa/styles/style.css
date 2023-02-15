@@ -16,6 +16,9 @@
   --zwart: #202020;
   --algemene-text: 'Josefin Sans', sans-serif;
   --quote-text: 'Prata', serif;
+
+  --tags-drop-shadow: drop-shadow(.1em .2em .1em rgba(36, 36, 36, 0.497));
+  
 }
 
 /********************/
@@ -25,10 +28,14 @@
 
 body {
   background-color: var(--groen);
-  margin: 1em;
-
+  margin: 0 0 0 1em;
+  overflow-x: hidden;
+display: grid;
+gap: 2em;
 
 }
+
+
 
 h1,
 h2 {
@@ -37,34 +44,8 @@ h2 {
 
 li {
   list-style: none;
-}
-
-main {
-  width: 100%;
-  /* height: 100vh; */
-  /* block-size: 90vmin; */
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  gap: 1em;
-}
-
-main section {
-  scroll-snap-align: center;
-  background-color: var(--grijs);
-  /* block-size: 95vmin; */
-  width: 90vw;
-  height: 70vh;
-  aspect-ratio: 1;
-  /* padding: 2em; */
-}
-
-main ul li {
   font-family: var(--algemene-text);
-  font-weight: 400;
 }
-
 img {
   width: 5em;
   height: 5em;
@@ -81,8 +62,93 @@ figure {
   aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
-  z-index: -1;
+  z-index: -3;
 }
+
+/**********/
+/* HEADER */
+/**********/
+header {
+  width: 100%;
+  display: grid;
+  align-items: end;
+  position: relative;
+  height: 30vh;
+  
+}
+
+
+
+header section:nth-of-type(1){
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1em;
+top: 0;
+}
+
+header section:nth-of-type(1) img {
+width: 3em;
+height: 3em;
+aspect-ratio: 1;
+}
+header h2 {
+  font-size: 5em;
+  margin-bottom: .3em
+}
+
+header section ul {
+display: flex;
+gap: 1em;
+}
+
+header section ul li {
+  background-color: var(--grijs);
+  padding: .5em 1em;
+  border-radius: 3em;
+  filter: var(--tags-drop-shadow);
+}
+/*********/
+/* MAIN  */
+/*********/
+main {
+  width: 100%;
+  /* height: 100vh; */
+  /* block-size: 90vmin; */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+padding-bottom: 1em;
+  gap: 1.2em;
+}
+
+main section {
+  scroll-snap-align: center;
+  background-color: var(--grijs);
+  /* block-size: 95vmin; */
+  width: 80vw;
+  height: 60vh;
+  aspect-ratio: 1;
+  border-radius: 3em;
+  padding: 1em;
+box-shadow: .01em .4em .3em rgba(0, 0, 0, 0.325);
+}
+
+main ul li {
+  font-family: var(--algemene-text);
+  font-weight: 400;
+}
+
+main section  {
+display: grid;
+
+}
+
+
+
+
+
+
 
 figure:nth-of-type(1) {
   top: -10%;
@@ -105,20 +171,27 @@ figure:nth-of-type(2) {
 
   }
 
+  header {
+    place-self: center;
+  }
+
   main {
    
     overflow: hidden;
     scroll-snap-type: none;
   overflow-x: hidden ;
   place-self: center;
-   
+  width: 70%;
+
 
   }
 
   .grid-container-for-desktop {
     display: grid;
     /* block-size: 50em; */
-    grid-template-columns: repeat( 3, 1fr);
+    /* grid-template-columns: repeat( 3, 1fr); */
+   
+
   }
 
   main section {
