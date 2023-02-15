@@ -6,10 +6,24 @@ console.log("Hello");
   const authorName = document.querySelector("main section p:nth-of-type(2)");
   const authorBio = document.querySelector("main article p:nth-of-type(2)");
   const nextButton = document.querySelector("main button");
+  const tagElement = document.querySelector("main section ul li:nth-of-type(1)");
 
 
 //Logica
 fetchData()
+
+function fetchData() {
+  fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
+    .then((response) => response.json())
+    .then((data) => {
+
+
+      addData(data)
+
+    });
+
+}
+
 
 function fetchData() {
   fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
@@ -24,31 +38,50 @@ addData(data)
 }
 
 function addData(data) {
-
-        let html = ''
-
+       
+        let html = '' 
+        
         data.forEach(item => {
-
+        
+      //  const tag = item.tags
+     
+       
           html = `
         <section>
-          <img src="${item.avatar}" alt="Avatar">
+          
 
           <article>
               <q>${item.quote}</q>
 
               <p>${item.author}</p>
+              <div class="author-info">
+              <img src="${item.avatar}" alt="Avatar">
               <p>${item.bio}</p>
+              </div>
+              
           </article>
+
+            <ul>
+                <li>${item.tags}</li>
+                
+            </ul>
       </section>
+
+
 
       `;
 
-          main.insertAdjacentHTML('beforeend', html)
 
+
+          main.insertAdjacentHTML('beforeend', html)
+          // tagElement.insertAdjacentHTML("beforeend", `# ` + `${tag}`)
         });
 
 
       }   
+
+
+
 
 
 // Versie zonder functions
