@@ -8,58 +8,142 @@ console.log("Hello");
   const nextButton = document.querySelector("main button");
 
 
-
 //Logica
-nextButton.addEventListener('click', () => {
+fetchData()
+
+function fetchData() {
   fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
     .then((response) => response.json())
     .then((data) => {
 
-      
- const randomIndex = Math.floor(Math.random() * data.length);
-      const randomData = data[randomIndex];
-      data.forEach(item => {
-        
-      const quotes = randomData.quote
-      quote.innerHTML = quotes;
 
-      const avatarImg = randomData.avatar
-     img.src = avatarImg
-        })
+addData(data)
+
+});
+
+}
+
+function addData(data) {
+
+        let html = ''
+
+        data.forEach(item => {
+
+          html = `
+        <section>
+          <img src="${item.avatar}" alt="Avatar">
+
+          <article>
+              <q>${item.quote}</q>
+
+              <p>${item.author}</p>
+              <p>${item.bio}</p>
+          </article>
+      </section>
+
+      `;
+
+          main.insertAdjacentHTML('beforeend', html)
+
+        });
+
+
+      }   
+
+
+// Versie zonder functions
+  // fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
+  //   .then((response) => response.json())
+  //   .then((data) => {
+
+  
+
+  //     let html = ''
+
+  //     data.forEach(item => {
+
+  //       html = `
+  //       <section>
+  //         <img src="${item.avatar}" alt="Avatar">
+
+  //         <article>
+  //             <q>${item.quote}</q>
+
+  //             <p>${item.author}</p>
+  //             <p>${item.bio}</p>
+  //         </article>
+  //     </section>
+
+  //     `;
+
+  //       main.insertAdjacentHTML('beforeend', html)
+
+  //     });
+
+
+  //       });
+
+
+  
+    
+
+
+
+
+
+// //Logica
+
+// Random quotes
+// nextButton.addEventListener('click', () => {
+//   fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
+//     .then((response) => response.json())
+//     .then((data) => {
+
+      
+//  const randomIndex = Math.floor(Math.random() * data.length);
+//       const randomData = data[randomIndex];
+//       data.forEach(item => {
+        
+//       const quotes = randomData.quote
+//       quote.innerHTML = quotes;
+
+//       const avatarImg = randomData.avatar
+//      img.src = avatarImg
+//         })
      
 
 
-      // let html = ''
+//       // let html = ''
 
-      // data.forEach(item => {
-      // const avatarImg = item.avatar
-      //   img.forEach(image => {
-      //     image.src = avatarImg
+//       // data.forEach(item => {
+//       // const avatarImg = item.avatar
+//       //   img.forEach(image => {
+//       //     image.src = avatarImg
 
-      //   })
+//       //   })
 
 
 
-      // html = `
-      //   <section>
-      //     <img src="${item.avatar}" alt="Avatar">
+//       // html = `
+//       //   <section>
+//       //     <img src="${item.avatar}" alt="Avatar">
 
-      //     <article>
-      //         <q>${item.quote}</q>
+//       //     <article>
+//       //         <q>${item.quote}</q>
 
-      //         <p>${item.author}</p>
-      //         <p>${item.bio}</p>
-      //     </article>
-      // </section>
+//       //         <p>${item.author}</p>
+//       //         <p>${item.bio}</p>
+//       //     </article>
+//       // </section>
 
-      // `;
+//       // `;
 
-      // main.insertAdjacentHTML('beforeend', html)
-      //     const allName = item.author ;
-      //    main.insertAdjacentHTML('beforeend', `${allName}`)
+//       // main.insertAdjacentHTML('beforeend', html)
+//       //     const allName = item.author ;
+//       //    main.insertAdjacentHTML('beforeend', `${allName}`)
 
-    });
+//     });
 
-})
+// })
 
  

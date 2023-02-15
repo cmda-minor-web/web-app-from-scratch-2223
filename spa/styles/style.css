@@ -1,12 +1,14 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
 
---wit: white;
+  --wit: white;
   --donker-blauw: #2e3553;
   --grijs: #eff4f5;
   --groen: #75B6A2;
@@ -19,23 +21,50 @@
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+
+
 body {
   background-color: var(--groen);
- 
+  margin: 1em;
+
 
 }
-h1, h2 {
+
+h1,
+h2 {
   font-family: var(--algemene-text)
 }
+
+li {
+  list-style: none;
+}
+
 main {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  /* block-size: 90vmin; */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  gap: 1em;
+}
+
+main section {
+  scroll-snap-align: center;
+  background-color: var(--grijs);
+  /* block-size: 95vmin; */
+  width: 90vw;
+  height: 70vh;
+  aspect-ratio: 1;
+  /* padding: 2em; */
 }
 
 main ul li {
   font-family: var(--algemene-text);
   font-weight: 400;
 }
+
 img {
   width: 5em;
   height: 5em;
@@ -44,4 +73,56 @@ img {
 
 q {
   font-family: var(--quote-text);
+}
+
+figure {
+  background-color: var(--lichte-groen);
+  block-size: 20em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+figure:nth-of-type(1) {
+  top: -10%;
+  right: -10%;
+}
+
+figure:nth-of-type(2) {
+  bottom: -10%;
+  left: 10%;
+}
+
+/************************/
+/* Voor groter schermen */
+/************************/
+@media (min-width: 50em) {
+  body {
+    overflow-x: hidden;
+    display: grid;
+  
+
+  }
+
+  main {
+   
+    overflow: hidden;
+    scroll-snap-type: none;
+  overflow-x: hidden ;
+  place-self: center;
+   
+
+  }
+
+  .grid-container-for-desktop {
+    display: grid;
+    /* block-size: 50em; */
+    grid-template-columns: repeat( 3, 1fr);
+  }
+
+  main section {
+    width: 100%;
+      aspect-ratio: 1;
+  }
 }
