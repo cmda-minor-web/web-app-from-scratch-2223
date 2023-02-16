@@ -1,5 +1,5 @@
 
-# Design quotes 
+# Design quotes app
  
  ### Belangrijk links
 
@@ -7,56 +7,73 @@
 - [Link naar Single page web app](https://k3a101.github.io/stress-relief-quotes/spa/)
 
 
+
  ---
+
+## De opdracht 
+Voor de opdracht heb ik een single page gemaakt op basis van een user story. De single page is gemaakt met vanilla HTML, CSS en javascript. 
+
 
 ## User story
 > Als student digital design, wil ik inspirerende web design quotes kunnen bekijken, zodat ik weer een beetje energie krijg wanneer ik het even niet meer zie zitten met al die hard-core deadlines die op me afkomen.
 
+
+
 ## Idee 
-Ik ga een single web app maken waar studenten verschillende quotes kan bekijken om hun deadlines te doormaken. De quotes zijn van verschillende designers die ook in de industrie werkte.
+Mijn idee is een quote app voor studenten die opzoek naar inspiratie voor hun projecten. De app heet Design quotes. In design quotes kun je aanmelden en krijg je een lijst met inspirerende quotes van experts in het gebied van design en de web. De quotes worden constant up to date dus elke dag komen meer quotes erbij. Elk citaat bevat een tag die je kan filtreren op basis van design onderwerpen. 
 
-<img src="./spa/images/schets1.png">
+<img src="./spa/images/wireflow-met-ui-stack.jpg">
 
-#### Schets 1
+## Design
+Hieronder staat het design van de design quotes app. Hier bij had ik ook nagedacht aan de UI stactk die darbij horen zoals de empty state, loading state en de error state.  
 
-In mijn idee heb ik twee paginas uitgewerkt. Op de startpagina heb je een overzicht van all quotes uit de API. In elke vakjes sataan de quote zelf en de uitvinder van de quotes. Als je op de knop klikt vergroot de vakje en komt meer informatie bij. Zolas de foto van de uitvinder, en de biografie van de quotes. 
+<img src="./spa/images/app-designs-screen.png">
 
-Het ontwerp is responsive, ik ga eerst op mobiel werken en daarna ga ik voor desktop werken. Op desktop werkt het allemaal hetzelfde, alleen heb je meer ruimte voor alle onderdelen.
+Verder heb ik ook een design bedacht voor groter schermen. Hier verandert alleen de layout. Hier ga je vertical scrollen.
 
-<img src="./spa/images/schets2.png">
+<img src="./spa/images/desktop-design.png">
 
-#### Schets 2
-Bij deze schets heb ik andere type layout geprobeerd, die ik kan gebruiken bij de desktop. De quotes is een belangrijke element op de pagina dus die moet groter op de pagina verschijnen. 
+--- 
 
-<img src="./spa/images/schets3.png">
+# API
+# Inleiding
 
-#### Schets 3
-Bij schets 3 probeer ik verschillende layout voor de detailpagina van de quote. In deze pagina staat de meer informatie van de quotes, namelijk de foto van het persoon die de quotes had bedacht en  een korte biografie van die persoon. Dit wilde ik ook toevoegen in mijn prototype.
+De quotes api ging stuk  en ik moest een nieuwe api toevoegen in mijn webappliatie. IK heb gekozen om zelf een api te maken met behulp van google sheets. De google sheet werk als een  backend database. 
 
-<img src="./spa/images/schets4.png">
+## Hoe maak je een eigen Api
 
-#### Shets 4
-Hier had ik verschillende schetsen gemaakt voor een mogelijke prototypes. Ze zijn allerlei manieren hoe ik de quotes kan laten weergeven. Mijn voorkeureen waren design 2 en Design 5. Ik ga ze samen combineren tot een geheel. 
+Voor mijn project heb ik zelf een api gemaakt met behulp van google sheet en de APi van [Ben Borgers](https://github.com/benborgers/opensheet#readme). Om de spreadsheets een json bestand te maken heb ik een aantal stappen doorgenomen. 
 
+### Stappen
+
+- Data invullen in google sheets
+    
+   <img src="./spa/images/quote-api-spreadsheet.png">
+    
+- De header is vetgedrukt en die is de objectnaam. Ik heb ook de eerste row gevriesd want anders krijg foutmelding
+- Verder heb ik mijn spreadsheats gepubliceerd op de web
+    
+    <img src="./spa/images/publish-to-web.png">
+    
+- De sharing link heb ik iedereen als viewer gegeven. Ik ben de enige met toegang naar het spreadsheet.
+- Ik heb de api link van Ben Borgers gebruikt. 
+  
+   ```
+    https://opensheet.elk.sh/spreadsheet_id/tab_name
+
+   ```
+
+- Ik heb  mij spreadsheet code/id and sheet naam aan de link toegevoegd:
+```
+ https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1
+ ```
+- De code kun je vinden bij de url van de spreadsheet bestand.
+
+  <img src="./spa/images/json-bestand.png">
+Als je deze stappen uitvoert heb je een json bestand met een APi url die je kan fetchen. Een voordeel is dat je data in de spreadsheet  kan toevoegen en wordt de json bestand automatisch aangepast. 
 
 ---
 
-## Wireflow
-<img src="./spa/images/userflow.jpg">
-
-
-## Breakdownschets
-<img src="./spa/images/breakdownschets.jpg">
-
-#### Toelichting
-Nadat ik mijn idee heb gekozen, heb ik een breakdown schets en een wireflow gemaakt. In de Wireflow komen de interactie van de gebruiker met de applicatie.  Bij de breakdownschets ging ik kijken naar het structuur pagina. Bijvoorbeeld welke HTML element ga ik  gebruiken en waarvoor. Welke css properties properties en hoe ik de one page interactiever kan maken.  
-
-
----
-
-# UI Stack
-## Wireflow
-
-## Breakdownschets 
-
-
+### Bronnen
+- https://github.com/benborgers/opensheet#readme
+- https://benborgers.com/posts/google-sheets-json
