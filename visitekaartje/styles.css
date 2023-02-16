@@ -1,0 +1,243 @@
+/* Google font inladen*/
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* Default browser padding & margin verwijderen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: kaushan script;
+  font-size: 4em;
+  color: white;
+  background-color: #101820FF
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+#parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  /* Hoe dichtbij object komt */
+}
+
+.intro_screen {
+  height: 100vh;
+  background-color: #101820FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro_screen h1 {
+  font-size: 1.3em;
+}
+
+.outro_screen {
+  height: 100vh;
+  background-color: #FEE715FF;
+  color: #101820FF;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax_layer {
+  padding-top: 175px;
+  padding-left: 100px;
+  position: absolute;
+  inset: 0;
+}
+
+.parallax_layer h3 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* scale calculation: 1 + ((z transform value * -1) / perspective) */
+.base_layer {
+  transform: translateZ(-300px) scale(2);
+}
+
+.mid_layer {
+  transform: translateZ(0);
+}
+
+.top_layer {
+  transform: translateZ(210px) scale(0.3);
+  padding-top: 50px;
+  font-weight: 300;
+}
+
+#intro {
+  z-index: 0;
+}
+
+#group-1 {
+  z-index: -1;
+  color: #101820FF;
+
+}
+
+#group-1>.base_layer {
+  background-color: #FEE715FF ;
+}
+
+
+#group-2>.mid_layer {
+  background-color: #101820FF;
+
+}
+
+img {
+  width: 300px;
+}
+
+.flex-container img {
+  width: 50px;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item {
+  font-family: kaushan script;
+}
+
+.grid-item:nth-of-type(2){
+  font-weight: 600;
+  grid-row-start: 2;
+  grid-column-start: 2;
+
+}
+
+.grid-item:nth-of-type(1) {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+}
+
+.grid-item:nth-of-type(3) {
+  grid-row-start: 3;
+  align-self: center;
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;;
+  align-content: space-between;
+}
+
+#flex-item:first-child {
+  width: 100%;
+  text-align: center;
+}
+
+#flex-item:not(:first-child) {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.grid-item:nth-of-type(2) {
+  font-size: 0.4em;
+  font-family: montserrat;
+}
+
+.grid-item:nth-of-type(3) {
+  font-size: 0.4em;
+  font-family: montserrat;
+  margin-top: -20vh;
+}
+
+.progress-bar {
+  width: 500px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 50px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 50%;
+  background-color: #FEE715FF;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 10s;
+  animation: fill 10s ease-in-out forwards;
+}
+
+
+@media (max-width: 767px) {
+  .intro_screen h1 {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .grid-container {
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #group-1 {
+    margin-top: 75vh;
+    height: 200vh;
+    text-align: center;
+  }
+  .parallax_layer {
+padding: 5vh;
+}
+
+#group-2  {
+margin-top: 100vh;
+}
+
+.progress-bar:nth-of-type(3){
+  font-size: 0.8em;
+  width: 300px;
+}
+
+.parallax_layer #html-en-css{
+margin-top: 30vh;
+}
+
+.parallax_layer h3{
+padding-bottom: 5px;
+padding-top: 15px;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro_screen h1 {
+    text-align: center;
+  }
+}
