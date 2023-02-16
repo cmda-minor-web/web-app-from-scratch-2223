@@ -31,6 +31,10 @@ img[target=logo] {
     border-radius: 50%;
 }
 
+header section input{
+    display: grid;
+}
+
 main {
     display: grid;
     place-content: center;
