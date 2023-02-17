@@ -19,8 +19,7 @@ Voor de opendag hebben we een [website](https://quotes.fdnd.nl) gemaakt met vers
 De quotes zijn ook door andere mensen te bekijken of te gebruiken in een (web) app. Hiervoor is een rest-api gemaakt waarmee je alle quotes die zijn gebruikt in de presentaties worden verzameld. 
 Je kan alle quotes opvragen, gesorteerd op datum of alfabet, of quotes filteren op bijvoorbeeld tags, auteur of jaar.
 
-https://quote.api.fdnd.nl/v1/quote
-
+https://quotes.fdnd.nl/api/v1/quotes
 
 
 ## Voorbeeld slides uit de colleges en presentaties
