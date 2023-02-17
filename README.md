@@ -25,7 +25,7 @@ Mijn idee is een quote app voor studenten die opzoek naar inspiratie voor hun pr
 <img src="./spa/images/wireflow-met-ui-stack.jpg">
 
 ## Design
-Hieronder staat het design van de design quotes app. Hier bij had ik ook nagedacht aan de UI stactk die darbij horen zoals de empty state, loading state en de error state.  
+Hieronder staat het design van de design quotes app. Hier bij had ik ook nagedacht aan de UI stactk die daarbij horen zoals de empty state, loading state en de error state.  
 
 <img src="./spa/images/app-designs-screen.png">
 
