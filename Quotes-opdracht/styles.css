@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Cantata+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background-color: hsl(0, 0%, 96%);
+font-family: Contata;
+}
+
+container {
+  display: grid;
+  justify-content: stretch;
+  height: 90vh;
+  width: 90vw;
+  margin: 5%;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+    /* styles for portrait iPad */
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+    /* styles for landscape iPad */
+}
+
+@media only screen 
+  and (max-width: 767px) {
+
+#quatation-mark{
+font-size: 150px;
+font-family: BIZ UDPGothic;
+padding: 0 !important;
+margin:0 !important;
+}
+h1 {
+  grid-column-start: 1;
+  grid-row: 2;
+  text-transform: uppercase;
+  font-size: 3em;
+  overflow-wrap: break-word;
+}
+#author {
+  grid-row: 3;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+#page-number{
+  font-size: 1.5em;
+  grid-column-start: 3;
+  grid-row: 4;
+  align-self: end;
+}
+
+
+    /* styles for mobile devices */
+}
+
+
+
+
