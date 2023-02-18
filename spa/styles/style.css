@@ -12,6 +12,7 @@
   --donker-blauw: #2e3553;
   --grijs: #eff4f5;
   --groen: #75B6A2;
+  --donker-groen: #43685D;
   --lichte-groen: #99C7B9;
   --zwart: #202020;
   --algemene-text: 'Josefin Sans', sans-serif;
@@ -119,6 +120,7 @@ main {
   height: 70vh;
   width: 100%;
   /* overflow-x: auto; */
+
 }
 
 main #content {
@@ -187,8 +189,41 @@ display: grid;
 
  */
 
+/*****************/
+/* LOADING STATE */
+/*****************/
+.loading {
+  width: 80vw;
+  height: 60vh;
+  aspect-ratio: 1;
+  border-radius: 3em;
+  padding: 1em;
+  background-color: var(--donker-groen);
+  display: none;
+  justify-content: center;
+}
 
 
+.loading.display {
+  display: block;
+}
+/* .loading.skeleton-header {
+  background-color: var(--donker-groen);
+
+}
+
+.loading.skeleton-header:has(section) {
+  opacity: 0;
+}
+
+.loading.skeleton-content {
+  background-color: var(--donker-groen);
+  width: 80vw;
+  height: 60vh;
+  aspect-ratio: 1;
+  border-radius: 3em;
+  padding: 1em;
+} */
 
 
 figure:nth-of-type(1) {
@@ -208,7 +243,7 @@ figure:nth-of-type(2) {
   body {
     overflow-x: hidden;
     display: grid;
-    
+
 
 
   }
@@ -217,13 +252,13 @@ figure:nth-of-type(2) {
     place-self: center;
   }
 
-  
-  
+
+
 
   main #content {
- flex-direction: column;
+    flex-direction: column;
     /* grid-template-columns: repeat(3, 1fr); */
-height: 100vh;
+    height: 100vh;
     scroll-snap-type: y mandatory;
     /* overflow-x: auto ; */
     place-self: center;

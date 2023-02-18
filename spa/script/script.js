@@ -2,8 +2,9 @@ console.log("Hello");
 //Variabele
  const main = document.querySelector("main ");
 const section = document.getElementById('content');
-console.log(section);
-
+const loader = document.querySelector('.loading');
+console.log(section)
+ 
 //Logica
 fetchData()
 
@@ -11,10 +12,13 @@ fetchData()
 
 // Hier ga ik data ophalen uit met de fetch API
 function fetchData() {
+  showLoader()
   fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
   .then(checkError)
     .then((data) => {
-      addData(data);
+  
+      addData(data)
+      console.log(data)
     })
       .catch((error) => {
       console.log(error);
@@ -44,7 +48,7 @@ function addData(data) {
           </article>
       `;
 
-          section.insertAdjacentHTML('beforeend', html)
+       section.insertAdjacentHTML("beforeend",html )
           // tagElement.insertAdjacentHTML("beforeend", `# ` + `${tag}`)
         });
 
@@ -58,6 +62,21 @@ function checkError(response) {
     throw Error(response.statusText);
   }
 }
+
+function showLoader() {
+
+  loader.classList.add("display");
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 1000)
+}
+
+function hideLoader() {
+  loader.classList.remove("display");
+}
+
+// Bron: https://dev.to/vaishnavs/displaying-loading-animation-on-fetch-api-calls-1e5m
+
 
 
 // Versie zonder functions
