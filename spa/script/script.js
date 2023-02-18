@@ -1,87 +1,63 @@
 console.log("Hello");
 //Variabele
  const main = document.querySelector("main ");
-  const img = document.querySelector("main section img");
-  const quote = document.querySelector("main article q");
-  const authorName = document.querySelector("main section p:nth-of-type(2)");
-  const authorBio = document.querySelector("main article p:nth-of-type(2)");
-  const nextButton = document.querySelector("main button");
-  const tagElement = document.querySelector("main section ul li:nth-of-type(1)");
-
+const section = document.getElementById('content');
+console.log(section);
 
 //Logica
 fetchData()
 
+
+
+// Hier ga ik data ophalen uit met de fetch API
 function fetchData() {
   fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
-    .then((response) => response.json())
+  .then(checkError)
     .then((data) => {
-
-
-      addData(data)
-
-    });
+      addData(data);
+    })
+      .catch((error) => {
+      console.log(error);
+      });
 
 }
-
-
-function fetchData() {
-  fetch('https://opensheet.elk.sh/14joQ9h8M0ydoJJ-fNYN68ls3TWPCvk8ZvBJvUXpF1cQ/sheet1')
-    .then((response) => response.json())
-    .then((data) => {
-
-
-addData(data)
-
-});
-
-}
-
+// Met deze functie plaats ik de data in de HTML
 function addData(data) {
        
         let html = '' 
-        
         data.forEach(item => {
         
-      //  const tag = item.tags
-     
-       
           html = `
-        <section>
-          
-
-          <article>
+          <article >
+           <section>
               <q>${item.quote}</q>
 
               <p>${item.author}</p>
-              <div class="author-info">
+            </section
+              <section class="author-info">
               <img src="${item.avatar}" alt="Avatar">
               <p>${item.bio}</p>
-              </div>
-              
+              </section>
+                <ul>
+                  <li>${item.tags}</li>                
+               </ul>             
           </article>
-
-            <ul>
-                <li>${item.tags}</li>
-                
-            </ul>
-      </section>
-
-
-
       `;
 
-
-
-          main.insertAdjacentHTML('beforeend', html)
+          section.insertAdjacentHTML('beforeend', html)
           // tagElement.insertAdjacentHTML("beforeend", `# ` + `${tag}`)
         });
-
 
       }   
 
 
-
+function checkError(response) {
+  if(response.status >= 200 && response.status <= 299) {
+    return response.json();
+  }else {
+    throw Error(response.statusText);
+  }
+}
 
 
 // Versie zonder functions
