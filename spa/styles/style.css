@@ -16,8 +16,8 @@
   --lichte-groen: #99C7B9;
   --zwart: #202020;
   --algemene-text: 'Josefin Sans', sans-serif;
-  --quote-text: 'Prata', serif;
-
+  --quote-text: 'Gloock', serif;
+  --paragraaf: 'Inter',sans-serif;
   --tags-drop-shadow: drop-shadow(.1em .2em .1em rgba(36, 36, 36, 0.497));
 
 }
@@ -34,13 +34,14 @@ body {
   overflow-x: hidden;
   display: grid;
   gap: 2em;
-
+  overflow-x: hidden;
 }
 
 
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--algemene-text)
 }
 
@@ -130,7 +131,7 @@ main #content {
   scroll-snap-type: x mandatory;
   /* background-color: var(--grijs); */
   width: 100vw;
-  height: 65vh;
+  /* height: vh; */
   padding-bottom: 1em;
 }
 
@@ -139,7 +140,7 @@ main #content article {
   background-color: var(--grijs);
   flex-direction: row;
   width: 80vw;
-  height: 60vh;
+  height: 70vh;
   aspect-ratio: 1;
   border-radius: 3em;
   padding: 1em;
@@ -151,43 +152,30 @@ main ul li {
   font-weight: 400;
 }
 
-/* 
-
-main #content {
-  width: 100%;
-  height: 100vh;
-  block-size: 90vmin;
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-padding-bottom: 1em;
-  gap: 1.2em;
+/************************/
+/* CONTAINER MET QUOTES */
+/************************/
+#content article q {
+  color: var(--donker-blauw);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
- #content article{
-  scroll-snap-align: center;
-  background-color: var(--grijs);
-  block-size: 95vmin;
-  width: 80vw;
-  height: 60vh;
-  aspect-ratio: 1;
-  border-radius: 3em;
-  padding: 1em;
-box-shadow: .01em .4em .3em rgba(0, 0, 0, 0.325);
+/* De selector selecteert alleem de biografie van de persoon */
+ #content section:nth-of-type(2) p{
+  font-family: var(--paragraaf);
+  font-size: 1em;
+  font-weight: 300;
+} 
+
+#content section:nth-of-type(1) p{
+    font-family: var(--algemene-text);
+      font-weight: bold;
 }
 
-main ul li {
-  font-family: var(--algemene-text);
-  font-weight: 400;
-}
 
-main #content  {
-display: grid;
 
-}
-
- */
 
 /*****************/
 /* LOADING STATE */
@@ -207,6 +195,7 @@ display: grid;
 .loading.display {
   display: block;
 }
+
 /* .loading.skeleton-header {
   background-color: var(--donker-groen);
 
