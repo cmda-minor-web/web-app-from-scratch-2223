@@ -32,19 +32,19 @@ function addData(data) {
         data.forEach(item => {
         
           html = `
-          <article >
+          <article>
            <section>
               <q>${item.quote}</q>
 
-              <p>${item.author}</p>
-            </section
-              <section class="author-info">
+              <p class="author">${item.author}</p>
+            </section>
+            <section>
               <img src="${item.avatar}" alt="Avatar">
               <p>${item.bio}</p>
-              </section>
-                <ul>
-                  <li>${item.tags}</li>                
-               </ul>             
+            </section>
+            <ul>
+              <li>${item.tags}</li>                
+            </ul>             
           </article>
       `;
 
