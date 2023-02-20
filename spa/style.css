@@ -31,7 +31,7 @@ img[target=logo] {
     border-radius: 50%;
 }
 
-header section input{
+header section input {
     display: grid;
 }
 
@@ -46,83 +46,82 @@ main section {
     width: 22em;
     height: 30em;
     background-size: 22em 30em;
-    box-shadow: 3px 3px 20px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
     margin: auto;
     overflow: hidden;
     background-color: #BBc2ff;
 }
 
-.blog:hover .info{
-  bottom: -3em;
-  opacity: 1;
-  /* background:rgba(74, 100, 114, 0.8); */
-
+section:hover .info {
+    bottom: -3em;
+    opacity: 1;
 }
 
-.title-box{
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  margin-top: 2em;
+.title-box {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
 }
 
-.title-box hr{
-  margin-top: -0.4em;
-  margin-bottom: 1em;
-  width: 5em;
-  height: 0.25em;
-  box-sizing: content-box;
-  border: none;
-  background: #818dff;;
+hr {
+    margin-top: -0.4em;
+    margin-bottom: 1em;
+    width: 5em;
+    height: 0.25em;
+    box-sizing: content-box;
+    border: none;
+    background: #818dff;
 }
 
-h3{
-   display: inline-block;
-   font-weight: 500;
-   letter-spacing: 2px;
-   font-size: 1.4em;
-   color: black;
-   text-align: center;
+h3 {
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    color: black;
+    text-align: center;
 }
-p{
+
+p {
     width: 170px;
-  margin: 0 auto;
-  color: #fff;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Droid Serif', serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 18px;
 }
 
 
-.info{
-  font-family: 'Droid Serif', serif;
-  font-size: 1.2em;
-  color: white;
-  line-height: 1.1em;
-  padding: 0 2em;
- 
-  position: relative;
-  bottom: -4em;
-  opacity: 0;
-  background: transparent;
-  transition: opacity 0.3s, bottom 0.3s;
-  text-align: center;
+.info {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.1em;
+    padding: 0 2em;
+
+    position: relative;
+    bottom: -4em;
+    opacity: 0;
+    background: transparent;
+    transition: opacity 0.3s, bottom 0.3s;
+    text-align: center;
 }
 
 
-footer > .icon-holder{
-  position: absolute;
-  bottom: 0;
-  height: 3em;
-  width: 100%;
-  display: inline-block;
-  font-size: 1.2em;
-  padding: 0 2em;
-  
+footer>span {
+    position: absolute;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0 2em;
+
 }
 
-footer {
+/* footer {
     background-color: yellow;
     width: 100%;
-}
+} */
