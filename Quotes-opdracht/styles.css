@@ -10,6 +10,25 @@ background-color: hsl(0, 0%, 96%);
 font-family: Contata;
 }
 
+h1 {
+  font-size: 5em
+}
+
+#author {
+  font-size: 1.5em;
+}
+
+#page-number {
+  font-size: 1.5em;
+}
+
+#quatation-mark {
+  font-size: 10em;
+  font-family: BIZ UDPGothic;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 container {
   display: grid;
   justify-content: stretch;
@@ -45,7 +64,7 @@ h1 {
   grid-column-start: 1;
   grid-row: 2;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 5em;
   overflow-wrap: break-word;
 }
 #author {
