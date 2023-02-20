@@ -31,6 +31,29 @@ img[target=logo] {
     border-radius: 50%;
 }
 
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #BBc2ff;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 header section input {
     display: grid;
 }
@@ -47,9 +70,10 @@ main section {
     height: 30em;
     background-size: 22em 30em;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-    margin: auto;
     overflow: hidden;
     background-color: #BBc2ff;
+    margin-top: 5em;
+    margin-bottom: 20em;
 }
 
 section:hover .info {
@@ -110,7 +134,7 @@ p {
 }
 
 
-footer>span {
+main section:nth-of-type(1) footer{
     position: absolute;
     bottom: 0;
     height: 3em;
@@ -121,7 +145,24 @@ footer>span {
 
 }
 
-/* footer {
-    background-color: yellow;
+h4 {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.2em;
+    color: black;
+    line-height: 1.1em;
+    padding: 0 2em;
+
+    position: relative;
+    bottom: -4em;
+    text-align: center;
+}
+
+main section:nth-of-type(2) footer{
+    position: absolute;
+    bottom: 0;
+    height: 3em;
     width: 100%;
-} */
+    display: inline-block;
+    padding: 0 2em;
+    color: white;
+}
