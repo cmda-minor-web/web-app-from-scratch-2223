@@ -20,7 +20,6 @@
     <p>Welcome</p> <p id="welcomeMsg"></p>
     <p id="errorMsg"></p>
   <p>Your level seems to be</p> <p id="summonerLevel"></p>
-    <img src="" id="summoner-icon" alt="">
 </div>
 
 <div class="table-content">
@@ -29,28 +28,47 @@
 
 <button class="champions-mastery">Klik hier om je huidige beste champions te zien</button>
 
-<div class="card">
-    <div class="card-header">
+<!--todo i'll make a card in the next iteration-->
+<!--<div class="card">-->
+<!--    <div class="card-header">-->
 
-    </div>
-    <div class="card-content">
-        <h3 id="champion-header"></h3>
-    </div>
-</div>
+<!--    </div>-->
+<!--    <div class="card-content">-->
+<!--        <h3 id="champion-header"></h3>-->
+<!--    </div>-->
+<!--</div>-->
+
+    <table id="champion-mastery-table">
+        <tr>
+            <th>Champion</th>
+            <th>Level</th>
+            <th>Points</th>
+            <th>Chest</th>
+            <th>Icon</th>
+        </tr>
+
+        <tr>
+            <td id="champion-name"></td>
+            <td id="champion-level"></td>
+            <td id="champion-points"></td>
+            <td id="champion-icon"></td>
+            <td class="chest-achieved"></td>
+        </tr>
+    </table>
+
 
 
 <button class="champions-mastery update">Update</button>
 
-<div class="table summoner-rank">
-    <table>
-
+<div id="table-content">
+    <table id="elo-table">
         <tr>
+            <th>Icon</th>
+            <th>Summoner Name</th>
             <th>Tier</th>
-            <td>Etc</td>
-        </tr>
-        <tr>
-            <th>Rank</th>
-            <td>Gold</td>
+            <th>LP</th>
+            <th>Wins</th>
+            <th>Losses</th>
         </tr>
     </table>
 </div>
