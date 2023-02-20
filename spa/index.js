@@ -27,8 +27,6 @@ function promiseOfSomeData() {
         })
         .then((json) => {
             info = json;
-            console.log(info)
-            console.log(info.length)
             title.innerHTML = info[counter].author;
             bio.innerHTML = info[counter].bio;
             quote.innerHTML = info[counter].quote;
@@ -40,10 +38,16 @@ function promiseOfSomeData() {
 }
 
 function nextSelector() {
-    if (counter == info.length) {
+    if (counter == (info.length - 1)) {
         counter = 0;
+
+        title.innerHTML = info[counter].author;
+        bio.innerHTML = info[counter].bio;
+        quote.innerHTML = info[counter].quote;
+        id.innerHTML = info[counter].id;
     } else {
         counter++;
+        
         title.innerHTML = info[counter].author;
         bio.innerHTML = info[counter].bio;
         quote.innerHTML = info[counter].quote;
