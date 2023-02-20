@@ -1,11 +1,11 @@
 //todo isn't it smarter to convert all these html id's to components maybe this will get messy otherwise..
 //BIG TODO💀 It sure is getting messy in these functions, need to split them in different directories and export/import them
-//API-Key start
-import {getKey} from './api.js';
 
-const key = getKey();
-//API-Key end
 
+import fetchSummoner from './fetch/fetchSummoner.js';
+import fetchMasteryBySummonerId from './fetch/fetchMasteryBySummonerId.js';
+import fetchChampions from './fetch/fetchChampions.js';
+import fetchElo from './fetch/fetchElo.js';
 
 const inputField = document.getElementById("summonerName");
 const button = document.querySelector(".champions-mastery");
@@ -16,48 +16,6 @@ const iconSummoner = document.querySelector('.summoner-icon')
 
 //empty champions object that will get filled up later, so we can do something with the champions
 let champions = {};
-
-
-
-//Returns a summoner object with relevant data
-async function fetchSummoner(summonerName) {
-    //todo funny bug javascript automatically asigns the word "undefined" to the url, but undefined is a summoner name lol
-    const summonerDataResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${key}`)
-    const summoner = await summonerDataResponse.json();
-
-    console.log(summoner);
-
-    return summoner
-}
-
-async function fetchMasteryBySummonerId(summonerId) {
-    const summonerDataMasteryResponse = await fetch(`https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${summonerId}?api_key=${key}`)
-    const summonerMastery = await summonerDataMasteryResponse.json()
-    console.log(summonerMastery)
-    return summonerMastery
-}
-
-async function fetchChampions() {
-    const championDataResponse = await fetch('https://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json');
-    const championData = await championDataResponse.json();
-    console.log(championData)
-    return championData
-}
-
-async function fetchElo(summonerId) {
-    const summonerDataEloResponse = await fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${key}`)
-    const summonerElo = await summonerDataEloResponse.json()
-    console.log(summonerElo)
-    return summonerElo
-}
-
-
-
-// https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/5484.png
-
-
-//todo name changes because this is getting messy already
-
 async function displaySearch() {
     inputField.addEventListener("change", async () => {
 
@@ -131,24 +89,6 @@ async function displayData() {
             //Here we could for example say its championsdata etc.266 =
             champions[championData.data[key].key] = championData.data[key].name;
         })
-
-        //chatgpt uitleg for above vond het heel mooi namelijk ^
-
-        //This section of the code loops through each key in the championData.data object using the forEach() method, which allows us to perform a function on each item in an array or object.
-        //
-        // For each key in the object, we assign the value of championData.data[key].name to the champions object with a key of championData.data[key].key. This effectively creates a new object where the keys are the championId values (retrieved from the Riot API) and the values are the corresponding champion names.
-        //
-        // Here's a breakdown of what's happening in the loop:
-        //
-        // Object.keys(championData.data) retrieves an array of the keys (champion IDs) in the championData.data object.
-        //
-        // The forEach() method loops through each key in the array and performs the following function:
-        //
-        // For each key, championData.data[key].key retrieves the key property (champion ID) of the corresponding object in the championData.data object.
-        //
-        // championData.data[key].name retrieves the name property (champion name) of the same object.
-        //
-        // champions[championData.data[key].key] = championData.data[key].name; assigns the championData.data[key].name value to the champions object with a key of championData.data[key].key, effectively creating a new object where the keys are the championId values (retrieved from the Riot API) and the values are the corresponding champion names.
 
         console.log(champions);
         // const championData = await fetchChampions();
