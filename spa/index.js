@@ -106,21 +106,21 @@ function onRouteChanged() {
     switch (hash) {
         case '#about':
             routerView.innerHTML = `<section id="about">
-            <div class="title-box">
-                <h3>About</h3>
-                <hr />
-            </div>
-            <h4></h4>
-            <footer>
-                <span>© 2023 Creator of The Quotes Room</span>
-            </footer>
-        </section> `;
-        console.log(document.querySelector('h4'))
-        about();
+                                        <div class="title-box">
+                                            <h3>About</h3>
+                                            <hr/>
+                                        </div>
+                                        <h4></h4>
+                                        <footer>
+                                            <span>© 2023 Creator of The Quotes Room</span>
+                                        </footer>
+                                    </section>`;
+            about();
             break;
-
         case "#home":
-            routerView.innerHTML = "<h1>About page</h1>";
+            console.log("home")
+            window.location = "index.html"
+            // routerView.innerHTML = "<h1>About page</h1>";
             break;
 
         default:
