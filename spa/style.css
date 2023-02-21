@@ -81,6 +81,21 @@ section:hover .info {
     opacity: 1;
 }
 
+.info {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.1em;
+    padding: 0 2em;
+
+    position: relative;
+    bottom: -4em;
+    opacity: 0;
+    background: transparent;
+    transition: opacity 0.3s, bottom 0.3s;
+    text-align: center;
+}
+
 .title-box {
     display: inline-block;
     width: 100%;
@@ -117,24 +132,7 @@ p {
     line-height: 18px;
 }
 
-
-.info {
-    font-family: 'Droid Serif', serif;
-    font-size: 1.2em;
-    color: white;
-    line-height: 1.1em;
-    padding: 0 2em;
-
-    position: relative;
-    bottom: -4em;
-    opacity: 0;
-    background: transparent;
-    transition: opacity 0.3s, bottom 0.3s;
-    text-align: center;
-}
-
-
-main section:nth-of-type(1) footer{
+main section:nth-of-type(1) footer {
     position: absolute;
     bottom: 0;
     height: 3em;
@@ -157,7 +155,7 @@ h4 {
     text-align: center;
 }
 
-main section:nth-of-type(2) footer{
+main section:nth-of-type(2) footer {
     position: absolute;
     bottom: 0;
     height: 3em;
@@ -165,4 +163,35 @@ main section:nth-of-type(2) footer{
     display: inline-block;
     padding: 0 2em;
     color: white;
+}
+
+/* main section:nth-of-type(3) {
+
+} */
+
+.loading {
+    display: grid;
+    place-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid black;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    animation: spin 1s infinite linear;
+}
+
+.loading.display {
+   opacity: 1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

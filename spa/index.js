@@ -5,20 +5,23 @@ const id = document.querySelector("span > span")
 const aboutH = document.querySelector("h4")
 const random = document.querySelector("button:nth-of-type(1)");
 const next = document.querySelector("button:nth-of-type(2)");
+const loaderH = document.querySelector("section:nth-of-type(3) h2")
 const url = "https://opensheet.elk.sh/1p7Wnace8KpaIFnATpBcil_KyJ4P8IC8vYIUO8NCfcKc/Quotes";
 let info;
 let counter = 0;
 
+const loader = document.querySelector(".loading");
+
 window.onload = async () => {
-    promiseOfSomeData();
-    console.log("onload");
+    fetchData();
 };
-window.addEventListener
 
 random.addEventListener("click", randomSelector);
 next.addEventListener("click", nextSelector);
 
-function promiseOfSomeData() {
+function fetchData() {
+    console.log('test')
+    loading();
     fetch(url)
         .then((r) => {
             if (r.status >= 200 && r.status <= 299) {
@@ -28,6 +31,8 @@ function promiseOfSomeData() {
             }
         })
         .then((json) => {
+            hideLoading();
+            
             info = json;
             title.innerHTML = info[counter].author;
             bio.innerHTML = info[counter].bio;
@@ -71,8 +76,20 @@ function randomSelector() {
 function about() {
     console.log(info)
     for (let i = 0; i < info.length; i++) {
-        if (info[i].author == 'Vona Magdalena'){
+        if (info[i].author == 'Vona Magdalena') {
             aboutH.innerHTML = info[i].quote;
         }
     }
+}
+
+function loading() {
+    loader.classList.add("display");
+
+}
+
+function hideLoading(){
+    loader.classList.remove("display");
+    // setTimeout(() => {
+    //     loader.classList.remove("display");
+    // }, 1000);
 }
