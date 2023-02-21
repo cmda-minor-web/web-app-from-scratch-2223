@@ -2,7 +2,7 @@ const title = document.querySelector("h2");
 const bio = document.querySelector("p");
 const quote = document.querySelector("q");
 const id = document.querySelector("span > span")
-const aboutH = document.querySelector("h4")
+// const aboutH = document.querySelector("h4")
 const random = document.querySelector("button:nth-of-type(1)");
 const next = document.querySelector("button:nth-of-type(2)");
 const loaderH = document.querySelector("section:nth-of-type(3) h2")
@@ -16,11 +16,12 @@ window.onload = async () => {
     fetchData();
 };
 
+window.addEventListener("hashchange", onRouteChanged);
+
 random.addEventListener("click", randomSelector);
 next.addEventListener("click", nextSelector);
 
 function fetchData() {
-    console.log('test')
     loading();
     fetch(url)
         .then((r) => {
@@ -32,14 +33,12 @@ function fetchData() {
         })
         .then((json) => {
             hideLoading();
-            
+
             info = json;
             title.innerHTML = info[counter].author;
             bio.innerHTML = info[counter].bio;
             quote.innerHTML = info[counter].quote;
             id.innerHTML = info[counter].id;
-
-            about();
         })
         .catch((error) => {
             alert(error);
@@ -74,7 +73,8 @@ function randomSelector() {
 }
 
 function about() {
-    console.log(info)
+    const aboutH = document.querySelector("h4")
+
     for (let i = 0; i < info.length; i++) {
         if (info[i].author == 'Vona Magdalena') {
             aboutH.innerHTML = info[i].quote;
@@ -87,9 +87,44 @@ function loading() {
 
 }
 
-function hideLoading(){
+function hideLoading() {
     loader.classList.remove("display");
     // setTimeout(() => {
     //     loader.classList.remove("display");
     // }, 1000);
+}
+
+function onRouteChanged() {
+    const hash = window.location.hash;
+
+    const routerView = document.getElementById("router-view");
+
+    if (!(routerView instanceof HTMLElement)) {
+        throw new ReferenceError("No router view element available for rendering");
+    }
+
+    switch (hash) {
+        case '#about':
+            routerView.innerHTML = `<section id="about">
+            <div class="title-box">
+                <h3>About</h3>
+                <hr />
+            </div>
+            <h4></h4>
+            <footer>
+                <span>© 2023 Creator of The Quotes Room</span>
+            </footer>
+        </section> `;
+        console.log(document.querySelector('h4'))
+        about();
+            break;
+
+        case "#home":
+            routerView.innerHTML = "<h1>About page</h1>";
+            break;
+
+        default:
+            routerView.innerHTML = "<h1>404 - Page Not Found</h1>";
+            break;
+    }
 }
