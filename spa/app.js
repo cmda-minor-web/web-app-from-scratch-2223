@@ -118,11 +118,8 @@ function onRouteChanged() {
             about();
             break;
         case "#home":
-            console.log("home")
             window.location = "index.html"
-            // routerView.innerHTML = "<h1>About page</h1>";
             break;
-
         default:
             routerView.innerHTML = "<h1>404 - Page Not Found</h1>";
             break;
