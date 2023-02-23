@@ -1,18 +1,25 @@
 body {
     margin: 0;
     padding-bottom: 50px;
+    font-family: "Cambay Devanagari";
 }
 
 
-header {
+main {
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: chocolate;
+    background-color: violet;
     box-shadow: 0 -1px 5px rgb(0, 0, 0, 0.2);
     padding-top: 5px;
     border-radius: 50px;
+    /*scroll-margin-block: 100px;*/
 
 }
 
@@ -28,23 +35,36 @@ header {
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
+
+}
+
+input[type="checkbox"] {
+    display: none;
 }
 
 .search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
-.search-icon a:hover {
+.search-hidden {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background-color: cornflowerblue;
-    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer:has(input[type="checkbox"]:checked) .search-hidden {
+    display: block;
+    opacity: 1;
 }
 
 .navbar-logo {
     display: flex;
     justify-content: center;
-
 }
 
 .navbar-logo img {
@@ -88,6 +108,8 @@ header {
 }
 
 .summoner-profile-data span {
+    border-style: outset;
+    border-color: goldenrod;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -108,7 +130,7 @@ header {
 
 .ranked-solo-content, .ranked-flex-content {
     display: grid;
-    background-color: chocolate;
+    background-color: violet;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     grid-gap: 20px;
@@ -119,4 +141,69 @@ header {
     max-width: 100%;
 }
 
+.champion-options {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 37%;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid violet;
+}
+
+.single-champion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px 5px;
+    padding-left: 130px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "single-champion-info single-champion-image single-champion-image"
+    "single-champion-info single-champion-image single-champion-image"
+    ". . .";
+}
+
+.single-champion-info {
+    grid-area: single-champion-info;
+}
+
+.single-champion-image {
+    grid-area: single-champion-image;
+}
+
+.single-champion-image img {
+    width: 50%;
+}
+
+.summoner-champion-info {
+    padding: 10px;
+    background-color: mediumpurple;
+    margin-top: 10px;
+}
+
+.champion-portraits-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+    "champion-portraits champion-portraits champion-portraits"
+    ". . ."
+    ". . .";
+}
+
+.champion-portraits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+    ". . . . ."
+    ". . . . .";
+    grid-area: champion-portraits;
+}
+
+.ranked-icon  {
+ width: 100px;
+}
 

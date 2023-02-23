@@ -6,33 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styling.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>True SPA-application</title>
 </head>
 <body>
-<header>
-<nav class="navbar">
-    <div class="navbar-grid">
-        <div class="search-icon">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"> Search</i></a>
-        </div>
-        <div class="navbar-logo">
-            <img src="mario.png" alt="">
-        </div>
-        <div class="navbar-btn">
-            <a href=""><p><span>Hamborgor menu</span></p></a>
-        </div>
-    </div>
-</nav>
-</header>
 
 <main>
     <div class="summoner-header">
         <div class="summoner-profile-data">
-            <h1>Hi Summoner</h1>
+            <h1 id="welcome-message">Use the search bar to find out information about your account!</h1>
             <div class="image-container">
-                <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Kaisa.png" alt="Profile image">
-                <span class="image-text">Mario mario</span>
+                <img src="https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/1.png" class="summoner-icon" alt="Profile image" id="summoner-icon">
+                <span class="image-text" id="summoner-level">1</span>
             </div>
         </div>
 
@@ -40,25 +27,89 @@
     <hr>
     <div class="summoner-content">
         <div class="ranked-solo-content">
+
             <div class="image-container">
-                <img src="ranked-solo.png" alt="Ranked Solo">
-                <span class="image-text">Ranked Solo</span>
+                <img src="" alt="Ranked Solo" id="ranked-icon" class="ranked-icon">
+                <span class="image-text" id="summoner-tier">Unranked</span>
+                <span class="image-text" id="summoner-lp"></span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod dolor ac mi convallis blandit.</p>
+            <div class="text-container">
+                <p id="summoner-result">Wins: 0 Losses:0</p>
+                <p id="summoner-result-sum">Winrate 0% </p>
+            </div>
+
         </div>
         <div class="ranked-flex-content">
             <div class="image-container">
                 <img src="ranked-flex.png" alt="Ranked Flex">
-                <span class="image-text">Ranked Flex</span>
+                <span class="image-text"></span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod dolor ac mi convallis blandit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod dolor ac mi convallis
+                blandit.</p>
         </div>
     </div>
 
     <div class="summoner-champion-info">
-<!--        //Ik wil hier een character display van mijn top 5 champions, de default zal altijd de beste champion zijn-->
+        <!--        //Ik wil hier een character display van mijn top 5 champions, de default zal altijd de beste champion zijn-->
+        <div class="champion-options">
+            <!--            Dit mag aan de linker kant -->
+<!--            Dit zijn 2 verschillende states die moeten worden opgeroepen met javascript.-->
+<!--            Knop wiped alles wat er staat maar de layout blijft hetzelfde, en generate wat gegenerate moet worden-->
+<!--            Top 5 champs van de api-->
+<!--            Champion rotation van de api-->
+            <button id="my-best-champions">Top 5 champs</button>
+            <button>Champion rotation</button>
+        </div>
+        <div class="single-champion-container">
+            <div class="single-champion-info">
+                <h1>Name: </h1>
+                <p>Title: </p>
+                <div class="single-champion-bio">
+                    <p>
+                       Bio:
+                    </p>
+                </div>
+            </div>
+            <div class="single-champion-image">
+                <img src="mario.png" alt="">
+            </div>
+        </div>
+        <div class="champion-portraits-container">
+            <div class="champion-portraits">
+
+                <div class="image-container">
+                    <img src="" alt="champion-icon" id="champion-icon">
+                    <span id="summonerName">Name</span>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </main>
 
+
+<!--footer start-->
+<footer>
+    <nav class="navbar">
+        <div class="navbar-grid">
+            <div class="search-icon">
+
+                <label for="show-search"><i class="fa-solid fa-magnifying-glass" class="search-icon"> Search</i></label>
+                <input type="checkbox" name="show-search"  id="show-search" class="">
+                <label for="search-summoner"></label>
+                <input type="text" name="search-hidden" placeholder="Search..." class="search-hidden" id="search-summoner">
+            </div>
+            <div class="navbar-logo">
+                <img src="mario.png" alt="">
+            </div>
+            <div class="navbar-btn">
+                <a href=""><p><span>Hamborgor menu</span></p></a>
+            </div>
+        </div>
+    </nav>
+</footer>
+<!--footer end-->
+<script type="module"  src="app.js" ></script>
 </body>
 </html>

@@ -81,6 +81,7 @@ async function displayData() {
         const summonerMastery = await fetchMasteryBySummonerId(summonerId);
         const championData = await fetchChampions();
 
+
         console.log(championData);
 
         //Thanks maijla? voor het verhelderen van mijn eigen code
@@ -88,6 +89,7 @@ async function displayData() {
         Object.keys(championData.data).forEach(key => {
             //Here we could for example say its championsdata etc.266 =
             champions[championData.data[key].key] = championData.data[key].name;
+            // console.log(championData.data[key].image.full)
         })
 
         console.log(champions);
@@ -108,7 +110,6 @@ async function displayData() {
             const chestGranted = summonerMastery[i].chestGranted;
             const championName = champions[championId];
 
-
             // Create a new row element for each champion
             const newRow = table.insertRow();
 
@@ -128,7 +129,6 @@ async function displayData() {
             //todo regex for & and .'s ex: Dr. Mundo, Nunu & Willump
             const filteredName = championName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
             champImg.src = `https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${filteredName}.png`;
-
 
             // Set the text content of the HTML elements to the mastery data
             nameCell.textContent = championName;
