@@ -93,12 +93,11 @@ async function displayData() {
         console.log(champions);
         // const championData = await fetchChampions();
         //Here I clear my existing html
-        championInfo.innerHTML = "";
-        chestInfo.innerHTML = "";
+        // championInfo.innerHTML = "";
+        // chestInfo.innerHTML = "";
 
 
         const table = document.getElementById("champion-mastery-table");
-
 
         //Start the loop so, we loop through our top 10 champions
         for (let i = 0; i < 10; i++) {
@@ -106,6 +105,7 @@ async function displayData() {
             const championId = summonerMastery[i].championId;
             const championLevel = summonerMastery[i].championLevel;
             const championPoints = summonerMastery[i].championPoints;
+            const chestGranted = summonerMastery[i].chestGranted;
             const championName = champions[championId];
 
 
@@ -134,7 +134,7 @@ async function displayData() {
             nameCell.textContent = championName;
             levelCell.textContent = `Champion Level: ${championLevel}`;
             pointsCell.textContent = `Champion Points: ${championPoints}`;
-            chestCell.textContent = `FALSE IDK!`;
+            chestCell.textContent = `${chestGranted}`;
             iconCell.appendChild(champImg)
 
         }
