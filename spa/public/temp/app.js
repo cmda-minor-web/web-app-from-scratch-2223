@@ -1,3 +1,4 @@
+//todo ik denk dat ik de filter const die ik zo vaak oproep moet veranderen naar een filter function?
 import fetchSummoner from './fetch/fetchSummoner.js';
 import fetchMasteryBySummonerId from "./fetch/fetchMasteryBySummonerId.js";
 import fetchChampions from "./fetch/fetchChampions.js";
@@ -69,6 +70,8 @@ async function displayData() {
         const championData = await fetchChampions();
 
 
+
+
         console.log(championData);
 
         //Thanks maijla? voor het verhelderen van mijn eigen code
@@ -79,29 +82,78 @@ async function displayData() {
             // console.log(championData.data[key].image.full)
         })
 
+
+// Listen for the hashchange event
+        window.addEventListener('hashchange', changeChampion)
+
+        function changeChampion(event) {
+            // get the selected champion ID from the hash
+            const championSelector = window.location.hash.slice(1);
+
+            //OBJECT.VALUES en kEYS zijn ZO GOATED WHAT THE FUCKKKKKKKKKKK DUDE
+            const selectedChampion = Object.values(championData.data).find(champion => {
+                return champion.id === championSelector;
+            });
+
+            // If a champion was found, display its data in the champion-clicked div
+            if (selectedChampion) {
+                document.getElementById('champion-click-name').textContent = selectedChampion.name;
+                document.getElementById('champion-click-title').textContent = selectedChampion.title;
+                const filteredName = selectedChampion.id.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
+                document.getElementById('champion-click-image').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${filteredName}_0.jpg`;
+            }
+        }
+
+// loop through  champion portraits and add click event listeners to their links
+        const championLinks = document.querySelectorAll('.champion-portrait-link');
+        championLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                window.location.hash = link.dataset.championId;
+            });
+        });
+
+
         console.log(champions);
+        const championPortraits = document.querySelector('.champion-portraits');
+        championPortraits.innerHTML = '';
 
-        //Start the loop so, we loop through our top 10 champions
-        for (let i = 0; i < 10; i++) {
+        //Start the loop so, we loop through our top 5 champions
+        for (let i = 0; i < 5; i++) {
 
+            // const championLevel = summonerMastery[i].championLevel;
+            // const championPoints = summonerMastery[i].championPoints;
+            // const chestGranted = summonerMastery[i].chestGranted;
             const championId = summonerMastery[i].championId;
-            const championLevel = summonerMastery[i].championLevel;
-            const championPoints = summonerMastery[i].championPoints;
-            const chestGranted = summonerMastery[i].chestGranted;
             const championName = champions[championId];
 
-            //todo fetch champions to display names with key and value in seperate function :O this is ugli
+            // Create a new div element for the champion portrait
+            const championPortrait = document.createElement('div');
 
-            const champImg = document.getElementById('champion-icon');
-            //Ik ga eerlijk zijn eerste gedeelte van de regex is mine maar daarna copy pasta..
-            // ..enige namen die dit veroorzaakte waren Kai'sa Bel'Veth Kha'Zix
-            //Coole hack btw  [^\w\s] is zelfde als [^a-zA-Z0-9\s]
+            // Create an image element for the champion icon
+            const champImg = document.createElement('img');
+
+            const championNameNode = document.createTextNode(championName);
+
+            const championLink = document.createElement('a');
+            const filteredName2 = champions[championId].replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
+            championLink.href = `#${filteredName2}`
+
+            //Coole hack btw  [^\w\s] is zelfde als [^a-zA-Z0-9\s] / Regex voor het replacen van de ' en wat whitespace en special caharcaters
             //todo regex for & and .'s ex: Dr. Mundo, Nunu & Willump
             const filteredName = championName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
             champImg.src = `https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${filteredName}.png`;
+
+
+
+            championPortrait.appendChild(champImg);
+            championPortrait.appendChild(championNameNode);
+            championPortraits.appendChild(championPortrait);
+            championLink.appendChild(championPortrait);
+            championPortraits.appendChild(championLink);
 
         }
     });
 }
 
-displaySearch();
+displayData();

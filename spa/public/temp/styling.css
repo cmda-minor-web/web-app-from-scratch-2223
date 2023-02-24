@@ -173,7 +173,7 @@ footer:has(input[type="checkbox"]:checked) .search-hidden {
 }
 
 .single-champion-image img {
-    width: 50%;
+    width: 80%;
 }
 
 .summoner-champion-info {
