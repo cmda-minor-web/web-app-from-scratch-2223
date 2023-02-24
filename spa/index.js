@@ -12,9 +12,9 @@ let counter = 0;
 
 const loader = document.querySelector(".loading");
 
-window.onload = async () => {
+//window.onload = async () => {
     fetchData();
-};
+//};
 
 window.addEventListener("hashchange", onRouteChanged);
 
@@ -36,6 +36,7 @@ function fetchData() {
             hideLoading();
 
             info = json;
+            // make a function
             title.innerHTML = info[counter].author;
             bio.innerHTML = info[counter].bio;
             quote.innerHTML = info[counter].quote;
@@ -50,6 +51,7 @@ function nextSelector() {
     if (counter == (info.length - 1)) {
         counter = 0;
 
+        // make function
         title.innerHTML = info[counter].author;
         bio.innerHTML = info[counter].bio;
         quote.innerHTML = info[counter].quote;
@@ -57,6 +59,7 @@ function nextSelector() {
     } else {
         counter++;
 
+        // make function
         title.innerHTML = info[counter].author;
         bio.innerHTML = info[counter].bio;
         quote.innerHTML = info[counter].quote;
@@ -67,6 +70,7 @@ function nextSelector() {
 function randomSelector() {
     let counterRandom = Math.floor(Math.random() * info.length);
 
+    // make function
     title.innerHTML = info[counterRandom].author;
     bio.innerHTML = info[counterRandom].bio;
     quote.innerHTML = info[counterRandom].quote;
@@ -82,7 +86,7 @@ function about() {
         }
     }
 }
-
+// make loading and hideLoading one function and use state
 //done
 function loading() {
     loader.classList.add("display");
@@ -108,6 +112,7 @@ function onRouteChanged() {
 
     switch (hash) {
         case '#about':
+            // make a function
             routerView.innerHTML = `<section id="about">
                                         <div class="title-box">
                                             <h3>About</h3>
@@ -121,9 +126,11 @@ function onRouteChanged() {
             about();
             break;
         case "#home":
+            // make function
             window.location = "index.html"
             break;
         default:
+            //make function
             routerView.innerHTML = "<h1>404 - Page Not Found</h1>";
             break;
     }
