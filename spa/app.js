@@ -1,4 +1,4 @@
-import { fetchData, info} from "./modules/api.js";
+import { fetchData } from "./modules/api.js";
 import { onRouteChanged } from "./modules/router.js";
 import { randomSelector, nextSelector } from "./modules/ui.js";
 
