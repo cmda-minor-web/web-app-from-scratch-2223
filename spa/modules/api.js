@@ -1,4 +1,11 @@
-import {loading, hideLoading} from "./modules/render.js"
+import {loading, hideLoading} from "./render.js";
+
+const title = document.querySelector("h2");
+const bio = document.querySelector("p");
+const quote = document.querySelector("q");
+const id = document.querySelector("span > span");
+const url = "https://opensheet.elk.sh/1p7Wnace8KpaIFnATpBcil_KyJ4P8IC8vYIUO8NCfcKc/Quotes";
+let counter = 0;
 
 export let info;
 

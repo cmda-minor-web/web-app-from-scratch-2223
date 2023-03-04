@@ -1,3 +1,15 @@
+import { info } from "./api.js";
+
+function about() {
+    const aboutH = document.querySelector("h4")
+
+    for (let i = 0; i < info.length; i++) {
+        if (info[i].author == 'Vona Magdalena') {
+            aboutH.innerHTML = info[i].quote;
+        }
+    }
+}
+
 export function onRouteChanged() {
     const hash = window.location.hash;
 
