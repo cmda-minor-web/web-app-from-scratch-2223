@@ -1,5 +1,6 @@
 import { loading, hideLoading } from "./render.js";
 import { setData } from "./render.js";
+import { errorHandler } from "./error.js";
 
 const url = "https://opensheet.elk.sh/1p7Wnace8KpaIFnATpBcil_KyJ4P8IC8vYIUO8NCfcKc/Quotes";
 let counter = 0;
@@ -24,6 +25,6 @@ export function fetchData(){
             setData(counter);
         })
         .catch((error) => {
-            alert(error);
+            errorHandler();
         });
 }

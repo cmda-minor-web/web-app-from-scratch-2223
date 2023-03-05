@@ -8,8 +8,19 @@
 
 The place to be for all the quotes you need!!
 
-## Information
+## Overview
 
 Follow the process of this application, that started from scrath in the wiki. Here you will get everything step by step.
 
-https://github.com/RainbowJM/web-app-from-scratch-2223.wiki.git
+## Highlights
+
+
+## New features Coming Soon
+...
+
+## More Detailed Inside
+* [Wiki]https://github.com/RainbowJM/web-app-from-scratch-2223.wiki.git
+
+
+- - -
+© 2023 The Quotes Room, Jevona Magdalena. All Rights Reserved.

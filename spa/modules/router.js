@@ -34,7 +34,6 @@ function notFound() {
 export function onRouteChanged() {
     const hash = window.location.hash;
 
-
     if (!(routerView instanceof HTMLElement)) {
         throw new ReferenceError("No router view element available for rendering");
     }

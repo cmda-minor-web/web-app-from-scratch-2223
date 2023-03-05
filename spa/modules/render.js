@@ -5,6 +5,7 @@ const title = document.querySelector("h2");
 const bio = document.querySelector("p");
 const quote = document.querySelector("q");
 const id = document.querySelector("span > span");
+export const author = [];
 
 export function loading() {
     loader.classList.add("display");
@@ -12,9 +13,6 @@ export function loading() {
 
 export function hideLoading() {
     loader.classList.remove("display");
-    // setTimeout(() => {
-    //     loader.classList.remove("display");
-    // }, 1000);
 }
 
 export function setData(index) {
@@ -22,4 +20,12 @@ export function setData(index) {
     bio.innerHTML = info[index].bio;
     quote.innerHTML = info[index].quote;
     id.innerHTML = info[index].id;
+}
+
+export function arrayInsert() {
+    for (let i = 0; i < info.length; i++) {
+        author.push(info[i].author);
+    }
+
+    console.log(author);
 }
