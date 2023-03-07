@@ -1,4 +1,4 @@
-    let api_key = "RGAPI-";
+    let api_key = "";
 
 export function getKey() {
     return api_key;
