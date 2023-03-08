@@ -9,6 +9,7 @@ export const getQueueData = (summonerElo, queueType) => {
             lp: '0 LP',
             results: '0 W 0 L',
             winRate: '0%',
+            iconSrc: 'https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/unranked.png'
         };
     }
 

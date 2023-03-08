@@ -3,7 +3,7 @@ import fetchSummoner from './fetch/fetchSummoner.js';
 import fetchMasteryBySummonerId from "./fetch/fetchMasteryBySummonerId.js";
 import fetchChampions from "./fetch/fetchChampions.js";
 import fetchElo from './fetch/fetchElo.js';
-
+import {getQueueData} from './helpers/getQueueData.js';
 
 
 const inputField = document.getElementById('search-summoner')
@@ -20,6 +20,8 @@ async function displaySearch() {
         const summonerId = summoner.id
         const summonerElo = await fetchElo(summonerId)
 
+        const soloQueueData = getQueueData(summonerElo, 'RANKED_SOLO_5x5');
+        const flexQueueData = getQueueData(summonerElo, 'RANKED_FLEX_SR');
 
 
         //todo for now i don't have to loop through the entire array i can simply say i want the first because there are no other summoners
@@ -49,47 +51,17 @@ async function displaySearch() {
         const summonerIconMini = document.getElementById('summoner-icon');
         summonerIconMini.src = `https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/${summoner.profileIconId}.png`;
 
+        summonerTierIconSolo.src = soloQueueData.iconSrc;
+        summonerTierSolo.textContent = soloQueueData.tier;
+        summonerLPSolo.textContent = soloQueueData.lp;
+        summonerResultsSolo.textContent = soloQueueData.results;
+        summonerResultSumSolo.textContent = soloQueueData.winRate;
 
-        if (!summonerElo[0] || !summonerElo[1]) {
-
-            summonerTierSolo.textContent = 'Unranked'
-            summonerLPSolo.textContent = '0 LP'
-            summonerResultsSolo.textContent = '0 W 0 L'
-            summonerResultSumSolo.textContent = '0% WR'
-
-            summonerTierFlex.textContent = 'Unranked';
-            summonerLPFlex.textContent = '0 LP';
-            summonerResultsFlex.textContent = '0 W 0 L'
-            summonerResultSumFlex.textContent = '0% WR'
-
-        } else {
-            //todo ik denk dat ik de filter const die ik zo vaak oproep moet veranderen naar een filter function?
-
-            const filteredSoloElo = summonerElo[0].tier.replace(/\d+/g, "").toLowerCase();
-            summonerTierIconSolo.src = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/${filteredSoloElo}.png`
-
-            const filteredFlexElo = summonerElo[1].tier.replace(/\d+/g, "").toLowerCase();
-            summonerTierIconFlex.src = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/${filteredFlexElo}.png`
-
-            const wins = summonerElo[0].wins;
-            const losses = summonerElo[0].losses;
-            const totalGames = wins + losses;
-            const winRate = (wins / totalGames) * 100;
-
-
-            summonerTierSolo.textContent = summonerElo[0].tier + ' ' + summonerElo[0].rank;
-            summonerLPSolo.textContent = summonerElo[0].leaguePoints + ' LP';
-            summonerResultsSolo.textContent = `${summonerElo[0].wins} W ${summonerElo[0].losses} L`;
-            summonerResultSumSolo.textContent = `${winRate.toFixed(2)}% wr`;
-
-            summonerTierFlex.textContent = summonerElo[1].tier + ' ' + summonerElo[1].rank;
-            summonerLPFlex.textContent = summonerElo[1].leaguePoints + ' LP';
-            summonerResultsFlex.textContent = `${summonerElo[1].wins} W ${summonerElo[1].losses} L`;
-            summonerResultSumFlex.textContent = `${winRate.toFixed(2)}% wr`;
-
-
-        }
-
+        summonerTierIconFlex.src = flexQueueData.iconSrc;
+        summonerTierFlex.textContent = flexQueueData.tier;
+        summonerLPFlex.textContent = flexQueueData.lp;
+        summonerResultsFlex.textContent = flexQueueData.results;
+        summonerResultSumFlex.textContent = flexQueueData.winRate;
 
     });
 }

@@ -12,8 +12,6 @@ const fetchElo = async (summonerId) => {
     });
 
 
-
-
     switch (true) {
         case filteredElo.some(elo => elo.queueType === 'RANKED_SOLO_5x5') && filteredElo.some(elo => elo.queueType === 'RANKED_FLEX_SR'):
             // Both queue types are present in filteredElo, return the array
@@ -33,7 +31,6 @@ const fetchElo = async (summonerId) => {
             // Both queue types are empty in filteredElo
             return { error: 'Unranked' };
     }
-
 
 };
 
