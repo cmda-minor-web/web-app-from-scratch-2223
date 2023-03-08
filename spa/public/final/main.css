@@ -4,12 +4,10 @@
     box-sizing: border-box;
     border: none;
 }
-
 .container {
     max-width: 100%;
     background-color: #413f3f;
 }
-
 .header-content {
     background-color: cornflowerblue;
     display: flex;
@@ -19,26 +17,22 @@
     padding: 0 3rem;
     border: 1px solid crimson;
 }
-
 .header-content-logo {
     width: 27rem;
     height: 3rem;
     border: 1px solid crimson;
     margin-right: 1rem;
 }
-
 .header-content-logo img {
     width: 100%;
     height: 100%;
 }
-
 .header-content-nav {
     width: 10rem;
     height: 2rem;
     border: 1px solid crimson;
     white-space: nowrap;
 }
-
 .header-content-nav ul {
     display: flex;
     justify-content: center;
@@ -49,20 +43,16 @@
     margin: 0;
     padding: 0;
 }
-
 .header-content-nav ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
-
 .header-content-nav ul li a {
     display: block;
     padding: 14px 16px;
     text-decoration: none;
 }
-
-
 .page-content {
     display: flex;
     flex-direction: column;
@@ -76,12 +66,10 @@
     background-color: white;
     border: 1px solid rebeccapurple;
 }
-
 .page-content-header {
     margin: 0 auto;
     text-align: center;
 }
-
 .page-content-header h1 {
     width: 68.5rem;
     height: 11.6rem;
@@ -91,12 +79,10 @@
     font-size: 10rem;
     color: cornflowerblue;
 }
-
 .page-content-search {
     margin: 3rem auto 0;
     text-align: center;
 }
-
 .page-content-search input[type="search"] {
     width: 76.8rem;
     height: 7.5rem;
@@ -107,14 +93,12 @@
     color: red;
     font-size: 2rem;
 }
-
 .page-content-search input::placeholder {
     color: #999;
     font-style: italic;
     font-size: 1.4rem;
     font-weight: normal;
 }
-
 .page-content-quote {
     display: flex;
     background-color: cornflowerblue;
@@ -125,7 +109,6 @@
     width: 100%;
     padding: 25px 25px;
 }
-
 .page-content-wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -133,15 +116,12 @@
     overflow: visible;
     width: 114rem;
 }
-
 .page-content-summoner {
     background-color: white;
     position: relative;
     overflow: visible;
     border: 1px solid dodgerblue;
-
 }
-
 .summoner-header {
     margin-left: 35px;
     display: flex;
@@ -149,7 +129,6 @@
     height: 142px;
     grid-column: 1 / -1;
 }
-
 .summoner-header-image {
     display: flex;
     align-items: center;
@@ -159,12 +138,10 @@
     height: 95px;
     margin-right: 20px;
 }
-
 .summoner-header-image img {
     max-width: 100%;
     height: auto;
 }
-
 .summoner-header-image span {
     text-align: center;
     border-style: outset;
@@ -172,17 +149,14 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-
 .summoner-header-info {
     display: flex;
     flex-direction: column;
 }
-
 .summoner-header-name {
     font-size: 36px;
     font-weight: bold;
 }
-
 .summoner-header-update button {
     background-color: deepskyblue;
     color: #fff;
@@ -195,19 +169,15 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .summoner-header-update button:hover {
     background-color: #055a79;
 }
-
-
 .summoner-ranked-wrapper {
     background-color: chocolate;
     margin-top: 32px;
     margin-left: 35px;
     margin-right: 45px;
 }
-
 .summoner-ranked-container {
     display: grid;
     grid-template-columns: 312px 2fr;
@@ -215,9 +185,7 @@
     grid-column-gap: 10px;
     grid-gap: 12px;
 }
-
 /*start test section ranked card 1*/
-
 .summoner-ranked-solo {
     display: flex;
     flex-direction: column;
@@ -225,18 +193,15 @@
     border-radius: 3px;
     border: 1px solid darkgoldenrod;
 }
-
 .ranked-queue-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .ranked-content-header {
     display: flex;
     justify-content: space-between;
 }
-
 .title {
     display: flex;
     align-items: center;
@@ -244,7 +209,6 @@
     font-weight: 700;
     color: coral;
 }
-
 .blue-divider {
     height: 18px;
     width: 2px;
@@ -252,13 +216,11 @@
     border-radius: 2px;
     margin-right: 12px;
 }
-
 .queue-type {
     font-weight: 700;
     color: #fff;
     font-size: 14px;
 }
-
 .summoner-ranked-sub-content {
     display: flex;
     justify-content: flex-start;
@@ -269,26 +231,22 @@
     color: cornsilk;
     margin-top: 16px;
 }
-
 .summoner-rank-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .summoner-rank-image {
     flex: 0 0 32px;
     width: 54px;
     margin-right: 12px;
     margin-left: 2px;
 }
-
 .text-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 .ranked-text {
     display: flex;
     justify-items: flex-start;
@@ -296,14 +254,12 @@
     font-size: 12px;
     font-weight: 500;
 }
-
 .ranked-title {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 2px;
     color: #fff;
 }
-
 .ranked-stats {
     display: flex;
     flex-direction: column;
@@ -311,13 +267,10 @@
     justify-items: center;
     font-size: 12px;
 }
-
 .total-games {
     margin-left: 6px;
 }
-
 /*end test section ranked card 1*/
-
 .summoner-ranked-flex {
     display: flex;
     flex-direction: column;
@@ -325,15 +278,12 @@
     border-radius: 3px;
     border: 1px solid greenyellow;
 }
-
 .summoner-ranked-history-stats {
     border: 1px solid mediumpurple;
 }
-
 .summoner-champion-mini-stats {
     border: 1px solid cyan;
 }
-
 .display-sidebar {
     position: absolute;
     z-index: 9;
@@ -344,7 +294,6 @@
     box-sizing: border-box;
     padding-top: 187px;
 }
-
 .display-option {
     width: 100%;
     height: 54px;
@@ -361,17 +310,15 @@
     user-select: none;
     list-style: none;
 }
-
 ul.display-sidebar li.display-option:before {
-    content: "\25C6"; /* Unicode voor black diamond blijkbaar */
+    content: "\25C6";
+    /* Unicode voor black diamond blijkbaar */
     font-size: 20px;
     margin-right: 10px;
 }
-
 ul.display-sidebar li.display-option:hover {
     color: #000;
 }
-
 .display-option a {
     display: inline-block;
     width: 75%;
@@ -379,34 +326,27 @@ ul.display-sidebar li.display-option:hover {
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-
 }
-
 .page-content-champions {
     position: relative;
     overflow: visible;
     border: 1px solid greenyellow;
     background-color: rgba(221, 234, 193, 0.82);
 }
-
 .champion-content {
     margin-left: 370px;
 }
-
 .champion-background {
     background: url(spirit-blossom-aphelios-skin-lol-splash-art-hd-wallpaper-uhdpaper.com-655@1@i.jpg) no-repeat;
     user-select: none;
     background-size: cover;
     min-height: 850px;
     position: relative;
-
 }
-
 .champion-content-wrapper {
     max-width: 800px;
     position: relative;
 }
-
 .content-wrap {
     margin-top: 10px;
     position: absolute;
@@ -416,73 +356,59 @@ ul.display-sidebar li.display-option:hover {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     top: -50rem;
-
 }
-
 .title-wrap {
     text-align: center;
 }
-
 .title {
     font-size: 36px;
     font-weight: bold;
     margin: 0 0 10px 0;
 }
-
 .subtitle {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
     color: #888;
 }
-
 .image-wrap {
     text-align: center;
     margin: 20px 0;
 }
-
 .info-wrap {
     margin-bottom: 20px;
 }
-
 .info-title {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 10px 0;
 }
-
 .info-list {
     color: #fff;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .info-item {
     margin-bottom: 10px;
 }
-
 .info-label {
     font-weight: bold;
     margin-right: 10px;
 }
-
 .info-value {
     color: #888;
 }
-
 .desc-wrap {
     margin-bottom: 20px;
 }
-
 .desc-title {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
     margin: 0 0 10px 0;
 }
-
 .desc-text {
     display: flex;
     width: 100%;
@@ -497,16 +423,16 @@ ul.display-sidebar li.display-option:hover {
     margin-top: 17px;
     line-height: 26px;
 }
-
 .champion-slider-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 9;
     left: 0;
     bottom: 0;
     padding-top: 22px;
-    width: 100%;
+    width: 90.8rem;
     height: 190px;
     background: rgba(204, 204, 204, 0.2);
     -webkit-user-select: none;
@@ -514,13 +440,11 @@ ul.display-sidebar li.display-option:hover {
     -ms-user-select: none;
     user-select: none;
 }
-
 .champion-slider {
     margin: 0;
     width: 830px;
     height: 100%;
 }
-
 .champion-slider-style {
     width: 100%;
     height: 170px;
@@ -531,11 +455,28 @@ ul.display-sidebar li.display-option:hover {
 /*kan beter gebarentaal leren inplaats van css i cri*/
 .single-champion-slider {
     text-decoration: none;
-    width: 110px;
     height: 150px;
-    font-size: 0;
     cursor: pointer;
+    background: transparent url(test.png) no-repeat 0 0;
 }
-
-
-
+.single-champion-slider img {
+    display: block;
+    margin: 2px auto 0;
+    width: 106px;
+    height: 106px;
+    padding: 6px;
+}
+.single-champion-slider p {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+    text-align: center;
+}
+.champion-slider-style li {
+    display: inline-block;
+}

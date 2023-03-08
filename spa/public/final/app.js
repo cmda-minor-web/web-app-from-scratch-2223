@@ -1,9 +1,9 @@
-//todo ik denk dat ik de filter const die ik zo vaak oproep moet veranderen naar een filter function?
 //todo ~validation
 import fetchSummoner from './fetch/fetchSummoner.js';
 import fetchMasteryBySummonerId from "./fetch/fetchMasteryBySummonerId.js";
 import fetchChampions from "./fetch/fetchChampions.js";
 import fetchElo from './fetch/fetchElo.js';
+
 
 
 const inputField = document.getElementById('search-summoner')
@@ -21,47 +21,80 @@ async function displaySearch() {
         const summonerElo = await fetchElo(summonerId)
 
 
-        //todo this does not work yet. the error as we always return a string instead of "undefined" (undefined is a summoner tho)
+
         //todo for now i don't have to loop through the entire array i can simply say i want the first because there are no other summoners
 
-        // select the <p> element within the "welcome-header" <div>
-        const summonerName = document.getElementById("welcome-message");
+        const summonerName = document.getElementById("summoner-name");
         const summonerLevel = document.getElementById("summoner-level");
 
-        const summonerTier = document.getElementById('summoner-tier')
-        const summonerResults = document.getElementById('summoner-result')
-        const summonerResultSum = document.getElementById('summoner-result-sum')
-        const summonerLP = document.getElementById('summoner-lp')
+        const summonerTierSolo = document.getElementById('summoner-tier-solo')
+        const summonerResultsSolo = document.getElementById('summoner-result-solo')
+        const summonerResultSumSolo = document.getElementById('summoner-result-sum-solo')
+        const summonerLPSolo = document.getElementById('summoner-lp-solo')
+        const summonerTierIconSolo = document.getElementById('ranked-icon-solo')
+
+
+        const summonerTierFlex = document.getElementById('summoner-tier-flex')
+        const summonerResultsFlex = document.getElementById('summoner-result-flex')
+        const summonerResultSumFlex = document.getElementById('summoner-result-sum-flex')
+        const summonerLPFlex = document.getElementById('summoner-lp-flex')
+        const summonerTierIconFlex = document.getElementById('ranked-icon-flex')
 
 
         // set the text content of the <p> element to the summoner's name and level
-        summonerName.textContent = `Welcome ${summoner.name} to my application`;
+        summonerName.textContent = summoner.name;
         summonerLevel.textContent = summoner.summonerLevel;
 
 
         const summonerIconMini = document.getElementById('summoner-icon');
         summonerIconMini.src = `https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/${summoner.profileIconId}.png`;
 
-        const summonerTierIcon = document.getElementById('ranked-icon')
-        const filteredElo = summonerElo[0].tier.replace(/\d+/g, "").toLowerCase();
-        summonerTierIcon.src = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/${filteredElo}.png`
+
+        if (!summonerElo[0] || !summonerElo[1]) {
+
+            summonerTierSolo.textContent = 'Unranked'
+            summonerLPSolo.textContent = '0 LP'
+            summonerResultsSolo.textContent = '0 W 0 L'
+            summonerResultSumSolo.textContent = '0% WR'
+
+            summonerTierFlex.textContent = 'Unranked';
+            summonerLPFlex.textContent = '0 LP';
+            summonerResultsFlex.textContent = '0 W 0 L'
+            summonerResultSumFlex.textContent = '0% WR'
+
+        } else {
+            //todo ik denk dat ik de filter const die ik zo vaak oproep moet veranderen naar een filter function?
+
+            const filteredSoloElo = summonerElo[0].tier.replace(/\d+/g, "").toLowerCase();
+            summonerTierIconSolo.src = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/${filteredSoloElo}.png`
+
+            const filteredFlexElo = summonerElo[1].tier.replace(/\d+/g, "").toLowerCase();
+            summonerTierIconFlex.src = `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/${filteredFlexElo}.png`
+
+            const wins = summonerElo[0].wins;
+            const losses = summonerElo[0].losses;
+            const totalGames = wins + losses;
+            const winRate = (wins / totalGames) * 100;
 
 
-        const wins = summonerElo[0].wins;
-        const losses = summonerElo[0].losses;
-        const totalGames = wins + losses;
-        const winRate = (wins / totalGames) * 100;
+            summonerTierSolo.textContent = summonerElo[0].tier + ' ' + summonerElo[0].rank;
+            summonerLPSolo.textContent = summonerElo[0].leaguePoints + ' LP';
+            summonerResultsSolo.textContent = `${summonerElo[0].wins} W ${summonerElo[0].losses} L`;
+            summonerResultSumSolo.textContent = `${winRate.toFixed(2)}% wr`;
+
+            summonerTierFlex.textContent = summonerElo[1].tier + ' ' + summonerElo[1].rank;
+            summonerLPFlex.textContent = summonerElo[1].leaguePoints + ' LP';
+            summonerResultsFlex.textContent = `${summonerElo[1].wins} W ${summonerElo[1].losses} L`;
+            summonerResultSumFlex.textContent = `${winRate.toFixed(2)}% wr`;
 
 
-        summonerTier.textContent = summonerElo[0].tier + ' ' + summonerElo[0].rank;
-        summonerLP.textContent = summonerElo[0].leaguePoints + ' LP';
-        summonerResults.textContent = `Wins: ${summonerElo[0].wins} Losses: ${summonerElo[0].losses}`;
-        summonerResultSum.textContent = `Winrate: ${winRate.toFixed(2)}%`;
+        }
+
+
     });
 }
 
 async function displayData() {
-    //todo This could be mega cleaner instead of dumping all the html here I think
     await displaySearch()
     showChampionsButton.addEventListener('click', async () => {
         const summonerName = inputField.value;

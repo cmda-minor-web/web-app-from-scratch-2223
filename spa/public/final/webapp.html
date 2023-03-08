@@ -30,7 +30,7 @@
             </div>
             <div class="page-content-search">
                 <label>
-                    <input type="search" placeholder="Search for your summoner">
+                    <input type="search" id="search-summoner" placeholder="Search for your summoner">
                 </label>
             </div>
             <div class="section-ranked">
@@ -45,12 +45,12 @@
             <div class="page-content-summoner">
                 <div class="summoner-header">
                     <div class="summoner-header-image">
-                        <span>330</span>
-                        <img src="https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/1.png" alt="header">
+                        <span id="summoner-level">330</span>
+                        <img src="https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/1.png" alt="header" id="summoner-icon">
                     </div>
                     <div class="summoner-header-info">
                         <div class="summoner-header-name">
-                            <p>Safoeman</p>
+                            <p id="summoner-name">Safoeman</p>
                         </div>
                         <div class="summoner-header-update">
                             <button>Update</button>
@@ -76,17 +76,17 @@
                             <div class="summoner-ranked-sub-content">
                                 <div class="summoner-rank-image-container">
                                     <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/platinum.png"
-                                         class="summoner-rank-image" alt="">
+                                         class="summoner-rank-image" id="ranked-icon-solo" alt="">
                                 </div>
 
                                 <div class="text-container">
                                     <div class="ranked-text">
-                                        <span class="ranked-title">Platinum 4</span>
-                                        <span class="">0 LP</span>
+                                        <span class="ranked-title" id="summoner-tier-solo">Platinum 4</span>
+                                        <span class="" id="summoner-lp-solo">0 LP</span>
                                     </div>
                                     <div class="ranked-stats">
-                                        <span class="total-games">43 W 52 L</span>
-                                        <span>43% wr</span>
+                                        <span class="total-games" id="summoner-result-solo">43 W 52 L</span>
+                                        <span id="summoner-result-sum-solo">43% wr</span>
                                     </div>
                                 </div>
 
@@ -94,6 +94,7 @@
 
                         </div>
                         <div class="summoner-champion-mini-stats">
+                            api call maken naar de match time line als ik er aan toe kom
 
 
                         </div>
@@ -104,7 +105,7 @@
                                 <div class="ranked-content-header">
                                     <div class="title">
                                         <div class="blue-divider">
-                                            <span class="queue-type">Ranked Flex</span>
+                                            <div class="queue-type">Ranked Flex</div>
                                         </div>
                                     </div>
 
@@ -114,17 +115,17 @@
                             <div class="summoner-ranked-sub-content">
                                 <div class="summoner-rank-image-container">
                                     <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/gold.png"
-                                         class="summoner-rank-image" alt="">
+                                         class="summoner-rank-image" id="ranked-icon-flex" alt="">
                                 </div>
 
                                 <div class="text-container">
                                     <div class="ranked-text">
-                                        <span class="ranked-title">Gold 4</span>
-                                        <span class="">0 LP</span>
+                                        <span class="ranked-title" id="summoner-tier-flex">Gold 2</span>
+                                        <span class="" id="summoner-lp-flex">32 LP</span>
                                     </div>
                                     <div class="ranked-stats">
-                                        <span class="total-games">12 W 1L</span>
-                                        <span>99% wr</span>
+                                        <span class="total-games" id="summoner-result-flex">43 W 52 L</span>
+                                        <span id="summoner-result-sum-flex">43% wr</span>
                                     </div>
                                 </div>
 
@@ -133,12 +134,13 @@
 
                         </div>
                         <div class="summoner-ranked-history-stats">
-
+                            api call maken naar de match time line als ik er aan toe kom
 
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="page-content-champions">
 
                 <ul class="display-sidebar">
@@ -193,7 +195,26 @@
                                     <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
                                     <p>Aphelios</p>
                                 </li>
-
+                                    <li class="single-champion-slider">
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                        <p>Aphelios</p>
+                                    </li>
+                                    <li class="single-champion-slider">
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                        <p>Aphelios</p>
+                                    </li>
+                                    <li class="single-champion-slider">
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                        <p>Aphelios</p>
+                                    </li>
+                                    <li class="single-champion-slider">
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                        <p>Aphelios</p>
+                                    </li>
+                                    <li class="single-champion-slider">
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                        <p>Aphelios</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
