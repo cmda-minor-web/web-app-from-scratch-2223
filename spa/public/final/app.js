@@ -7,7 +7,8 @@ import {getQueueData} from './helpers/getQueueData.js';
 
 
 const inputField = document.getElementById('search-summoner')
-const showChampionsButton = document.getElementById('my-best-champions')
+const displayTopChampions = document.getElementById('top-6-champions')
+// const displayDefaultRotation = document.getElementById('my-best-champions')
 
 /*De eerste regel van de code creëert een leeg object champions.*/
 let champions = {};
@@ -68,7 +69,9 @@ async function displaySearch() {
 
 async function displayData() {
     await displaySearch()
-    showChampionsButton.addEventListener('click', async () => {
+
+    displayTopChampions.addEventListener('click', async () => {
+
         const summonerName = inputField.value;
         const summoner = await fetchSummoner(summonerName);
         const summonerId = summoner.id;
@@ -101,12 +104,13 @@ async function displayData() {
                 return champion.id === championSelector;
             });
 
-            // If a champion was found, display its data in the champion-clicked div
             if (selectedChampion) {
+
                 document.getElementById('champion-click-name').textContent = selectedChampion.name;
                 document.getElementById('champion-click-title').textContent = selectedChampion.title;
                 const filteredName = selectedChampion.id.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
-                document.getElementById('champion-click-image').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${filteredName}_0.jpg`;
+                const championBackground = document.querySelector('.champion-background');
+                championBackground.style.backgroundImage = `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${filteredName}_0.jpg)`
             }
         }
 
@@ -119,13 +123,12 @@ async function displayData() {
             });
         });
 
-
         console.log(champions);
-        const championPortraits = document.querySelector('.champion-portraits');
+        const championPortraits = document.querySelector('.champion-slider-style');
         championPortraits.innerHTML = '';
 
-        //Start the loop so, we loop through our top 5 champions
-        for (let i = 0; i < 5; i++) {
+        //Start the loop so, we loop through our top 6 champions
+        for (let i = 0; i < 6; i++) {
 
             // const championLevel = summonerMastery[i].championLevel;
             // const championPoints = summonerMastery[i].championPoints;
@@ -134,12 +137,15 @@ async function displayData() {
             const championName = champions[championId];
 
             // Create a new div element for the champion portrait
-            const championPortrait = document.createElement('div');
+            const championPortrait = document.createElement('li');
+            championPortrait.classList.add('single-champion-slider');
 
             // Create an image element for the champion icon
             const champImg = document.createElement('img');
 
-            const championNameNode = document.createTextNode(championName);
+            const championPortraitName = document.createElement('p');
+
+            championPortraitName.textContent = championName
 
             const championLink = document.createElement('a');
             const filteredName2 = champions[championId].replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
@@ -152,7 +158,7 @@ async function displayData() {
 
 
             championPortrait.appendChild(champImg);
-            championPortrait.appendChild(championNameNode);
+            championPortrait.appendChild(championPortraitName);
             championPortraits.appendChild(championPortrait);
             championLink.appendChild(championPortrait);
             championPortraits.appendChild(championLink);

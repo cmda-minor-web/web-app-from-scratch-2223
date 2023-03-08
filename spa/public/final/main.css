@@ -1,4 +1,4 @@
-* {
+*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,12 +15,10 @@
     width: 100%;
     height: 5rem;
     padding: 0 3rem;
-    border: 1px solid crimson;
 }
 .header-content-logo {
     width: 27rem;
     height: 3rem;
-    border: 1px solid crimson;
     margin-right: 1rem;
 }
 .header-content-logo img {
@@ -30,7 +28,6 @@
 .header-content-nav {
     width: 10rem;
     height: 2rem;
-    border: 1px solid crimson;
     white-space: nowrap;
 }
 .header-content-nav ul {
@@ -64,7 +61,6 @@
     height: 62rem;
     left: 3rem;
     background-color: white;
-    border: 1px solid rebeccapurple;
 }
 .page-content-header {
     margin: 0 auto;
@@ -109,6 +105,17 @@
     width: 100%;
     padding: 25px 25px;
 }
+.page-content-quote q {
+    font-family: 'playfair display';
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: normal;
+    line-height: 60px;
+    text-transform: none;
+    color: #242526;
+
+}
 .page-content-wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -120,7 +127,6 @@
     background-color: white;
     position: relative;
     overflow: visible;
-    border: 1px solid dodgerblue;
 }
 .summoner-header {
     margin-left: 35px;
@@ -141,13 +147,16 @@
 .summoner-header-image img {
     max-width: 100%;
     height: auto;
+    border: 4px solid;
 }
 .summoner-header-image span {
     text-align: center;
     border-style: outset;
-    border-color: goldenrod;
+    border-color: gold;
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: "Chakra Petch";
+
 }
 .summoner-header-info {
     display: flex;
@@ -156,6 +165,8 @@
 .summoner-header-name {
     font-size: 36px;
     font-weight: bold;
+    font-family: "Chakra Petch";
+
 }
 .summoner-header-update button {
     background-color: deepskyblue;
@@ -173,10 +184,12 @@
     background-color: #055a79;
 }
 .summoner-ranked-wrapper {
-    background-color: chocolate;
+    background-color: #413f3f;
     margin-top: 32px;
     margin-left: 35px;
     margin-right: 45px;
+    font-family: "Chakra Petch";
+    text-space: 10px;
 }
 .summoner-ranked-container {
     display: grid;
@@ -191,7 +204,6 @@
     flex-direction: column;
     padding: 18px;
     border-radius: 3px;
-    border: 1px solid darkgoldenrod;
 }
 .ranked-queue-container {
     display: flex;
@@ -211,15 +223,15 @@
 }
 .blue-divider {
     height: 18px;
-    width: 2px;
-    background: crimson;
+    width: 4px;
+    background: cornflowerblue;
     border-radius: 2px;
-    margin-right: 12px;
 }
 .queue-type {
     font-weight: 700;
     color: #fff;
     font-size: 14px;
+    margin-left: 10px;
 }
 .summoner-ranked-sub-content {
     display: flex;
@@ -276,13 +288,10 @@
     flex-direction: column;
     padding: 18px;
     border-radius: 3px;
-    border: 1px solid greenyellow;
 }
 .summoner-ranked-history-stats {
-    border: 1px solid mediumpurple;
 }
 .summoner-champion-mini-stats {
-    border: 1px solid cyan;
 }
 .display-sidebar {
     position: absolute;
@@ -294,7 +303,7 @@
     box-sizing: border-box;
     padding-top: 187px;
 }
-.display-option {
+.display-option  {
     width: 100%;
     height: 54px;
     line-height: 54px;
@@ -342,7 +351,12 @@ ul.display-sidebar li.display-option:hover {
     background-size: cover;
     min-height: 850px;
     position: relative;
+    /*chatgpt 6 verschillende solutions ongv 15 min tijd geskost vol onzin. Google gebruikt ongv 30 sec tijd gekost: *https://stackoverflow.com/questions/9483364/css3-background-image-transition*!*/
+    -webkit-transition: background-image 0.4s ease-in-out;
+    transition: background-image 0.4s ease-in-out;
+
 }
+/*champion-click-image*/
 .champion-content-wrapper {
     max-width: 800px;
     position: relative;
@@ -479,4 +493,8 @@ ul.display-sidebar li.display-option:hover {
 }
 .champion-slider-style li {
     display: inline-block;
+}
+
+.champion-loading-indicator {
+    display: none;
 }
