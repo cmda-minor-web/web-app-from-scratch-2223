@@ -1,20 +1,25 @@
 //todo ~validation
 import fetchSummoner from './fetch/fetchSummoner.js';
 import fetchMasteryBySummonerId from "./fetch/fetchMasteryBySummonerId.js";
+import fetchSingleChampion from "./fetch/fetchSingleChampion.js";
 import fetchChampions from "./fetch/fetchChampions.js";
 import fetchElo from './fetch/fetchElo.js';
+import getFilteredName from './helpers/getFilteredName.js';
 import {getQueueData} from './helpers/getQueueData.js';
 
 
 const inputField = document.getElementById('search-summoner')
 const displayTopChampions = document.getElementById('top-6-champions')
-// const displayDefaultRotation = document.getElementById('my-best-champions')
 
 /*De eerste regel van de code creëert een leeg object champions.*/
 let champions = {};
 
 async function displaySearch() {
     inputField.addEventListener("change", async () => {
+
+
+        window.location.href = "#ranked-details";
+
 
         const username = inputField.value;
         const summoner = await fetchSummoner(username);
@@ -23,9 +28,6 @@ async function displaySearch() {
 
         const soloQueueData = getQueueData(summonerElo, 'RANKED_SOLO_5x5');
         const flexQueueData = getQueueData(summonerElo, 'RANKED_FLEX_SR');
-
-
-        //todo for now i don't have to loop through the entire array i can simply say i want the first because there are no other summoners
 
         const summonerName = document.getElementById("summoner-name");
         const summonerLevel = document.getElementById("summoner-level");
@@ -88,14 +90,23 @@ async function displayData() {
         Object.keys(championData.data).forEach(key => {
             //Here we could for example say its championsdata etc.266 =
             champions[championData.data[key].key] = championData.data[key].name;
-            // console.log(championData.data[key].image.full)
         })
 
 
-// Listen for the hashchange event
         window.addEventListener('hashchange', changeChampion)
 
-        function changeChampion(event) {
+        const currentHash = window.location.hash;
+
+        //sets default to the first champion in the array, instead of the hardcoded example
+        if (currentHash) {
+            const championHashId = summonerMastery[0].championId;
+            const hashFilter = getFilteredName(champions[championHashId])
+            window.location.hash = `${hashFilter}`;
+        } else {
+            window.location.hash = 'lol.com';
+        }
+
+        async function changeChampion(event) {
             // get the selected champion ID from the hash
             const championSelector = window.location.hash.slice(1);
 
@@ -104,13 +115,30 @@ async function displayData() {
                 return champion.id === championSelector;
             });
 
-            if (selectedChampion) {
 
-                document.getElementById('champion-click-name').textContent = selectedChampion.name;
-                document.getElementById('champion-click-title').textContent = selectedChampion.title;
-                const filteredName = selectedChampion.id.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
+            if (selectedChampion) {
+                //todo could be cleaner but works for now okay .. i needed the epic lore
+
+                const filteredName = getFilteredName(selectedChampion.id)
                 const championBackground = document.querySelector('.champion-background');
-                championBackground.style.backgroundImage = `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${filteredName}_0.jpg)`
+                const loader = document.querySelector('.champion-background-loading')
+
+                const backgroundImg = new Image();
+                backgroundImg.onload = function () {
+                    setTimeout(async () => {
+                        const filteredSingleChampionName = getFilteredName(selectedChampion.name)
+                        const singularData = await fetchSingleChampion(filteredSingleChampionName)
+                        console.log(singularData)
+                        document.getElementById('champion-click-name').textContent = selectedChampion.name;
+                        document.getElementById('champion-click-title').textContent = selectedChampion.title;
+                        document.getElementById('champion-click-bio').textContent = singularData.lore;
+                        championBackground.style.backgroundImage = `url(${this.src})`
+                        loader.style.display = 'none'
+                    }, 500)
+                }
+                backgroundImg.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${filteredName}_0.jpg`
+                loader.style.display = 'block';
+
             }
         }
 
@@ -127,16 +155,26 @@ async function displayData() {
         const championPortraits = document.querySelector('.champion-slider-style');
         championPortraits.innerHTML = '';
 
+
+        const championMasteryLevel = document.getElementById('champion-click-level')
+        const championMasteryPoints = document.getElementById('champion-click-points')
+        const championMasteryChest = document.getElementById('champion-click-chest')
+        championMasteryLevel.onload = function () {
+            console.log('Image loaded successfully');
+        };
         //Start the loop so, we loop through our top 6 champions
         for (let i = 0; i < 6; i++) {
 
-            // const championLevel = summonerMastery[i].championLevel;
-            // const championPoints = summonerMastery[i].championPoints;
-            // const chestGranted = summonerMastery[i].chestGranted;
+            console.log(summonerMastery[i])
             const championId = summonerMastery[i].championId;
             const championName = champions[championId];
+            const masteryLevel = summonerMastery[i].championLevel;
+            const masteryPoints = summonerMastery[i].championPoints;
 
-            // Create a new div element for the champion portrait
+            const chestGrantedUrl = 'https://raw.communitydragon.org/7.23/plugins/rcp-fe-lol-champion-mastery-notifications/unknown/bcc5aff41f45fe6b.png';
+            const chestNotGrantedUrl = 'https://i.ibb.co/L6f6hwy/no-mastery.png';
+
+            // Create a new li element for the champion portrait
             const championPortrait = document.createElement('li');
             championPortrait.classList.add('single-champion-slider');
 
@@ -148,20 +186,32 @@ async function displayData() {
             championPortraitName.textContent = championName
 
             const championLink = document.createElement('a');
-            const filteredName2 = champions[championId].replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
+            const filteredName2 = getFilteredName(champions[championId])
             championLink.href = `#${filteredName2}`
 
             //Coole hack btw  [^\w\s] is zelfde als [^a-zA-Z0-9\s] / Regex voor het replacen van de ' en wat whitespace en special caharcaters
             //todo regex for & and .'s ex: Dr. Mundo, Nunu & Willump
-            const filteredName = championName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/^(...)(.)/, (_, firstThree, fourth) => firstThree + fourth.toLowerCase()).replace(/\s+/g, '');
+            const filteredName = getFilteredName(championName)
             champImg.src = `https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${filteredName}.png`;
 
+            // cool trick updating champ data from here
+            championPortrait.addEventListener('click', () => {
+                setTimeout(() => {
+                    championMasteryLevel.src = `https://raw.communitydragon.org/7.23/plugins/rcp-fe-lol-champion-mastery-notifications/global/default/assets/cm_rank_up/${masteryLevel}.png`;
+                    championMasteryPoints.textContent = `${masteryPoints} points`;
+                    //ternary operator very cool as well
+                    const chestImageSrc = summonerMastery[i].chestGranted ? chestGrantedUrl : chestNotGrantedUrl;
+                    championMasteryChest.innerHTML = `<img src="${chestImageSrc}" alt="Chest granted?"/>`;
+
+                }, 400.05)
+            });
 
             championPortrait.appendChild(champImg);
             championPortrait.appendChild(championPortraitName);
             championPortraits.appendChild(championPortrait);
             championLink.appendChild(championPortrait);
             championPortraits.appendChild(championLink);
+
 
         }
     });

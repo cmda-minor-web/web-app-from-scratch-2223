@@ -19,7 +19,7 @@
         <section class="header_and_search">
         <div class="header-content">
             <div class="header-content-logo">
-                <img src="logo.png" alt="">
+                <img src="assets/logo.png" alt="">
             </div>
             <div class="header-content-nav">
                 <ul>
@@ -38,7 +38,7 @@
                 </label>
             </div>
             <div class="section-ranked">
-                <p>All regions, but EU is superior </p>
+                <q>All regions, but EU is superior </q>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
         </div>
         </section>
 
-
+        <a id="ranked-details"></a>
         <div class="page-content-wrapper">
             <section class="summoner-details-and-rank-details">
             <div class="page-content-summoner">
@@ -168,7 +168,11 @@
 
                 <div class="champion-content">
 
-                    <div class="champion-background"></div>
+                    <div class="champion-background">
+                        <div class="champion-background-loading" style="display: none">
+                            <img src="assets/loader.gif" id="champion-background-loading" alt="">
+                        </div>
+                    </div>
                     <div class="champion-content-wrapper">
                         <div class="content-wrap">
                             <div class="title-wrap">
@@ -180,18 +184,19 @@
                                 <h2 class="info-title">Character Info</h2>
                                 <ul class="info-list">
                                     <li class="info-item">
-                                        <span class="info-label">Role:</span>
-                                        <span class="info-value">ADC</span>
+                                        <span class="info-label">Mastery of your champion:</span>
+                                        <img src="" alt="Mastery level" id="champion-click-level" >
+                                        <span class="info-value" id="champion-click-points">100000 points</span>
                                     </li>
                                     <li class="info-item">
-                                        <span class="info-label">Difficulty:</span>
-                                        <span class="info-value">3</span>
+                                        <span class="info-label">Chest granted?</span>
+                                        <span class="info-value" id="champion-click-chest">False</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="desc-wrap">
                                 <h2 class="desc-title">Biography</h2>
-                                <p class="desc-text">Emerging from moonlight's shadow with weapons drawn, Aphelios kills
+                                <p class="desc-text" id="champion-click-bio">Emerging from moonlight's shadow with weapons drawn, Aphelios kills
                                     the enemies of his faith in brooding silence—speaking only through the certainty of
                                     his aim, and the firing of each gun. Though fueled by a poison that renders him
                                     mute, he is guided by his sister Alune. From her distant temple sanctuary, she

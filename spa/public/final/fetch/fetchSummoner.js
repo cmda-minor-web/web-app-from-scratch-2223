@@ -3,12 +3,21 @@ import { getKey } from '/spa/src/api.js';
 const key = getKey();
 
 const fetchSummoner = async (summonerName) => {
-    const summonerDataResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${key}`);
-    const summoner = await summonerDataResponse.json();
+    try {
+        const summonerDataResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${key}`);
+        if(!summonerDataResponse.ok) {
+            throw new Error('No response between range 200-2999');
+        }
+        const summoner = await summonerDataResponse.json();
+        console.log(summoner)
+        return summoner
+    } catch (error) {
+        console.error('error: username does not exist')
+        window.alert('This Summoner does not exist please type in the correct username')
 
-    console.log(summoner);
 
-    return summoner;
+    }
+
 };
 
 export default fetchSummoner;
