@@ -13,9 +13,6 @@ const fetchSummoner = async (summonerName) => {
         return summoner
     } catch (error) {
         console.error('error: username does not exist')
-        window.alert('This Summoner does not exist please type in the correct username')
-
-
     }
 
 };
