@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Cantata+One&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
 
 #canvas1 {
   position:absolute;
@@ -16,8 +10,14 @@
   left: 0;  
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-background-color: hsl(0, 0%, 96%);
+background-color: #D5EDF6;
 font-family: Contata;
 }
 
@@ -27,18 +27,49 @@ h1 {
 
 #author {
   font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
 
 #page-number {
   font-size: 1.5em;
 }
 
+#quote,#author {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
 #quatation-mark {
   font-size: 10em;
   font-family: BIZ UDPGothic;
-  padding: 0 !important;
-  margin: 0 !important;
 }
+
+#new-quote-btn{
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 100px;
+}
+
+#new-quote-btn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
 
 container {
   display: grid;
@@ -66,10 +97,8 @@ container {
   and (max-width: 767px) {
 
 #quatation-mark{
-font-size: 150px;
 font-family: BIZ UDPGothic;
-padding: 0 !important;
-margin:0 !important;
+margin-bottom: -100px !important;
 }
 h1 {
   grid-column-start: 1;
@@ -82,6 +111,14 @@ h1 {
   grid-row: 3;
   font-size: 1.5em;
   overflow-wrap: break-word;
+}
+
+#quote {
+height:50vh;
+}
+
+#new-quote-btn {
+height: 50px;
 }
 
 #page-number{
