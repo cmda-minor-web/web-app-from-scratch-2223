@@ -3,6 +3,7 @@ import fetchMasteryBySummonerId from "../fetch/fetchMasteryBySummonerId.js";
 import fetchChampions from "../fetch/fetchChampions.js";
 import getFilteredName from "../helpers/getFilteredName.js";
 import fetchSingleChampion from "../fetch/fetchSingleChampion.js";
+
 const inputField = document.getElementById('search-summoner')
 /*De eerste regel van de code creëert een leeg object champions.*/
 let champions = {};
@@ -144,7 +145,6 @@ export default async function handleChampions() {
         championPortraits.appendChild(championPortrait);
         championLink.appendChild(championPortrait);
         championPortraits.appendChild(championLink);
-
 
     }
 

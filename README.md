@@ -4,9 +4,9 @@ In this course I will learn to build a web application without frameworks or unn
 
 ## Assignment
 
-1. [Visitekaartje](#): Mijn visite-kaartje.
+1. [Visitekaartje](https://safouanem.github.io/web-app-from-scratch-2223/visitekaartje/): Mijn visite-kaartje.
 2. ~~[Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.~~
-3. [Single Page App](#): My single page application.
+3. [Single Page App](https://safouanem.github.io/web-app-from-scratch-2223/spa/public/final/webapp.html): My single page application.
 
 ---
 
@@ -21,33 +21,41 @@ In this course I will learn to build a web application without frameworks or unn
 | [Week 4 - Wrapping up 🎁](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-4.md)  | College + work  | Review + work | Beoordelingsgesprekken  |
 
 
-## Week 2 - Hello API
+
+## Week 2 - 3 - 4 - Main API Application
 
 User-story: As a League of Legends addict/user, I want to be able to see champion & summoner information about my summoner of choice, so that I don’t have to open a statistics site all the time & being able to see my champions in style 
 
+# Wiki
+https://roan-anglerfish-3db.notion.site/Wiki-van-Safouane-GG-832532f851a447d39126426f8f297452
+
+## Known bugs
+- [x] No bugs only features ;)
 ## Assets: 
 1. https://developer.riotgames.com/apis
 2. https://developer.riotgames.com/docs/lol
-# Voorbeeld champion ophalen: 
+3. https://raw.communitydragon.org/
+## Voorbeeld champion ophalen: 
 1. Alle champs: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json
 2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion/Aatrox.json
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
+### - Weblink 🔗 - If you feel the need to look what I've been doing,
+#### - https://safouanem.github.io/web-app-from-scratch-2223/spa/public/final/webapp.html
 
-<!-- ☝️ replace this description with a description of your own work -->
+- I tried to make an u.gg/op.gg clone for myself, and to my surprise I was able to finish more than I expected in the Wiki? I got a bit more in depth about the structure of the code etc.
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+### Installation
+```text
+git clone git@github.com:SafouaneM/web-app-from-scratch-2223.git
+```
+And you should be good to go now, do not forget to implement your own api key in the api.js.
+You can request an api key from this url, it'll take no longer then 1 minute to generate one 
+#### !(Do note you need a riot games account to generate a key.)!
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+### Bonus things that I will implement / working on
+- [] Autocomplete when you're looking for a summoner
+- [~] Champion rotation as the default state
+- [] Ranked solo and flex queue last played games and data about said games.
+- [] Responsive design 🤪🤪🤪
