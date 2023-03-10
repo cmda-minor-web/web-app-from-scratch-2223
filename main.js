@@ -1,7 +1,7 @@
 // app.js
 
 // Import the displayQuote function from the display.js module
-import { displayQuote } from './modules/display.js';
+import { displayQuote } from './modules/render.js';
 
 // Add an event listener to the category select element that calls the displayQuote function when the value changes
 const categorySelect = document.getElementById("category-select");

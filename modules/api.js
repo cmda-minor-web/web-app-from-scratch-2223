@@ -1,6 +1,7 @@
 // Fetches data from the API based on the maximum number of characters in a quote and a specified category
 export async function fetchData(maxChars, category) {
   const url = `https://api.api-ninjas.com/v1/quotes?category=${category}&limit=10`;
+  
 
   try {
     const response = await fetch(url, {
@@ -14,4 +15,11 @@ export async function fetchData(maxChars, category) {
   } catch (error) {
     console.error('Error fetching data:', error); // Log any errors that occur during the fetch
   }
+
+  const filteredData = data.filter(quote => quote.quote.length <= maxChars); // var used for error handling
+
+  if (filteredData.length === 0) { // if quote is equal to 0
+    throw new Error('No quotes found'); // throw error
+  }
+
 }

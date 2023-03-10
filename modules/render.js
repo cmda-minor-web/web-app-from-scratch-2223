@@ -5,6 +5,8 @@ import { fetchData } from './api.js';
 const quoteElement = document.getElementById("quote");
 const authorElement = document.getElementById("author");
 
+
+
 // Get the category select element from the DOM
 const categorySelect = document.getElementById("category-select");
 
