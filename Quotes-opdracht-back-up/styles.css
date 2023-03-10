@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Cantata+One&display=swap');
+
+
+#canvas1 {
+  position:absolute;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  top: 0;  
+  left: 0;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: #D5EDF6;
+font-family: Contata;
+}
+
+h1 {
+  font-size: 5em
+}
+
+#author {
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#page-number {
+  font-size: 1.5em;
+}
+
+#quote,#author {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#quatation-mark {
+  font-size: 10em;
+  font-family: BIZ UDPGothic;
+}
+
+#new-quote-btn{
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 100px;
+}
+
+#new-quote-btn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+container {
+  display: grid;
+  justify-content: stretch;
+  height: 90vh;
+  width: 90vw;
+  margin: 5%;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+    /* styles for portrait iPad */
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+    /* styles for landscape iPad */
+}
+
+@media only screen 
+  and (max-width: 767px) {
+
+#quatation-mark{
+font-family: BIZ UDPGothic;
+margin-bottom: -100px !important;
+}
+h1 {
+  grid-column-start: 1;
+  grid-row: 2;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  overflow-wrap: break-word;
+}
+#author {
+  grid-row: 3;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+#quote {
+height:50vh;
+}
+
+#new-quote-btn {
+height: 50px;
+}
+
+#page-number{
+  font-size: 1.5em;
+  grid-column-start: 3;
+  grid-row: 4;
+  align-self: end;
+}
+
+
+    /* styles for mobile devices */
+}
+
+
+
+

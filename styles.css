@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Cantata+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: #fbfeff;
+font-family: Cantata;
+}
+
+h1 {
+  font-size: 5em
+}
+
+#author {
+  font-size: 1.5em;
+  grid-row: 3;
+}
+
+#page-number {
+  font-size: 1.5em;
+}
+
+#quote,#author {
+}
+
+
+#quatation-mark {
+  font-size: 10em;
+  font-family: BIZ UDPGothic;
+  grid-column: 1/1;
+}
+
+#category-select {
+grid-column: 2/4;
+-webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none; 
+   font-size: 18px;
+   color: #161616;
+   border: none;
+   text-align: center;
+   background-color: buttonface;
+   border-radius: 25px;
+   max-height: 7vh;
+}
+
+#new-quote-btn{
+grid-row:4;
+grid-column: 1/4;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  height: 100px;
+}
+
+#new-quote-btn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 1em;
+  justify-content: stretch;
+  height: 90vh;
+  width: 90vw;
+  margin: 5%;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+    /* styles for portrait iPad */
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+    /* styles for landscape iPad */
+}
+
+@media only screen 
+  and (max-width: 767px) {
+
+#quatation-mark{
+font-family: BIZ UDPGothic;
+margin-bottom: -100px !important;
+}
+h1 {
+  grid-column-start: 1;
+  grid-row: 2;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  overflow-wrap: break-word;
+}
+#author {
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+#quote {
+height:50vh;
+grid-column: 1/4;
+}
+
+#new-quote-btn {
+height: 50px;
+}
+
+#page-number{
+  font-size: 1.5em;
+  grid-column-start: 3;
+  grid-row: 4;
+  align-self: end;
+}
+
+}
+
+/* to hide the overflow of the skeleton state due transform overflow is used */
+.loading {
+  background: #c1c1c1;
+  min-height: 30px;
+  position:relative;
+  overflow:hidden; 
+  border-radius: 2px;
+}
+
+.loading:nth-of-type(2) {
+  max-height: 30px;
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #d0d0d0, transparent);
+  transform: translateX(-100%);
+  animation: loading 1s infinite;
+
+}
+
+@keyframes loading {
+100% {
+  transform: translateX(100%);
+}
+
+}
+
+
+
+
+
+
+
+
+
