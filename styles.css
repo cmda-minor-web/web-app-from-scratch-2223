@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Cantata+One&display=swap');
 
-
-#canvas1 {
-  position:absolute;
-  background-color: blue;
-  width: 100%;
-  height: 100%;
-  top: 0;  
-  left: 0;  
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -17,8 +7,8 @@
 }
 
 body {
-background-color: #D5EDF6;
-font-family: Contata;
+background-color: #fbfeff;
+font-family: Cantata;
 }
 
 h1 {
@@ -27,28 +17,41 @@ h1 {
 
 #author {
   font-size: 1.5em;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  grid-row: 3;
 }
-
 
 #page-number {
   font-size: 1.5em;
 }
 
 #quote,#author {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
 
 #quatation-mark {
   font-size: 10em;
   font-family: BIZ UDPGothic;
+  grid-column: 1/1;
+}
+
+#category-select {
+grid-column: 2/4;
+-webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none; 
+   font-size: 18px;
+   color: #161616;
+   border: none;
+   text-align: center;
+   background-color: buttonface;
+   border-radius: 25px;
+   max-height: 7vh;
 }
 
 #new-quote-btn{
-  font-size: 16px;
+grid-row:4;
+grid-column: 1/4;
+  font-size: 18px;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
@@ -57,10 +60,8 @@ h1 {
   border: 3px solid;
   padding: 0.25em 0.5em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
   height: 100px;
 }
 
@@ -73,6 +74,9 @@ h1 {
 
 container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 1em;
   justify-content: stretch;
   height: 90vh;
   width: 90vw;
@@ -108,13 +112,13 @@ h1 {
   overflow-wrap: break-word;
 }
 #author {
-  grid-row: 3;
   font-size: 1.5em;
   overflow-wrap: break-word;
 }
 
 #quote {
 height:50vh;
+grid-column: 1/4;
 }
 
 #new-quote-btn {
@@ -128,9 +132,44 @@ height: 50px;
   align-self: end;
 }
 
-
-    /* styles for mobile devices */
 }
+
+/* to hide the overflow of the skeleton state due transform overflow is used */
+.loading {
+  background: #c1c1c1;
+  min-height: 30px;
+  position:relative;
+  overflow:hidden; 
+  border-radius: 2px;
+}
+
+.loading:nth-of-type(2) {
+  max-height: 30px;
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #d0d0d0, transparent);
+  transform: translateX(-100%);
+  animation: loading 1s infinite;
+
+}
+
+@keyframes loading {
+100% {
+  transform: translateX(100%);
+}
+
+}
+
+
+
+
+
 
 
 
