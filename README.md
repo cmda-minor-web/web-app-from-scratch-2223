@@ -25,15 +25,15 @@ Er is onderzoek gedaan naar verschillende mogelijkheden om data op te halen, eer
 
 Zie hier onder mijn “sketches” en mijn oorspronkelijke ideeën.
 
-![IMG_9463.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0ce07355-cc2b-4210-9f65-1c6fcd0f8cea/IMG_9463.jpg)
+![text.jpg](https://file.notion.so/f/s/0ce07355-cc2b-4210-9f65-1c6fcd0f8cea/IMG_9463.jpg?id=89b8e21c-1e69-4fdf-85be-36bcd9c1746f&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332076627&signature=1dZKvmhji7N-C80_VleYjChkyzU-ymMcd6OWvvt4ZJo&downloadName=IMG_9463.jpg)
 
-![IMG_9464.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e4a9647-08b8-4373-8d55-8cd1df5c42b1/IMG_9464.jpg)
+![IMG_9464.jpg](https://file.notion.so/f/s/5e4a9647-08b8-4373-8d55-8cd1df5c42b1/IMG_9464.jpg?id=a82143bb-7ddc-4677-8662-2666f87664c9&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332206084&signature=PuDsaC_Pvw-QG5_ynRNkZCe_zFTvXYIVLfXnogroowQ&downloadName=IMG_9464.jpg)
 
-![IMG_9465.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b478ca74-488e-40d0-97c1-3493144141fc/IMG_9465.jpg)
+![IMG_9465.jpg](https://file.notion.so/f/s/b478ca74-488e-40d0-97c1-3493144141fc/IMG_9465.jpg?id=6d1a8cdf-95a3-40af-a0c5-b7abc15a3a3a&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332210626&signature=5OocBFZjyxtUHbZC8k9ORjM2qagfURsj7vVitGroOSY&downloadName=IMG_9465.jpg)
 
-![IMG_9466.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62239263-7c9e-455e-8cf3-ae0a383538d7/IMG_9466.jpg)
+![IMG_9466.jpg](https://file.notion.so/f/s/62239263-7c9e-455e-8cf3-ae0a383538d7/IMG_9466.jpg?id=75983955-8d66-4c7d-8e9d-7ea29b6ab07b&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332214368&signature=Zk6bkGKupuH2cDNydFCQ6_Qx_6jALuIaBka_05Le8aI&downloadName=IMG_9466.jpg)
 
-![IMG_9468.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9cf6d6fc-a182-47b4-a755-7dca7632550e/IMG_9468.jpg)
+![IMG_9468.jpg](https://file.notion.so/f/s/9cf6d6fc-a182-47b4-a755-7dca7632550e/IMG_9468.jpg?id=3aaf115c-44f8-473c-a301-3cf7fb5e2c31&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332219536&signature=YX0LczvRB0vFZGM5sK43FMeIoSs2EglFGIFgnyUk3pM&downloadName=IMG_9468.jpg)
 
 Zoals we kunnen zien, was ik meer bezig met een mobiele applicatie design dan een echte website. Meer over dat later, want het is zeker geen mobiele applicatie geworden.
 
@@ -55,7 +55,7 @@ Ik ben eerst begonnen met het testen van de data die ik kon krijgen, dit heb ik 
 
 Die zag er zo ongeveer uit:
 
-![Screenshot 2023-03-09 at 04.58.21.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/538821b5-b485-43aa-971c-021567869d38/Screenshot_2023-03-09_at_04.58.21.png)
+![Screenshot 2023-03-09 at 04.58.21.png](https://file.notion.so/f/s/538821b5-b485-43aa-971c-021567869d38/Screenshot_2023-03-09_at_04.58.21.png?id=2448aadd-585a-4916-bd23-2275488bc4e3&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332361627&signature=SqWmBXpGvs3-LjXJfFDxTZhhCASPJfOapNaOMOOiAfQ&downloadName=Screenshot+2023-03-09+at+04.58.21.png)
 
 Hier ging ik de data die ik kreeg via de api testen, zonder dat ik mij zorgen hoefde te maken over styling en andere zaken. Deze manier van werken beviel mij, en zal ik zeker bij de volgende keer ook toepassen. Omdat jij je namelijk alleen bezig houd met de logica van de data etc, dit kan natuurlijk verder in het project veranderd worden maar het is een goeie basis.
 
@@ -63,7 +63,7 @@ Vervolgens heb ik het concept van de sketches uitgewerkt en omgetoverd naar een 
 
 Die zag er zo ongeveer uit;
 
-![Screenshot 2023-03-09 at 05.01.07.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ef5549c-c634-49d7-8d82-715a53c86108/Screenshot_2023-03-09_at_05.01.07.png)
+![Screenshot 2023-03-09 at 05.01.07.png](https://file.notion.so/f/s/6ef5549c-c634-49d7-8d82-715a53c86108/Screenshot_2023-03-09_at_05.01.07.png?id=73399daf-9cb4-4a0e-aacd-b77bcaff04f3&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332364877&signature=xmTyKrvP8e0l7MP4iNOXQx4TYXUi-s8db8pA5MFsRh8&downloadName=Screenshot+2023-03-09+at+05.01.07.png)
 
 Hier was ik dus al vrij ver in het project, ik had werkende data en al een heleboel dingen die we dus hiervoor hadden opgeschreven waren al geïmplementeerd.  
 
@@ -71,21 +71,17 @@ Vervolgens besloot ik om niet verder te gaan met het mobiele project, omdat ik h
 
 Dat zag er ongeveer zo uit:
 
-![Screenshot 2023-03-09 at 05.05.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/debd102c-1339-44c8-aba9-43931f94eae7/Screenshot_2023-03-09_at_05.05.49.png)
+![Screenshot 2023-03-09 at 05.05.49.png](https://file.notion.so/f/s/debd102c-1339-44c8-aba9-43931f94eae7/Screenshot_2023-03-09_at_05.05.49.png?id=e7ff0c11-f17b-408c-a3c1-a28b7c916fbb&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332368969&signature=DPgsUEXfiJsVu69MW0jypVxynY_9e2koBdl2ztvT33Q&downloadName=Screenshot+2023-03-09+at+05.05.49.png)
 
-![Screenshot 2023-03-09 at 05.06.08.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c4778961-26c2-4078-bbe4-f3f4460cbf10/Screenshot_2023-03-09_at_05.06.08.png)
+![Screenshot 2023-03-09 at 05.06.08.png](https://file.notion.so/f/s/c4778961-26c2-4078-bbe4-f3f4460cbf10/Screenshot_2023-03-09_at_05.06.08.png?id=aa68ffa2-ef37-4c36-a932-d0ebf003c264&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332371630&signature=1rBzhihQykpgPbn5jIYDT8kKV4pnOjFTQKA3qli2uDc&downloadName=Screenshot+2023-03-09+at+05.06.08.png)
 
-![Screenshot 2023-03-09 at 05.06.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f4b7e5cf-ec21-4a6f-9a50-0e793d027521/Screenshot_2023-03-09_at_05.06.26.png)
+![Screenshot 2023-03-09 at 05.06.26.png](https://file.notion.so/f/s/f4b7e5cf-ec21-4a6f-9a50-0e793d027521/Screenshot_2023-03-09_at_05.06.26.png?id=dc64246c-b238-4b2d-b616-55465c85c77a&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332374696&signature=h8u-zB08rStnJTUtGCj_i_5U26xqO11JSmD2QNDi0HM&downloadName=Screenshot+2023-03-09+at+05.06.26.png)
 
 Dit was overigens de eerste keer dat ik aan de slag ben gegaan met Adobe XD, en ik vind het een fijn programma om mee te werken. En het hielp mij deels met het vormgeven van de werkende website die er uiteindelijk zo uit is gaan zien.
 
 [https://www.youtube.com/watch?v=5nlV8y-Yml4](https://www.youtube.com/watch?v=5nlV8y-Yml4)
 
 Er zijn natuurlijk nog genoeg dingen die aangepast moeten worden, maar dat zie je vanzelf wel verschijnen in de *Bonus things that I will implement / working on. /*
-
-In de github repository readme file.
-
-[GitHub - SafouaneM/web-app-from-scratch-2223: In the course Web App From Scratch I'll learn to build web applications with vanilla HTML, CSS & JavaScript, without frameworks or unnecessary libraries. Web App From Scratch is part of the half year minor programme about Web Design and Development in Amsterdam. Bachelor Communication and Multimedia Design, Amsterdam University of Applied Science](https://github.com/SafouaneM/web-app-from-scratch-2223)
 
 Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken dit doen we op een andere pagina.
 
