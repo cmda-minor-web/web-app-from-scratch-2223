@@ -19,7 +19,9 @@ In het begin waren er een aantal userstories waar wij uit mochten kiezen, geen v
 
 Ik zelf ging dus gebruik maken van de RIOT-API van Riot Games.
 
-## Onderzoek
+## Concept 1
+
+### Wireframes / Sketches
 
 Er is onderzoek gedaan naar verschillende mogelijkheden om data op te halen, eerst moest ik echter opschrijven/tekenen welke data ik eigenlijk wou laten zien. En daarna pas leek het mij verstandig om te gaan kijken welke endpoints er gebruikt gaan worden van de api.
 
@@ -34,6 +36,7 @@ Zie hier onder mijn “sketches” en mijn oorspronkelijke ideeën.
 ![IMG_9466.jpg](https://file.notion.so/f/s/62239263-7c9e-455e-8cf3-ae0a383538d7/IMG_9466.jpg?id=75983955-8d66-4c7d-8e9d-7ea29b6ab07b&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332214368&signature=Zk6bkGKupuH2cDNydFCQ6_Qx_6jALuIaBka_05Le8aI&downloadName=IMG_9466.jpg)
 
 ![IMG_9468.jpg](https://file.notion.so/f/s/9cf6d6fc-a182-47b4-a755-7dca7632550e/IMG_9468.jpg?id=3aaf115c-44f8-473c-a301-3cf7fb5e2c31&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332219536&signature=YX0LczvRB0vFZGM5sK43FMeIoSs2EglFGIFgnyUk3pM&downloadName=IMG_9468.jpg)
+
 
 Zoals we kunnen zien, was ik meer bezig met een mobiele applicatie design dan een echte website. Meer over dat later, want het is zeker geen mobiele applicatie geworden.
 
@@ -53,7 +56,6 @@ Dus we hebben door deze sketches te maken al een heleboel informatie gekregen ov
 
 Ik ben eerst begonnen met het testen van de data die ik kon krijgen, dit heb ik gedaan doormiddel van een playground te maken. 
 
-### Wireframes
 
 Die zag er zo ongeveer uit:
 
@@ -68,6 +70,9 @@ Die zag er zo ongeveer uit;
 ![Screenshot 2023-03-09 at 05.01.07.png](https://file.notion.so/f/s/6ef5549c-c634-49d7-8d82-715a53c86108/Screenshot_2023-03-09_at_05.01.07.png?id=73399daf-9cb4-4a0e-aacd-b77bcaff04f3&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332364877&signature=xmTyKrvP8e0l7MP4iNOXQx4TYXUi-s8db8pA5MFsRh8&downloadName=Screenshot+2023-03-09+at+05.01.07.png)
 
 Hier was ik dus al vrij ver in het project, ik had werkende data en al een heleboel dingen die we dus hiervoor hadden opgeschreven waren al geïmplementeerd.  
+
+## Concept 2
+### Wireframes
 
 Vervolgens besloot ik om niet verder te gaan met het mobiele project, omdat ik het gevoel had dat ik meer bezig was met het “design” dan met de backend. Dus ik ben overgegaan naar een web applicatie, die ik oke had gestijld en heb laten doen wat het moest doen. Buiten dat hij  responsive is maar dat moet je op dit moment niet verassen. Ik had deze webapplicatie gebouwd op basis van mijn design in adobe XD. 
 
@@ -94,6 +99,7 @@ https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explan
 1. https://developer.riotgames.com/apis
 2. https://developer.riotgames.com/docs/lol
 3. https://raw.communitydragon.org/
+
 ## Voorbeeld champion ophalen: 
 1. Alle champs: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json
 2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion/Aatrox.json
@@ -112,9 +118,3 @@ And you should be good to go now, do not forget to implement your own api key in
 You can request an api key from this url, it'll take no longer then 1 minute to generate one 
 #### !(Do note you need a riot games account to generate a key.)!
 
-
-### Bonus things that I will implement / working on
-- [] Autocomplete when you're looking for a summoner
-- [~] Champion rotation as the default state
-- [] Ranked solo and flex queue last played games and data about said games.
-- [] Responsive design 🤪🤪🤪
