@@ -53,6 +53,8 @@ Dus we hebben door deze sketches te maken al een heleboel informatie gekregen ov
 
 Ik ben eerst begonnen met het testen van de data die ik kon krijgen, dit heb ik gedaan doormiddel van een playground te maken. 
 
+### Wireframes
+
 Die zag er zo ongeveer uit:
 
 ![Screenshot 2023-03-09 at 04.58.21.png](https://file.notion.so/f/s/538821b5-b485-43aa-971c-021567869d38/Screenshot_2023-03-09_at_04.58.21.png?id=2448aadd-585a-4916-bd23-2275488bc4e3&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332361627&signature=SqWmBXpGvs3-LjXJfFDxTZhhCASPJfOapNaOMOOiAfQ&downloadName=Screenshot+2023-03-09+at+04.58.21.png)
@@ -67,7 +69,7 @@ Die zag er zo ongeveer uit;
 
 Hier was ik dus al vrij ver in het project, ik had werkende data en al een heleboel dingen die we dus hiervoor hadden opgeschreven waren al geïmplementeerd.  
 
-Vervolgens besloot ik om niet verder te gaan met het mobiele project, omdat ik het gevoel had dat ik meer bezig was met het “design” dan met de backend. Dus ik ben overgegaan naar een web applicatie, die ik oke had gestijld en heb laten doen wat het moest doen. Buiten dat hij niet responsive is maar dat moet je op dit moment niet verassen. Ik had deze webapplicatie gebouwd op basis van mijn design in adobe XD. 
+Vervolgens besloot ik om niet verder te gaan met het mobiele project, omdat ik het gevoel had dat ik meer bezig was met het “design” dan met de backend. Dus ik ben overgegaan naar een web applicatie, die ik oke had gestijld en heb laten doen wat het moest doen. Buiten dat hij  responsive is maar dat moet je op dit moment niet verassen. Ik had deze webapplicatie gebouwd op basis van mijn design in adobe XD. 
 
 Dat zag er ongeveer zo uit:
 
@@ -81,7 +83,7 @@ Dit was overigens de eerste keer dat ik aan de slag ben gegaan met Adobe XD, en 
 
 [https://www.youtube.com/watch?v=5nlV8y-Yml4](https://www.youtube.com/watch?v=5nlV8y-Yml4)
 
-Er zijn natuurlijk nog genoeg dingen die aangepast moeten worden, maar dat zie je vanzelf wel verschijnen in de *Bonus things that I will implement / working on. /*
+Er zijn natuurlijk nog genoeg dingen die aangepast moeten worden maar die neem ik mee in het volgende vak.
 
 Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken dit doen we op een andere pagina.
 
