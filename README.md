@@ -6,9 +6,11 @@ In this course I will learn to build a web application without frameworks or unn
 
 User-story: As a League of Legends addict/user, I want to be able to see champion & summoner information about my summoner of choice, so that I don’t have to open a statistics site all the time & being able to see my champions in style 
 
-# Wiki
+# Readme van Safouane.GG 
 
-# Wiki van Safouane.GG
+<img width="754" alt="Screenshot 2023-05-16 at 17 47 39" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/23bb2f91-9008-4a2f-87a8-f0b16b256960">
+<img width="590" alt="Screenshot 2023-05-16 at 17 47 52" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/dbd6cdc1-e3b5-4db4-928d-155f66925722">
+
 
 ## Het begin
 
@@ -84,14 +86,22 @@ Dat zag er ongeveer zo uit:
 
 ![Screenshot 2023-03-09 at 05.06.26.png](https://file.notion.so/f/s/f4b7e5cf-ec21-4a6f-9a50-0e793d027521/Screenshot_2023-03-09_at_05.06.26.png?id=dc64246c-b238-4b2d-b616-55465c85c77a&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332374696&signature=h8u-zB08rStnJTUtGCj_i_5U26xqO11JSmD2QNDi0HM&downloadName=Screenshot+2023-03-09+at+05.06.26.png)
 
+### Activity diagram (in delen)
+ 
+
+<img width="520" alt="Screenshot 2023-05-16 at 17 52 38" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/4cf5293c-e549-4a70-99e2-436195facbfc">
+
+<img width="400" alt="Screenshot 2023-05-16 at 17 52 49" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/255dd02e-b82b-4933-bd1f-9dda8694544e">
+
+
 Dit was overigens de eerste keer dat ik aan de slag ben gegaan met Adobe XD, en ik vind het een fijn programma om mee te werken. En het hielp mij deels met het vormgeven van de werkende website die er uiteindelijk zo uit is gaan zien.
 
-[https://www.youtube.com/watch?v=5nlV8y-Yml4](https://www.youtube.com/watch?v=5nlV8y-Yml4)
 
 Er zijn natuurlijk nog genoeg dingen die aangepast moeten worden maar die neem ik mee in het volgende vak.
 
 Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken dit doen we op een andere pagina.
 
+#### Recommend reading
 https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explanation
 
 
@@ -101,14 +111,15 @@ https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explan
 3. https://raw.communitydragon.org/
 
 ## Voorbeeld champion ophalen: 
-1. Alle champs: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json
-2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion/Aatrox.json
+1. Alle champs: http://ddragon.leagueoflegends.com/cdn/13.3.3/data/en_US/champion.json
+2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/13.3.3/data/en_US/champion/Aatrox.json
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 ### - Weblink 🔗 - If you feel the need to look what I've been doing,
 #### - https://safouanem.github.io/web-app-from-scratch-2223/spa/public/final/webapp.html
+#### - New link coming up with enviroment variable.
 
-- I tried to make an u.gg/op.gg clone for myself, and to my surprise I was able to finish more than I expected in the Wiki? I got a bit more in depth about the structure of the code etc.
+- I tried to make an u.gg/op.gg clone for myself, and to my surprise I was able to finish more than I expected in the Wiki? I got a bit more in depth about the structure of the code etc. 
 
 ### Installation
 ```text
