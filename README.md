@@ -89,6 +89,7 @@ In de github repository readme file.
 
 Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken dit doen we op een andere pagina.
 
+https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explanation
 
 
 ## Assets: 
