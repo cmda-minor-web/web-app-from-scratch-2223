@@ -10,6 +10,7 @@ User-story: As a League of Legends addict/user, I want to be able to see champio
 
 <img width="754" alt="Screenshot 2023-05-16 at 17 47 39" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/23bb2f91-9008-4a2f-87a8-f0b16b256960">
 <img width="590" alt="Screenshot 2023-05-16 at 17 47 52" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/dbd6cdc1-e3b5-4db4-928d-155f66925722">
+<img width="917" alt="Screenshot 2023-05-16 at 17 58 25" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/90b83b1d-fc89-4f81-91b4-bfc1756ea197">
 
 
 ## Het begin
@@ -74,6 +75,7 @@ Die zag er zo ongeveer uit;
 Hier was ik dus al vrij ver in het project, ik had werkende data en al een heleboel dingen die we dus hiervoor hadden opgeschreven waren al geïmplementeerd.  
 
 ## Concept 2
+
 ### Wireframes
 
 Vervolgens besloot ik om niet verder te gaan met het mobiele project, omdat ik het gevoel had dat ik meer bezig was met het “design” dan met de backend. Dus ik ben overgegaan naar een web applicatie, die ik oke had gestijld en heb laten doen wat het moest doen. Buiten dat hij  responsive is maar dat moet je op dit moment niet verassen. Ik had deze webapplicatie gebouwd op basis van mijn design in adobe XD. 
@@ -86,6 +88,20 @@ Dat zag er ongeveer zo uit:
 
 ![Screenshot 2023-03-09 at 05.06.26.png](https://file.notion.so/f/s/f4b7e5cf-ec21-4a6f-9a50-0e793d027521/Screenshot_2023-03-09_at_05.06.26.png?id=dc64246c-b238-4b2d-b616-55465c85c77a&table=block&spaceId=f40270c7-fe4d-46b3-a3f4-437fe94d2055&expirationTimestamp=1684332374696&signature=h8u-zB08rStnJTUtGCj_i_5U26xqO11JSmD2QNDi0HM&downloadName=Screenshot+2023-03-09+at+05.06.26.png)
 
+### Uitgebreid Resultaat
+
+<img width="754" alt="Screenshot 2023-05-16 at 17 47 39" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/23bb2f91-9008-4a2f-87a8-f0b16b256960">
+<img width="590" alt="Screenshot 2023-05-16 at 17 47 52" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/dbd6cdc1-e3b5-4db4-928d-155f66925722">
+<img width="558" alt="Screenshot 2023-05-16 at 17 57 38" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/01f94d64-e8a0-47b3-ab5c-bfea73160a11">
+<img width="551" alt="Screenshot 2023-05-16 at 17 57 47" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/70e3d0e2-7d8b-4c8a-a5db-eb1b0d024133">
+<img width="950" alt="Screenshot 2023-05-16 at 17 58 05" src="https://github.com/SafouaneM/web-app-from-scratch-2223/assets/31611670/c5b3f75e-7aca-4b3b-8fd1-aa0f1f565d0b">
+
+
+Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken om te kijken wat al deze dingen nou betekenen
+
+#### Recommend reading 
+https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explanation
+
 ### Activity diagram (in delen)
  
 
@@ -96,13 +112,6 @@ Dat zag er ongeveer zo uit:
 
 Dit was overigens de eerste keer dat ik aan de slag ben gegaan met Adobe XD, en ik vind het een fijn programma om mee te werken. En het hielp mij deels met het vormgeven van de werkende website die er uiteindelijk zo uit is gaan zien.
 
-
-Er zijn natuurlijk nog genoeg dingen die aangepast moeten worden maar die neem ik mee in het volgende vak.
-
-Nu we dit allemaal besproken hebben lijkt het mij handig om wat dieper in de code te gaan duiken dit doen we op een andere pagina.
-
-#### Recommend reading
-https://github.com/SafouaneM/web-app-from-scratch-2223/wiki/In-depth-code-explanation
 
 
 ## Assets: 
