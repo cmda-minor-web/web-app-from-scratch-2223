@@ -4,22 +4,113 @@
     box-sizing: border-box;
     border: none;
     scroll-behavior: smooth;
+    font-family: Sans-Serif
 }
 
-q {
-    font-family: 'playfair display';
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 900;
-    letter-spacing: normal;
-    line-height: 60px;
-    text-transform: none;
-    color: #242526;
+/* Header */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.container {
-    max-width: 100%;
-    background-color: #413f3f;
+
+.header .container {
+    margin: 0 auto;
+    padding: 0 6px;
 }
+
+.header .flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .text {
+    color: #4b5563;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .nav-links a {
+    color: #4b5563;
+    transition: color 0.3s ease;
+}
+
+.header .nav-links a:hover {
+    color: #6b7280;
+}
+
+.header .button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header .button:hover {
+    background-color: #2563eb;
+}
+
+/* Main */
+.main {
+    margin: 0 auto;
+    padding: 20px 6px;
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+.main .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.main form {
+    width: 100%;
+    max-width: 32rem;
+}
+
+.main .form-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #4fd1c5;
+    padding-bottom: 0.5rem;
+}
+
+.main .form-input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: #4b5563;
+    margin-right: 0.75rem;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    outline: none;
+}
+
+.main .form-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main .form-button:hover {
+    background-color: #2563eb;
+}
+
+
+
 .header-content {
     background-color: cornflowerblue;
     display: flex;
@@ -69,9 +160,8 @@ q {
     justify-content: center;
     position: relative;
     overflow: visible;
-    width: 114rem;
+    width: 100%;
     height: 62rem;
-    left: 3rem;
     background-color: white;
 }
 .page-content-header {
@@ -136,7 +226,7 @@ q {
     width: 114rem;
 }
 .page-content-summoner {
-    background-color: white;
+    background-color: #cfd0d2;
     position: relative;
     overflow: visible;
 }
@@ -196,7 +286,7 @@ q {
     background-color: #055a79;
 }
 .summoner-ranked-wrapper {
-    background-color: #413f3f;
+    background-color: #f3f4f6;
     margin-top: 32px;
     margin-left: 35px;
     margin-right: 45px;
@@ -226,13 +316,8 @@ q {
     display: flex;
     justify-content: space-between;
 }
-.title {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: coral;
-}
+
+
 .blue-divider {
     height: 18px;
     width: 4px;
@@ -241,7 +326,7 @@ q {
 }
 .queue-type {
     font-weight: 700;
-    color: #fff;
+    color: black;
     font-size: 14px;
     margin-left: 10px;
 }
@@ -252,8 +337,8 @@ q {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: cornsilk;
     margin-top: 16px;
+
 }
 .summoner-rank-image-container {
     display: flex;
@@ -270,6 +355,8 @@ q {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: black;
+
 }
 .ranked-text {
     display: flex;
@@ -277,12 +364,14 @@ q {
     flex-direction: column;
     font-size: 12px;
     font-weight: 500;
+    color: black;
+
 }
 .ranked-title {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 2px;
-    color: #fff;
+    color: black;
 }
 .ranked-stats {
     display: flex;
@@ -302,44 +391,33 @@ q {
     padding: 18px;
     border-radius: 3px;
 }
-.summoner-ranked-history-stats {
-}
-.summoner-champion-mini-stats {
-}
-
 
 .display-sidebar {
-    position: absolute;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    width: 370px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 370px;
+    padding: 30px;
     box-sizing: border-box;
-    padding-top: 187px;
 }
+
 .display-option  {
     font-family:  "Chakra Petch";
-    width: 100%;
-    height: 54px;
-    line-height: 54px;
-    font-size: 18px;
+    line-height: 1.5;
+    font-size: 1.125rem;
     color: #fff;
     text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
-    box-sizing: border-box;
-    padding-left: 56px;
+    padding-left: 2rem;
     cursor: pointer;
-    background: 16px center no-repeat;
-    background-image: url("#");
-    background-size: 40px;
-    user-select: none;
     list-style: none;
+    margin-bottom: 1rem;
 }
+
 ul.display-sidebar li.display-option:before {
     content: "\25C6";
-    /* Unicode voor black diamond blijkbaar */
-    font-size: 20px;
-    margin-right: 10px;
+    /* Unicode for black diamond apparently */
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
 }
 ul.display-sidebar li.display-option:hover {
     color: #000;
@@ -353,30 +431,35 @@ ul.display-sidebar li.display-option:hover {
     text-decoration: none;
 }
 .page-content-champions {
-    position: relative;
-    overflow: visible;
-    border: 1px solid greenyellow;
-    background-color: rgba(221, 234, 193, 0.82);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #cfd0d2;
 }
+
 .champion-content {
-    margin-left: 370px;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem;
+    box-sizing: border-box;
 }
+
 .champion-background {
     background: url(assets/spirit-blossom-aphelios-skin-lol-splash-art-hd-wallpaper-uhdpaper.com-655@1@i.jpg) no-repeat;
-    user-select: none;
     background-size: cover;
-    min-height: 850px;
+    min-height: 300px;
     position: relative;
-    /*chatgpt 6 verschillende solutions ongv 15 min tijd geskost vol onzin. Google gebruikt ongv 30 sec tijd gekost: *https://stackoverflow.com/questions/9483364/css3-background-image-transition*!*/
     -webkit-transition: background-image 0.4s ease-in-out;
     transition: background-image 0.4s ease-in-out;
-
+    margin-bottom: 2rem;
 }
 
 .champion-background-loading {
     background-color: rgba(221, 234, 193, 0.82);
     background-size: cover;
-    min-height: 850px;
+    min-height: 10em;
     position: relative;
     display: flex;
     align-items: center;
@@ -394,16 +477,14 @@ ul.display-sidebar li.display-option:hover {
     max-width: 800px;
     position: relative;
 }
+
+
 .content-wrap {
-    margin-top: 10px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: 40px;
+    padding: 2.5rem;
     border-radius: 3px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: rgba(204, 204, 204, 0.2);
-    top: -50rem;
+    box-sizing: border-box;
 }
 .title-wrap {
     text-align: center;
@@ -412,7 +493,6 @@ ul.display-sidebar li.display-option:hover {
     font-size: 36px;
     font-weight: bold;
     margin: 0 0 10px 0;
-    font-family: 'Single Day', cursive;
 }
 .subtitle {
     font-family: 'Itim', cursive;
@@ -481,53 +561,46 @@ ul.display-sidebar li.display-option:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 9;
-    left: 0;
-    bottom: 0;
-    padding-top: 22px;
-    width: 90.8rem;
-    height: 190px;
-    background: rgba(204, 204, 204, 0.2);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.champion-slider {
-    margin: 0;
-    width: 830px;
-    height: 100%;
-}
-.champion-slider-style {
+    padding-top: 1.375rem;
     width: 100%;
-    height: 170px;
-    align-items: center;
-    bottom: 10px;
-    left: 0;
+    box-sizing: border-box;
+    background: rgba(204, 204, 204, 0.2);
 }
-/*kan beter gebarentaal leren inplaats van css i cri*/
+
+
+.champion-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 830px;
+    box-sizing: border-box;
+}
+
+
+/*kan beter gebarentaal leren inplaats van css*/
 .single-champion-slider {
-    text-decoration: none;
-    height: 150px;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 150px;
+    box-sizing: border-box;
     background: transparent url(assets/border.png) no-repeat 0 0;
+    margin-bottom: 1rem;
 }
+
 .single-champion-slider img {
-    display: block;
-    margin: 2px auto 0;
-    width: 106px;
-    height: 106px;
-    padding: 6px;
+    width: 100%;
+    max-width: 106px;
+    padding: 0.375rem;
 }
+
 .single-champion-slider p {
     font-family: 'Single Day', cursive;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 23px;
-    line-height: 18px;
+    font-size: 1.4375rem;
+    line-height: 1.125rem;
     color: #fff;
     text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
     text-align: center;
@@ -538,4 +611,38 @@ ul.display-sidebar li.display-option:hover {
 
 .champion-loading-indicator {
     display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .page-content-champions {
+        flex-direction: row;
+    }
+
+    .display-sidebar {
+        width: 370px;
+        padding: 50px;
+    }
+
+    .champion-content {
+        margin-left: 1rem;
+    }
+
+    .champion-slider {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+    }
+    .champion-slider::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    .champion-slider::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .champion-slider::-webkit-scrollbar-thumb {
+        background-color: rgba(155, 155, 155, 0.7);
+        border-radius: 20px;
+        border: transparent;
+    }
 }

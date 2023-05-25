@@ -44,7 +44,6 @@ export default async function handleChampions() {
         // get the selected champion ID from the hash
         const championSelector = window.location.hash.slice(1);
 
-        //OBJECT.VALUES en kEYS zijn ZO GOATED WHAT THE FUCKKKKKKKKKKK DUDE
         const selectedChampion = Object.values(championData.data).find(champion => {
             return champion.id === championSelector;
         });

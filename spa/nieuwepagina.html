@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Safouane.gg the ultimate experience to see information about yourself and some small data behind your favorite champions.">
+    <link rel="stylesheet" href="./public/final/main.css">
+    <title>Safouane.GG</title>
+
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            margin: 0 auto;
+            padding: 6px;
+        }
+
+        .header .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header .text {
+            color: #4b5563;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .header .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header .nav-links a:hover {
+            color: #6b7280;
+        }
+
+        .header .button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header .button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Main Styles */
+        .main {
+            margin: 0 auto;
+            padding: 20px 6px;
+            flex-grow: 1;
+        }
+
+        .main .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .main form {
+            width: 100%;
+            max-width: 32rem;
+        }
+
+        .main .form-group {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #4fd1c5;
+            padding-bottom: 0.5rem;
+        }
+
+        .main .form-input {
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            color: #4b5563;
+            margin-right: 0.75rem;
+            padding: 8px 12px;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            outline: none;
+        }
+
+        .main .form-button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main .form-button:hover
+         {
+            background-color: #2563eb;
+        }
+
+
+            /* Footer Styles */
+        .footer {
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 12px;
+        }
+
+        .footer .container {
+            margin: 0 auto;
+            padding: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .text {
+            color: #4b5563;
+            font-size: 0.8rem;
+        }
+
+        .footer .links a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .links a:hover {
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+<div id="loadingBar" class="hidden w-full h-1 bg-yellow-500 animate-loading"></div>
+<header class="header">
+    <nav class="container">
+        <div class="flex">
+            <div class="text">Safouane.GG</div>
+            <div class="nav-links">
+                <a href="/summoner" class="link">Home</a>
+                <a href="/champions" class="link">Champions</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main">
+    <div class="flex flex-col items-center">
+        <h1 class="title">SAFOUANE.GG</h1>
+        <div id="status-message"></div>
+        <div class="form-group">
+                <input name="summonerName" type="text" id="search-summoner" placeholder="Enter summoner name" class="form-input">
+                <button type="submit" class="form-button">Search</button>
+            </div>
+    </div>
+</main>
+
+    <section class="summoner-details-and-rank-details">
+        <div class="page-content-summoner">
+            <div class="summoner-header">
+                <div class="summoner-header-image">
+                    <span id="summoner-level">330</span>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/1.png" alt="header" id="summoner-icon">
+                </div>
+                <div class="summoner-header-info" id="info-summoner-url">
+                    <div class="summoner-header-name">
+                        <p id="summoner-name">Safoeman</p>
+                    </div>
+                    <div class="summoner-header-update">
+                        <button>Update</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="summoner-ranked-wrapper">
+                <div class="summoner-ranked-container">
+                    <div class="summoner-ranked-solo">
+
+                        <div class="ranked-queue-container">
+                            <div class="ranked-content-header">
+                                <div class="title">
+                                    <div class="blue-divider">
+                                        <div class="queue-type">Ranked Solo</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="summoner-ranked-sub-content">
+                            <div class="summoner-rank-image-container">
+                                <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/platinum.png"
+                                     class="summoner-rank-image" id="ranked-icon-solo" alt="">
+                            </div>
+
+                            <div class="text-container">
+                                <div class="ranked-text">
+                                    <span class="ranked-title" id="summoner-tier-solo">Platinum 4</span>
+                                    <span class="" id="summoner-lp-solo">0 LP</span>
+                                </div>
+                                <div class="ranked-stats">
+                                    <span class="total-games" id="summoner-result-solo">43 W 52 L</span>
+                                    <span id="summoner-result-sum-solo">43% wr</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="summoner-champion-mini-stats">
+
+
+                    </div>
+                    <div class="summoner-ranked-flex">
+
+
+                        <div class="ranked-queue-container">
+                            <div class="ranked-content-header">
+                                <div class="title">
+                                    <div class="blue-divider">
+                                        <div class="queue-type">Ranked Flex</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="summoner-ranked-sub-content">
+                            <div class="summoner-rank-image-container">
+                                <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/gold.png"
+                                     class="summoner-rank-image" id="ranked-icon-flex" alt="">
+                            </div>
+
+                            <div class="text-container">
+                                <div class="ranked-text">
+                                    <span class="ranked-title" id="summoner-tier-flex">Gold 2</span>
+                                    <span class="" id="summoner-lp-flex">32 LP</span>
+                                </div>
+                                <div class="ranked-stats">
+                                    <span class="total-games" id="summoner-result-flex">43 W 52 L</span>
+                                    <span id="summoner-result-sum-flex">43% wr</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="summoner-ranked-history-stats">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="page-content-champions">
+
+        <ul class="display-sidebar">
+            <li class="display-option">
+                <a id="top-6-champions">Top 6 champions</a>
+            </li>
+            <li class="display-option">
+                <a href="#">Champion rotation</a>
+            </li>
+            <li class="display-option">
+                <a href="#">Overig</a>
+            </li>
+        </ul>
+
+        <div class="champion-content">
+
+            <div class="champion-background">
+                <div class="champion-background-loading" style="display: none">
+                    <img src="./public/final/assets/loader.gif" id="champion-background-loading" alt="">
+                </div>
+            </div>
+            <div class="champion-content-wrapper">
+                <div class="content-wrap">
+                    <div class="title-wrap">
+                        <h1 class="title" id="champion-click-name">Aphelios</h1>
+                        <p class="subtitle" id="champion-click-title">The twink</p>
+                    </div>
+
+                    <div class="info-wrap">
+                        <h2 class="info-title">Character Info</h2>
+                        <ul class="info-list">
+                            <li class="info-item">
+                                <span class="info-label">Mastery of your champion:</span>
+                                <img src="" alt="Mastery level" id="champion-click-level" >
+                                <span class="info-value" id="champion-click-points">100000 points</span>
+                            </li>
+                            <li class="info-item">
+                                <span class="info-label">Chest granted?</span>
+                                <span class="info-value" id="champion-click-chest">False</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="desc-wrap">
+                        <h2 class="desc-title">Biography</h2>
+                        <p class="desc-text" id="champion-click-bio">Emerging from moonlight's shadow with weapons drawn, Aphelios kills
+                            the enemies of his faith in brooding silence—speaking only through the certainty of
+                            his aim, and the firing of each gun. Though fueled by a poison that renders him
+                            mute, he is guided by his sister Alune. From her distant temple sanctuary, she
+                            pushes an arsenal of moonstone weapons into his hands. For as long as the moon
+                            shines overhead, Aphelios will never be alone.</p>
+                    </div>
+                </div>
+                <div class="champion-slider-container">
+                    <div class="champion-slider">
+                        <ul class="champion-slider-style">
+                            <li class="single-champion-slider">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Aphelios.png" alt="">
+                                <p id="">Aphelios</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+<script type="module" src="./public/final/app.js"></script>
+
+</html>
