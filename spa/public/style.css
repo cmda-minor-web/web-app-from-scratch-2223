@@ -1,0 +1,53 @@
+
+.champions-mastery {
+    margin-top: 0.5em;
+    padding: 0.2em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-content img {
+    width: 25%;
+    height: 25%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.top-tier {
+    background-color: darkgreen;
+    color: white;
+}
+
+.high-tier {
+    background-color: green;
+    color: white;
+}
+
+.middle-tier {
+    background-color: orange;
+    color: white;
+}
+
+.low-tier {
+    background-color: red;
+    color: white;
+}
+
+.bottom-tier {
+    background-color: darkred;
+    color: white;
+}
+
+
+

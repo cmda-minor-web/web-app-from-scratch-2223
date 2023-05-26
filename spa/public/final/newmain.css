@@ -1,0 +1,492 @@
+h1  {
+    color: #48525f;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:system-ui;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #EFF1F3
+
+}
+
+header {
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 0 1em;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    flex-wrap: wrap;
+    box-shadow: 0px 1px 9px #a2a2a240;
+}
+
+header ul {
+    display: flex;
+    gap: 1em;
+}
+
+header nav {
+}
+
+header nav > ul > li > a {
+    color: #48525f;
+    transition: 0.2s;
+    display:block;
+}
+
+header nav > ul > li > a:hover {
+    color: #2d333c;
+    transform: scale(1.05);
+}
+
+main {display: flex;flex-direction: column;gap: 1em;}
+
+main > section {
+    padding: 1em;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1em;
+}
+
+section.summoner-search2 {
+    display: grid;
+    place-content: center;
+    height: calc(100vh - 5em);
+    overflow: hidden;
+    position: relative;
+    background: #5483E8;
+
+}
+
+section.summoner-search2 > div > form {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #6ac0b8;
+    padding-bottom: 0.5rem;
+}
+
+section.summoner-search2 > div > form > button {
+    background-color: #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 21px 30px;
+    border: transparent;
+    transition: background-color 0.3s ease;
+    background-image: url(https://s-lol-web.op.gg/images/icon/icon-gg.svg);
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+    width: 5em;
+    font-size: 0px;
+    box-sizing: content-box;
+}
+
+section.summoner-search2 > div > form > button:hover {
+    background-color: #2563eb;
+    border: none;
+}
+
+section.summoner-search2 > div > form >  input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: #4b5563;
+    margin-right: 0.75rem;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    outline: none;
+}
+
+section.summoner-search2::before, section.summoner-search2::after {
+    content: '';
+    position: absolute;
+    background: #3a49b7;
+    height: 30em;
+    width: 30em;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+section.summoner-search2::before {
+    top: -8em;
+    left: -11em;
+}
+
+section.summoner-search2::after {
+    bottom: -10em;
+    right: -6em;
+}
+
+
+
+.hidden {
+    position: absolute;
+    top: 0;
+    left: -9999999em;
+    transform: scale(.1);
+}
+
+section.summoner-rank-details {
+    background: white;
+}
+
+
+section.summoner-rank-details > ul {
+    display: flex;
+    gap: 1em;
+    flex: 0 0 100%;
+    height: 2em;
+    padding-bottom: 1em;
+
+}
+
+section.summoner-search2 div {
+    background: white;
+    padding: 1em;
+    border-radius: .2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    isolation: isolate;
+    z-index: 1;
+}
+
+section.summoner-rank-details > ul li {
+    background: #ECEEF1;
+    padding: .5em;
+    border-radius: .2em;
+    border: 1px solid #9AA4AF
+}
+
+figure img {
+    height: inherit;
+    border-radius: 30%;
+}
+
+figure {
+    position: relative;
+    flex: 0 1 8em;
+    height: 11em;
+    aspect-ratio: 1/1;
+}
+
+figure figcaption {
+    top: -1em;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+section > h3 {
+    display: none;
+}
+
+figure figcaption em {
+    background: #212F38;
+    padding: .2em 1em;
+    color: white;
+    border-radius: 10%;
+}
+
+section.summoner-rank-details > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .5em;
+    flex: 1 1 60%;
+}
+
+section.summoner-rank-details > div > h4 {
+    font-size: 21px;
+}
+
+section.summoner-rank-details > div > button {
+    height: 2em;
+    transition: .2s;
+    background: cornflowerblue;
+    width: 6em;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+section.summoner-rank-details > div > p {
+    color: #9BA5B0;
+    font-size: 12px
+}
+
+section.summoner-rank-details article {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 45%;
+    background: #eff1f3;
+    padding: 1em;
+    border-radius: .2em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section.summoner-rank-details > span {
+    width: 100%;
+    background: black;
+    height: 1px;
+}
+
+section.summoner-rank-details article ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 10em;
+    gap: .2em;
+}
+
+section.summoner-rank-details article ul li {
+    display: flex;
+    background: white;
+    gap: .5em;
+    border-radius: .1em;
+    padding: .5em;
+    flex: 1 1 40%;
+}
+
+section.summoner-rank-details article img {
+    flex: 0 1 5em;
+    width: 5em;
+    /*background: red;*/
+    border-radius: .2em;
+}
+
+section.summoner-rank-details article h3 {
+    width: 100%;
+}
+
+section.summoner-rank-details > a {
+    /* width: 100%; */
+    color: inherit;
+    background: #48525f;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+section.summoner-rank-details article ul li:nth-of-type(even) {
+    justify-content: space-between;
+}
+
+section.summoner-champion-details2 {
+    /* border: 1px solid black; */
+    /* background: white; */
+}
+
+article.card {
+    padding: 1em;
+    /* background: orange; */
+    border-radius: .2em;
+    position: relative;
+}
+
+
+
+.card > div {
+    /* background: gray; */
+    display: flex;
+    position: relative;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    /* background: limegreen; */
+    /* height: auto; */
+    gap: 1em;
+}
+
+.card > div > div {
+    display: flex;
+    background: #fff;
+    border-radius: .5em;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 0 0 black;
+    -webkit-box-shadow: 0 0 11px 0px #5b5b5b38;
+}
+
+.card > div > div:first-of-type > img {
+    height: 10em;
+    background: red;
+    align-self: center;
+    left: -1em;
+    flex: 0 0 17em;
+    width: 20em;
+    position: relative;
+    border-radius: .5em;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.card > div > div:first-of-type {
+    flex: 1 1 25em;
+    min-height: 12em;
+}
+
+.card > div > div:last-of-type {
+    width: 10em;
+    min-height: fit-content;
+    gap: .5em;
+    padding: .5em 0;
+    justify-content: center;
+}
+
+.card > div > div:last-of-type img {
+    width: 4em;
+    height: auto;
+}
+
+
+.card > div > div:last-of-type a {
+    height: 4em;
+    width: 4em;
+    border: 1px solid red;
+}
+
+.card > div > div:last-of-type a:hover {
+    transform: scale(1.05);
+}
+
+.card > div > div:last-of-type a {
+    transition: .2s;
+}
+
+.card > div > div:first-of-type > div {
+    flex: 1 0 9em;
+    padding: 1em;
+    border-radius: 10%;
+}
+
+.card > div > div:first-of-type > div ul {
+    margin: .5em .5em 0 0;
+    display: flex;
+    gap: 1em;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.card > div > div:first-of-type > div ul li {
+    /* background: white; */
+    gap: 1em;
+    padding: 1em;
+    flex: 1 1 4em;
+    max-width: 7em;
+    display: flex;
+    color: black;
+    border-radius: .2em;
+}
+
+.card > div > div:first-of-type > div ul li img {
+    height: 4em;
+    aspect-ratio: 1/1;
+    /* background: red; */
+    object-fit: cover;
+}
+
+.card > section {
+    padding: 1em;
+    background: white;
+    border-radius: .5em;
+    margin-top: 1em;
+}
+
+@media (max-width:595px){
+    .card > div > div:last-of-type {
+        width:100%;
+        justify-content: space-around;
+        gap: 0;
+        padding: .5em;
+    }
+}
+
+@media (max-width:652px){
+    .card > div > div:first-of-type > img{
+        left:unset;
+        align-self: baseline;
+        margin: 1em;
+        flex: unset;
+        width: 100%;
+        object-fit: cover;
+    }
+    section.summoner-champion-details2 {
+        padding: 0;
+        border: unset;
+    }
+
+    section.summoner-champion-details2 h2 {
+        padding: 1em 0 0 1em;
+    }
+
+    .card > div {
+        gap: 1em;
+    }
+    header {
+        justify-content: center;
+        padding: 1em;
+    }
+}
+
+article.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: loadPls 2s linear infinite;
+    filter:blur(2px);
+}
+
+@keyframes loadPls{
+    0%{
+        background:rgb(255 255 255/ .5);
+    }
+    50%{
+        background:rgb(255 255 255 / .9)
+    }
+    100%{
+        background:rgb(255 255 255 / .5);
+    }
+}
+
+article.loading::after {
+    content: 'loading';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+    font-weight: 700;
+}
+
+section.summoner-rank-details > p {
+    width: 100%;
+}
+section.summoner-rank-details > a:hover {
+    transform: scale(1.05);
+}
+
+section.summoner-rank-details > div > button:hover {
+    filter: hue-rotate(10deg) contrast(1.2);
+    transform: scale(1.05);
+}

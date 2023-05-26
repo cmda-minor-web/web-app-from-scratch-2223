@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+}
+
+.rotated {
+    transform: rotate(45deg);
+    background-color: violet;
+}
+
+.small-img {
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.card {
+    border-radius: 5px;
+    display: flex;
+    background-repeat: repeat;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 360px;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+.card:hover {
+
+}
+
+
+
+.box {
+    box-shadow: 0px 5px 10px 0px rgb(0,0,0,0.3);
+    transition: transform ease 0.5s, box-shadow ease 0.5s;
+    border: 2px solid #000000;
+    background-color: rgb(240, 244, 245);
+    padding: 1em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 20px 2px rgb(0,0,0,0.5);
+
+}
+
+.box2 {
+
+}
+
+
+.box2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box2 li {
+    margin: 10px 0;
+}
+
+#welcomeMsg {
+    font-family: 'Itim', cursive;
+    font-size: 32px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .box {
+        width: 75%;
+        height: auto;
+    }
+}

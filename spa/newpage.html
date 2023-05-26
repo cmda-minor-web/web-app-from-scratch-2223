@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="Safouane.gg the ultimate experience to see information about yourself and some small data behind your favorite champions.">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/final/newmain.css">
+</head>
+<body>
+
+<header>
+    <h1>Safouane.GG</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Champions</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="summoner-search2">
+        <div>
+            <h2>Safouane.GG</h2>
+            <div id="status-message"></div>
+            <form action="#">
+                <label for="search-summoner"></label>
+                <input type="text" id="search-summoner" placeholder="Enter summoner name here">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="summoner-rank-details">
+        <h2 class="hidden">rank details</h2>  <!--position:absolute; top:0; left:-99999em; transform:scale(.1)-->
+        <h3>previous ranks</h3> <!-- ook verbergen -->
+        <ul>
+            <li>Gold IV</li>
+            <li>Plat IV</li>
+            <li>Silver IV</li>
+            <li>Diamond IV</li>
+            <li>...</li>
+        </ul>
+        <h3>summoner info</h3>
+        <figure>
+            <img id="summoner-icon" src="https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/5675.png" alt="summonerIcon">
+            <figcaption>
+                <em id="summoner-level">Level 322</em>
+            </figcaption>
+        </figure>
+        <div id="info-summoner-url">
+            <h4 id="summoner-name">DragonSake</h4>
+            <button>Update</button>
+            <p>Last updated .... ago</p>
+        </div>
+        <span></span> <!-- horizontale lijn om content te splitsen-->
+        <h3>Summary</h3>
+        <p><b>Summary of your elo below </b></p>
+        <a id="top-6-champions">Click to see your Champions</a>
+        <span></span> <!-- horizontale lijn om content te splitsen-->
+
+        <article>
+            <h3>Ranked Solo</h3>
+            <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/platinum.png"
+                 alt="" id="ranked-icon-solo">
+            <ul>
+                <li id="summoner-tier-solo">Gold 2</li>
+                <li>
+                    <p id="summoner-result-solo">49W</p>
+                    <p>42L</p>
+                </li>
+                <li id="summoner-lp-solo">36LP</li>
+                <li>
+                    <p>Win rate: </p>
+                    <p id="summoner-result-sum-solo">54%</p>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h3 >Ranked Flex</h3>
+            <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/diamond.png"
+                 alt="" id="ranked-icon-flex">
+            <ul>
+                <li id="summoner-tier-flex">Gold 2</li>
+                <li>
+                    <p id="summoner-result-flex">49W</p>
+                    <p>42L</p>
+                </li>
+                <li id="summoner-lp-flex">36LP</li>
+                <li>
+                    <p>Win rate: </p>
+                    <p id="summoner-result-sum-flex">54%</p>
+                </li>
+            </ul>
+        </article>
+
+    </section>
+    <section class="summoner-champion-details2">
+        <h2>Your best champion info</h2> <!-- verberg die shit -->
+        <article class="card">
+            <div>
+                <div>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg" alt="" class="champion-background">
+                    <div>
+                        <h3 id="champion-click-name">Caitlyn</h3>
+                        <p id="champion-click-title">the Sheriff of Piltover</p>
+                        <ul>
+                            <li><img
+                                    src="https://raw.communitydragon.org/7.23/plugins/rcp-fe-lol-champion-mastery-notifications/global/default/assets/cm_rank_up/7.png"
+                                    alt="" id="champion-click-level">
+                                Champion mastery
+                            </li>
+                            <li id="champion-click-points">32150k</li>
+                            <li><img src="https://i.ibb.co/L6f6hwy/no-mastery.png" alt="" id="champion-click-chest"> Chest granted</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="test-portraits">
+<!--                    <a href="" class="champion-id"><img src="https://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/Jinx.png" class="champion-image" alt=""></a>-->
+                </div>
+            </div>
+            <section>
+                <h3>Biography</h3>
+                <p id="champion-click-bio">Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its
+                    elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her
+                    partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's
+                    most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any
+                    lawbreakers foolish enough to operate in the City of Progress.</p>
+            </section>
+        </article>
+    </section>
+</main>
+<footer class="footer">
+    <div>
+        <div class="text">&copy; 2023 Safouane.GG</div>
+    </div>
+</footer>
+<script type="module" src="./public/final/app.js"></script>
+</body>
+</html>

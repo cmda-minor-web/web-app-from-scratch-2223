@@ -1,16 +1,16 @@
-# Web App From Scratch @cmda-minor-web 2021 - 2022
+# Web App From Scratch @cmda-minor-web 2023
 
-In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API, manipulated and finally shown in the UI of the App. You will learn to apply interface principles when building and testing the interface. With the gained knowledge you will be able to build interactive prototypes, based on a user story and real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
+In this course I will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API, manipulated and finally shown in the UI of the App. You will learn to apply interface principles when building and testing the interface. With the gained knowledge you will be able to build interactive prototypes, based on a user story and real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
 
 ## Assignment
 
-1. [Visitekaartje](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#1-visitekaartje): Ontwerp en maak met HTML, CSS en JS een visitekaartje.
-2. [Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.
-3. [Single Page App](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-2.md): Design and build a single page web app based on a User Story.
+1. [Visitekaartje](https://safouanem.github.io/web-app-from-scratch-2223/visitekaartje/): Mijn visite-kaartje.
+2. ~~[Squadpagina](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/main/course/week-1.md#2-squadpagina): Ontwerp en maak met je team een squadpagina waarin je de verschillende visitekaartjes toont.~~
+3. [Single Page App](https://safouanem.github.io/web-app-from-scratch-2223/spa/public/final/webapp.html): My single page application.
 
 ---
 
-## Program
+## Program that I'll be following
 
 | Planning | Maandag | Dinsdag | Vrijdag  |
 |---|---|---|---|
@@ -20,37 +20,42 @@ In this course you will learn to build a web application without frameworks or u
 | Voorjaarsvakantie |  |  |  |
 | [Week 4 - Wrapping up 🎁](https://github.com/cmda-minor-web/web-app-from-scratch-2223/blob/master/course/week-4.md)  | College + work  | Review + work | Beoordelingsgesprekken  |
 
-## Best Practices
 
-All work during this course will be tested against our [Best Practices for JavaScript](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md).
 
-## Rubric
+## Week 2 - 3 - 4 - Main API Application
 
-Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
+User-story: As a League of Legends addict/user, I want to be able to see champion & summoner information about my summoner of choice, so that I don’t have to open a statistics site all the time & being able to see my champions in style 
 
-| Deficiency | Criterion | Improvement |
-|:--|:--|:--|
-|  | *User Interface* - you design, build and test the user interface by applying interface design principles |  |
-|  | *Code structure* - you write modular, consistent and efficient HTML, CSS and JavaScript code by applying structure and best practices. You manage state for the application and the UI |  |
-|  | *Data management* - you understand how you can work with an external API using asynchronous code. You can retrieve data, manipulate and dynamically convert it to structured html |  |
-|  | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.  |  |
+# Wiki
+https://roan-anglerfish-3db.notion.site/Wiki-van-Safouane-GG-832532f851a447d39126426f8f297452
+
+## Known bugs
+- [x] No bugs only features ;)
+## Assets: 
+1. https://developer.riotgames.com/apis
+2. https://developer.riotgames.com/docs/lol
+3. https://raw.communitydragon.org/
+## Voorbeeld champion ophalen: 
+1. Alle champs: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion.json
+2. 1 Champion: http://ddragon.leagueoflegends.com/cdn/9.19.1/data/en_US/champion/Aatrox.json
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
+### - Weblink 🔗 - If you feel the need to look what I've been doing,
+#### - https://safouanem.github.io/web-app-from-scratch-2223/spa/public/final/webapp.html
 
-<!-- ☝️ replace this description with a description of your own work -->
+- I tried to make an u.gg/op.gg clone for myself, and to my surprise I was able to finish more than I expected in the Wiki? I got a bit more in depth about the structure of the code etc.
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+### Installation
+```text
+git clone git@github.com:SafouaneM/web-app-from-scratch-2223.git
+```
+And you should be good to go now, do not forget to implement your own api key in the api.js.
+You can request an api key from this url, it'll take no longer then 1 minute to generate one 
+#### !(Do note you need a riot games account to generate a key.)!
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+### Bonus things that I will implement / working on
+- [] Autocomplete when you're looking for a summoner
+- [~] Champion rotation as the default state
+- [] Ranked solo and flex queue last played games and data about said games.
+- [] Responsive design 🤪🤪🤪
