@@ -1,7 +1,7 @@
 
 const fetchChampions = async () => {
     try {
-        const championDataResponse = await fetch('https://ddragon.leagueoflegends.com/cdn/11.20.1/data/en_US/champion.json');
+        const championDataResponse = await fetch('https://ddragon.leagueoflegends.com/cdn/13.9.1/data/en_US/champion.json');
         if(!championDataResponse.ok) {
             throw new Error('No response between range 200-2999');
         }

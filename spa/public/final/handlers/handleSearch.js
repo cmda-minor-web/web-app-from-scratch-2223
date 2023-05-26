@@ -54,7 +54,7 @@ export default async function handleSearch() {
 
 
         const summonerIconMini = document.getElementById('summoner-icon');
-        summonerIconMini.src = `https://ddragon.leagueoflegends.com/cdn/13.3.1/img/profileicon/${summoner.profileIconId}.png`;
+        summonerIconMini.src = `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/profileicon/${summoner.profileIconId}.png`;
 
         summonerTierIconSolo.src = soloQueueData.iconSrc;
         summonerTierSolo.textContent = soloQueueData.tier;
